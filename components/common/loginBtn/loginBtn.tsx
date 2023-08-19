@@ -41,11 +41,15 @@ const LoginBtn: React.FC<LoginBtnProps> = ({ label, setIsLogin, isLogin }) => {
     //     ></div>
     //   </div>
     // </div>
-      <div
+    <div
       className={cx(
         "signup-btn w-[81px] h-[40px] flex items-center justify-center cursor-pointer text-center fuller-button",
         label === "Log in" ? "blue" : "red"
-      )} onClick={() => setIsLogin && setIsLogin(!isLogin)}>{label}</div>
+      )}
+      onClick={() => setIsLogin && setIsLogin(!isLogin)}
+    >
+      {label}
+    </div>
   );
 };
 

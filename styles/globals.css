@@ -419,10 +419,13 @@ body {
 } */
 #__next {
   height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 .mySwiper {
   width: 100%;
   height: 100%;
+  max-width: 1920px;
 }
 
 .swiper-slide {
@@ -468,7 +471,7 @@ body {
   width: 44px;
 }
 .swiper .swiper-button-next {
-  right: 28.5vw !important;
+  right: 26.7vw !important;
   width: 44px;
 }
 

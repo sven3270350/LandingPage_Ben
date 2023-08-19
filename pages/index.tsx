@@ -6,13 +6,13 @@ import VideoSection from "components/common/VideoSection";
 import ModuleMarketPlaces from "components/common/ModuleMarketPlaces";
 import ProposalSection from "components/common/ProposalSection";
 import RequestDemo from "components/common/RequestDemo";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules";
 import "swiper/css";
 import { useState } from "react";
 
 interface SwiperProps {
-  className: string
+  className: string;
   direction: "horizontal" | "vertical";
   scrollbar?: boolean;
   mousewheel?: boolean;
@@ -20,7 +20,7 @@ interface SwiperProps {
   onSlideChange?: (swiper: any) => void;
 }
 
-const Home = () => {
+const Home: NextPage = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
 
   const handleSlideChange = (swiper: any) => {
@@ -33,18 +33,28 @@ const Home = () => {
     scrollbar: false,
     modules: [Mousewheel],
     mousewheel: true,
-    onSlideChange: handleSlideChange
+    onSlideChange: handleSlideChange,
   };
 
   return (
     <>
-    <Header activeSlide={activeSlide} />
-    <Swiper {...swiperProps}>
-      <SwiperSlide><IntroSection /></SwiperSlide>
-      <SwiperSlide><VideoSection /></SwiperSlide>
-      <SwiperSlide><ModuleMarketPlaces /></SwiperSlide>
-      <SwiperSlide><ProposalSection /><Footer /></SwiperSlide>
-    </Swiper>
+      <Header activeSlide={activeSlide} />
+      <Swiper {...swiperProps}>
+        <SwiperSlide>
+          <IntroSection />
+        </SwiperSlide>
+        <SwiperSlide>
+          <VideoSection />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ModuleMarketPlaces />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProposalSection />
+          <RequestDemo />
+          <Footer />
+        </SwiperSlide>
+      </Swiper>
     </>
   );
 };

@@ -9,7 +9,7 @@ import Help from "public/assets/icons/Help";
 import Group from "public/assets/icons/Group";
 import HoverEffectBtn from "public/assets/icons/HoverEffectBtn";
 interface HeaderProps {
-  activeSlide: number
+  activeSlide: number;
 }
 const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
   const [isLogin, setIsLogin] = useState(false);
@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
   return (
     <nav
       className={cx(
-        "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full",
+        "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full max-w-[1920px]",
         activeSlide > 0 ? "isSticky" : ""
       )}
     >
@@ -46,17 +46,32 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                 href={ROUTE_PATH.HOME}
                 className="mx-1 navItem opacity-[.8] hover:opacity-[1] relative overflow-hidden text-center rounded-md text-sm"
               > */}
-                <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="Portfolio" />
-                {/* <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div> */}
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                width={100}
+                height={40}
+                label="Portfolio"
+              />
+              {/* <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div> */}
               {/* </Link> */}
               {/* <Link
                 href={ROUTE_PATH.HOME}
                 className="mx-1 navItem opacity-[.8] hover:opacity-[1] relative overflow-hidden text-center rounded-md text-sm"
               > */}
-                <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="Raise" />
-                {/* <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div> */}
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                width={100}
+                height={40}
+                label="Raise"
+              />
+              {/* <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div> */}
               {/* </Link> */}
-                <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="Market" />
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                width={100}
+                height={40}
+                label="Market"
+              />
             </div>
           </div>
         </div>
@@ -64,9 +79,24 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
         <div className="flex flex-row items-center">
           {isLogin && (
             <div className="hidden 2xl:flex flex-row items-center mr-10 w-[333px]">
-              <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="My Crptool" />
-              <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="My Calendar" />
-              <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="My Group" />
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                width={100}
+                height={40}
+                label="My Crptool"
+              />
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                width={100}
+                height={40}
+                label="My Calendar"
+              />
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                width={100}
+                height={40}
+                label="My Group"
+              />
             </div>
           )}
           <div className="flex flex-row justify-center items-center">

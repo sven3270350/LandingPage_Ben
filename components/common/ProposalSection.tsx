@@ -52,7 +52,7 @@ const ProposalSection = () => {
           Get the most out of cryptool
         </div> */}
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-6 mb-4 mt-2 lg:mx-40 mx-0">
+      <div className="flex flex-wrap justify-center items-center gap-6 mb-4 mt-4 lg:mx-40 mx-0">
         {plans.map((item, index) => {
           return (
             <div

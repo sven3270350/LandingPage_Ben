@@ -22,8 +22,8 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="h-[40vh]">
-      <div className="flex flex-wrap justify-between pt-8 pb-12 pr-64 pl-44 border-solid border-t-[1px] border-[#F0F0F0] footer-gradient h-[30vh]">
+    <div className="h-[40vh] flex justify-center">
+      <div className="max-w-[1920px] w-full flex flex-wrap justify-between pt-8 pb-12 pr-64 pl-44 border-solid border-t-[1px] border-[#F0F0F0] footer-gradient h-[30vh]">
         <div>
           <Image
             width={225}
@@ -33,16 +33,32 @@ const Footer = () => {
           />
           <div className="flex flex-col mt-16">
             <div className="flex flex-row space-x-2">
-              <Link target="blank" href={'mailto:info@cryptool.io'} className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
+              <Link
+                target="blank"
+                href={"mailto:info@cryptool.io"}
+                className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
+              >
                 <Mail width={14} height={16} />
               </Link>
-              <Link target="blank" href={"https://twitter.com/cryptool_io"} className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
+              <Link
+                target="blank"
+                href={"https://twitter.com/cryptool_io"}
+                className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
+              >
                 <Twitter width={14} height={16} />
               </Link>
-              <Link target="blank" href={"https://linkedin.com/company/cryptool-io"} className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
+              <Link
+                target="blank"
+                href={"https://linkedin.com/company/cryptool-io"}
+                className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
+              >
                 <Linkedin width={14} height={16} />
               </Link>
-              <Link target="blank" href={"https://t.me/cryptool_io"} className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
+              <Link
+                target="blank"
+                href={"https://t.me/cryptool_io"}
+                className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
+              >
                 <Telegram width={14} height={16} />
               </Link>
             </div>
