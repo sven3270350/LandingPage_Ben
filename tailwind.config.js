@@ -16,6 +16,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
+        robotic: ['Roboto', 'sans-serif'],
         poppins: ["Poppins"],
         petrona: ["Petrona"],
       },

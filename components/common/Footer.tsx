@@ -1,5 +1,10 @@
 import Image from "next/image";
 import FooterItem from "./FooterMenu";
+import Link from "next/link";
+import Mail from "public/assets/icons/Mail";
+import Twitter from "public/assets/icons/Twitter";
+import Linkedin from "public/assets/icons/Linkedin";
+import Telegram from "public/assets/icons/Telegram";
 interface MenuItem {
   title: string;
   items: string[];
@@ -17,8 +22,8 @@ const Footer = () => {
     },
   ];
   return (
-    <>
-      <div className="flex flex-wrap justify-between pt-8 pb-12 pr-64 pl-44 border-solid border-t-[1px] border-[#F0F0F0] footer-gradient">
+    <div className="h-[40vh]">
+      <div className="flex flex-wrap justify-between pt-8 pb-12 pr-64 pl-44 border-solid border-t-[1px] border-[#F0F0F0] footer-gradient h-[30vh]">
         <div>
           <Image
             width={225}
@@ -28,38 +33,18 @@ const Footer = () => {
           />
           <div className="flex flex-col mt-16">
             <div className="flex flex-row space-x-2">
-              <div className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
-                <Image
-                  width={14}
-                  height={16}
-                  alt="mail"
-                  src="/assets/icons/mail.svg"
-                />
-              </div>
-              <div className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
-                <Image
-                  width={14}
-                  height={16}
-                  alt="Vector"
-                  src="/assets/icons/Vector.svg"
-                />
-              </div>
-              <div className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
-                <Image
-                  width={14}
-                  height={16}
-                  alt="Linkedin"
-                  src="/assets/icons/Linkedin.svg"
-                />
-              </div>
-              <div className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
-                <Image
-                  width={14}
-                  height={16}
-                  alt="brands_telegram"
-                  src="/assets/icons/fa-brands_telegram-plane.svg"
-                />
-              </div>
+              <Link target="blank" href={'mailto:info@cryptool.io'} className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
+                <Mail width={14} height={16} />
+              </Link>
+              <Link target="blank" href={"https://twitter.com/cryptool_io"} className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
+                <Twitter width={14} height={16} />
+              </Link>
+              <Link target="blank" href={"https://linkedin.com/company/cryptool-io"} className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
+                <Linkedin width={14} height={16} />
+              </Link>
+              <Link target="blank" href={"https://t.me/cryptool_io"} className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
+                <Telegram width={14} height={16} />
+              </Link>
             </div>
             <div className="mt-2 text-[#54716F] text-base font-normal">
               © 2023 Cryptool. All rights reserved
@@ -76,7 +61,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

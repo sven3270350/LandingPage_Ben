@@ -40,7 +40,7 @@ const ModuleMarketPlaces = () => {
     },
   };
   return (
-    <div className="lg:mx-40 mx-0">
+    <div className="lg:mx-40 mx-0 mt-[97px]">
       <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
         Implement
       </div>
@@ -52,117 +52,105 @@ const ModuleMarketPlaces = () => {
       </div>
       <Swiper {...swiperProps}>
         <SwiperSlide>
-          <div>
-            <Image
-              className="rounded-[44px]"
-              width={533}
-              alt="Swiper image"
-              height={300}
-              src="/assets/icons/5.jpg"
-            />
-            <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
-              in-a-box
-            </div>
-            <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-              Learn more
-            </div>
+          <Image
+            className="rounded-[44px]"
+            width={533}
+            alt="Swiper image"
+            height={300}
+            src="/assets/icons/5.jpg"
+          />
+          <div className="absolute top-[20%] left-[20%] text-white text-base">
+            Hedge Fund-
+            <br />
+            in-a-box
+          </div>
+          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
+            Learn more
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <Image
-              className="rounded-[44px]"
-              width={533}
-              alt="Swiper image"
-              height={300}
-              src="/assets/icons/6.jpg"
-            />
-            <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
-              in-a-box
-            </div>
-            <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-              Learn more
-            </div>
+          <Image
+            className="rounded-[44px]"
+            width={533}
+            alt="Swiper image"
+            height={300}
+            src="/assets/icons/6.jpg"
+          />
+          <div className="absolute top-[20%] left-[20%] text-white text-base">
+            Hedge Fund-
+            <br />
+            in-a-box
+          </div>
+          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
+            Learn more
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <Image
-              className="rounded-[44px]"
-              width={533}
-              alt="Swiper image"
-              height={300}
-              src="/assets/icons/1.jpg"
-            />
-            <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
-              in-a-box
-            </div>
-            <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-              Learn more
-            </div>
+          <Image
+            className="rounded-[44px]"
+            width={533}
+            alt="Swiper image"
+            height={300}
+            src="/assets/icons/1.jpg"
+          />
+          <div className="absolute top-[20%] left-[20%] text-white text-base">
+            Hedge Fund-
+            <br />
+            in-a-box
+          </div>
+          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
+            Learn more
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <Image
-              className="rounded-[44px]"
-              width={533}
-              height={300}
-              alt="Swiper image"
-              src="/assets/icons/2.jpg"
-            />
-            <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
-              in-a-box
-            </div>
-            <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-              Learn more
-            </div>
+          <Image
+            className="rounded-[44px]"
+            width={533}
+            height={300}
+            alt="Swiper image"
+            src="/assets/icons/2.jpg"
+          />
+          <div className="absolute top-[20%] left-[20%] text-white text-base">
+            Hedge Fund-
+            <br />
+            in-a-box
+          </div>
+          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
+            Learn more
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <Image
-              className="rounded-[44px]"
-              width={533}
-              alt="Swiper image"
-              height={300}
-              src="/assets/icons/3.jpg"
-            />
-            <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
-              in-a-box
-            </div>
-            <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-              Learn more
-            </div>
+          <Image
+            className="rounded-[44px]"
+            width={533}
+            alt="Swiper image"
+            height={300}
+            src="/assets/icons/3.jpg"
+          />
+          <div className="absolute top-[20%] left-[20%] text-white text-base">
+            Hedge Fund-
+            <br />
+            in-a-box
+          </div>
+          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
+            Learn more
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <Image
-              className="rounded-[44px]"
-              width={533}
-              alt="Swiper image"
-              height={300}
-              src="/assets/icons/4.jpg"
-            />
-            <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
-              in-a-box
-            </div>
-            <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-              Learn more
-            </div>
+          <Image
+            className="rounded-[44px]"
+            width={533}
+            alt="Swiper image"
+            height={300}
+            src="/assets/icons/4.jpg"
+          />
+          <div className="absolute top-[20%] left-[20%] text-white text-base">
+            Hedge Fund-
+            <br />
+            in-a-box
+          </div>
+          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
+            Learn more
           </div>
         </SwiperSlide>
         <div className="flex flex-col justify-center items-center !mt-11 lg:mx-40 mx-0">

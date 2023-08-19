@@ -11,13 +11,13 @@ const IntroSection = () => {
   }, []);
 
   return (
-    <div className="mt-[-82px]">
+    <div className="">
       <div
         className="bg-firstSection relative"
         style={{ height: `${windowHeight}px` }}
       >
         <Image
-          className="absolute top-[20%] left-[5%]"
+          className="absolute sm:block hidden top-[20%] left-[5%]"
           width={650}
           height={200}
           src="/assets/icons/LogoWhite.svg"
@@ -29,22 +29,15 @@ const IntroSection = () => {
         >
           Start Managing Today
         </button>
-        <div className="absolute top-[75%] left-[5%] text-white opacity-[.8] text-4xl tracking-wide">
+        <div className="absolute top-[75%] left-[5%] text-white opacity-[.8] font-robotic text-4xl tracking-wide">
           Automated tool to easily manage, raise,
           <br />
-          invest, and trade cryptocurrency assets
+          invest and trade cryptocurrency assets
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-[-32px] lg:mx-40 mx-0">
         <ArrowBelow className="z-10" />
         <ArrowBelow className="z-10 mt-[-9px]" />
-        <div className="text-[#00F2DE] font-medium text-2xl">Discover</div>
-        <div className="mt-10 text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px]">
-          Get to know our platform
-        </div>
-        <div className="text-[#2F4644] text-2xl font-light !leading-[120%] tracking-[-2px]">
-          Investing and managing capital, made easy
-        </div>
       </div>
     </div>
   );

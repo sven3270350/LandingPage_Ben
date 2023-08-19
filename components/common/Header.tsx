@@ -1,39 +1,31 @@
 import { cx } from "@emotion/css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import LoginBtn from "./loginBtn/loginBtn";
 import { ROUTE_PATH } from "components/hooks/route-path";
 import Link from "next/link";
 import Image from "next/image";
-
-const Header = () => {
-  const [stickyNav, setStickyNav] = useState(false);
+import Notifications from "public/assets/icons/Notifications";
+import Help from "public/assets/icons/Help";
+import Group from "public/assets/icons/Group";
+import HoverEffectBtn from "public/assets/icons/HoverEffectBtn";
+interface HeaderProps {
+  activeSlide: number
+}
+const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
   const [isLogin, setIsLogin] = useState(false);
-  const onScroll = () => {
-    if (window.scrollY > window.innerHeight - 65) {
-      setStickyNav(true);
-    } else {
-      setStickyNav(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
 
   return (
     <nav
       className={cx(
-        "sticky z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full",
-        stickyNav ? "isSticky" : ""
+        "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full",
+        activeSlide > 0 ? "isSticky" : ""
       )}
     >
       <div className="flex items-center justify-between">
         <div className="flex justify-between items-center w-full">
           <div className="flex flex-row flex-shrink-0 justify-between 2xl:gap-[121px] gap-0">
             <div>
-              {stickyNav ? (
+              {activeSlide ? (
                 <Image
                   width={163}
                   height={50}
@@ -50,27 +42,21 @@ const Header = () => {
               )}
             </div>
             <div className="hidden md:flex items-center">
-              <Link
+              {/* <Link
                 href={ROUTE_PATH.HOME}
-                className="mx-4 navItem opacity-[.8] hover:opacity-[1] relative overflow-hidden hover:text-white text-center rounded-md text-sm"
-              >
-                Portfolio
-                <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div>
-              </Link>
-              <Link
+                className="mx-1 navItem opacity-[.8] hover:opacity-[1] relative overflow-hidden text-center rounded-md text-sm"
+              > */}
+                <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="Portfolio" />
+                {/* <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div> */}
+              {/* </Link> */}
+              {/* <Link
                 href={ROUTE_PATH.HOME}
-                className="mx-4 navItem opacity-[.8] hover:opacity-[1] relative overflow-hidden hover:text-white text-center rounded-md text-sm"
-              >
-                Raise
-                <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div>
-              </Link>
-              <Link
-                href={ROUTE_PATH.HOME}
-                className="mx-4 navItem opacity-[.8] hover:opacity-[1] relative overflow-hidden hover:text-white text-center rounded-md text-sm"
-              >
-                Marketplace
-                <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div>
-              </Link>
+                className="mx-1 navItem opacity-[.8] hover:opacity-[1] relative overflow-hidden text-center rounded-md text-sm"
+              > */}
+                <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="Raise" />
+                {/* <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div> */}
+              {/* </Link> */}
+                <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="Market" />
             </div>
           </div>
         </div>
@@ -78,27 +64,9 @@ const Header = () => {
         <div className="flex flex-row items-center">
           {isLogin && (
             <div className="hidden 2xl:flex flex-row items-center mr-10 w-[333px]">
-              <Link
-                href={ROUTE_PATH.HOME}
-                className="mx-4 navItem w-full opacity-[.8] hover:opacity-[1] relative overflow-hidden lg:block hidden hover:text-white text-center rounded-md text-sm"
-              >
-                My Cryptool
-                <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div>
-              </Link>
-              <Link
-                href={ROUTE_PATH.HOME}
-                className="mx-4 navItem w-full opacity-[.8] hover:opacity-[1] relative overflow-hidden lg:block hidden hover:text-white text-center rounded-md text-sm"
-              >
-                My Calendar
-                <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div>
-              </Link>
-              <Link
-                href={ROUTE_PATH.HOME}
-                className="mx-4 navItem w-full opacity-[.8] hover:opacity-[1] relative overflow-hidden lg:block hidden hover:text-white text-center rounded-md text-sm"
-              >
-                My Group
-                <div className="hoverEvent absolute bottom-[-24px] w-[90%] rounded-full h-6 left-[5%] bg-[#6fadfba1]"></div>
-              </Link>
+              <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="My Crptool" />
+              <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="My Calendar" />
+              <HoverEffectBtn className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1" width={100} height={40} label="My Group" />
             </div>
           )}
           <div className="flex flex-row justify-center items-center">
@@ -133,28 +101,13 @@ const Header = () => {
             {isLogin ? (
               <div className="flex flex-row items-center ml-4 gap-4">
                 <Link href={ROUTE_PATH.HOME} passHref className="w-[20px]">
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/assets/icons/notifications.svg"
-                    alt="notifications"
-                  />
+                  <Notifications width={20} height={20} />
                 </Link>
                 <Link href={ROUTE_PATH.HOME} passHref className="w-[20px]">
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/assets/icons/help.svg"
-                    alt="help"
-                  />
+                  <Help width={20} height={20} />
                 </Link>
                 <Link href={ROUTE_PATH.HOME} passHref className="w-[20px]">
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/assets/icons/groups_2.svg"
-                    alt="groups_2"
-                  />
+                  <Group width={20} height={20} />
                 </Link>
                 <Link href={ROUTE_PATH.HOME} passHref className="w-[40px]">
                   <Image
