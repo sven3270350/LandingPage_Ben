@@ -63,7 +63,7 @@ const ProposalSection = () => {
                 {item.title}
               </div>
               <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px]">
-                {item.price}
+                ${item.price}
               </div>
               <div className="text-[#54716F] text-base not-italic font-normal mb-8">
                 {item.label}
