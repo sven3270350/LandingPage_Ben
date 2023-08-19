@@ -1,3 +1,4 @@
+import HoverEffectBtn from "public/assets/icons/HoverEffectBtn";
 import React from "react";
 
 interface Plan {
@@ -85,12 +86,12 @@ const ProposalSection = () => {
                   Learn more
                 </div>
               </div>
-              <button
-                type="button"
-                className="inline-block w-[176px] rounded-3xl text-[#2F4644] bg-[#00f2de] py-2 font-normal text-base shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:bg-info-600 hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:bg-info-600 focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:bg-info-700 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]"
-              >
-                {item.btnLabel}
-              </button>
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                width={100}
+                height={40}
+                label={item.btnLabel}
+              />
             </div>
           );
         })}
