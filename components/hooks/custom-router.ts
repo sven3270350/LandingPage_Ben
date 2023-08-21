@@ -16,9 +16,19 @@ export const useCustomRouter = () => {
     return router.push(ROUTE_PATH.Signup);
   };
 
+  const goToForgotPassword = () => {
+    return router.push(ROUTE_PATH.ForgotPassword);
+  };
+
+  const goToManualSignUp = () => {
+    return router.push(ROUTE_PATH.goToManualSignUp);
+  };
+
   return {
     goToHome,
     goToLogin,
     goToSignup,
+    goToForgotPassword,
+    goToManualSignUp,
   };
 };

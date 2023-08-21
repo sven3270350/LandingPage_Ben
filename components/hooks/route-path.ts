@@ -1,5 +1,7 @@
 export enum ROUTE_PATH {
   HOME = '/',
-  Login = '/login',
-  Signup = '/signup',
+  Login = '/account/login',
+  Signup = '/account/signup',
+  ForgotPassword = '/account/forgotpassword',
+  goToManualSignUp = '/account/manualsignup'
 }
