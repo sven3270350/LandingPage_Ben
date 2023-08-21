@@ -1,4 +1,5 @@
-import HoverEffectBtn from "public/assets/icons/HoverEffectBtn";
+import HoverEffectBtn from "components/common/loginBtn/HoverEffectBtn";
+import { useMediaSize } from "components/hooks/media-size";
 import React from "react";
 
 interface Plan {
@@ -28,7 +29,7 @@ const ProposalSection = () => {
       walletAccessCount: "5",
       entires: "unlimited",
       maxGroupSize: "50",
-      btnLabel: "Sign Up",
+      btnLabel: "Sign up",
     },
     {
       title: "Manager",
@@ -37,11 +38,12 @@ const ProposalSection = () => {
       walletAccessCount: "unlimited",
       entires: "unlimited",
       maxGroupSize: "unlimited",
-      btnLabel: "Sign Up",
+      btnLabel: "Sign up",
     },
   ];
+  const { isMobile } = useMediaSize();
   return (
-    <div className=" h-[60vh]">
+    <div className={isMobile ? "" : "h-[60vh]"}>
       <div className="flex flex-col justify-center items-center mt-[96px]">
         <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
           Get going
@@ -49,9 +51,6 @@ const ProposalSection = () => {
         <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px]">
           Learn about our account options
         </div>
-        {/* <div className="text-[#2F4644] text-2xl font-light !leading-[120%] tracking-[-2px] mb-10">
-          Get the most out of cryptool
-        </div> */}
       </div>
       <div className="flex flex-wrap justify-center items-center gap-6 mb-4 mt-4 lg:mx-40 mx-0">
         {plans.map((item, index) => {
@@ -87,8 +86,9 @@ const ProposalSection = () => {
                 </div>
               </div>
               <HoverEffectBtn
-                className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
-                width={100}
+                className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 !w-[120px]"
+                strokeDashoffset={-195}
+                width={120}
                 height={40}
                 label={item.btnLabel}
               />

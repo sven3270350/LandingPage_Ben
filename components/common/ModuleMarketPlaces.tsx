@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import { EffectCoverflow, Navigation } from "swiper/modules";
+import HoverEffectBtn from "components/common/loginBtn/HoverEffectBtn";
 
 interface SwiperProps {
   modules: (typeof EffectCoverflow | typeof Navigation)[];
@@ -38,6 +39,12 @@ const ModuleMarketPlaces = () => {
       scale: 0.8,
       modifier: 1,
     },
+  };
+  const handleClick = () => {
+    window.open(
+      "https://docs.google.com/document/d/19iuROlL5QV43Li6KRaPkuBIDWDIv1c3OdBbwgS9Upew/edit",
+      "_blank"
+    );
   };
   return (
     <div className="lg:mx-40 mx-0 mt-[97px]">
@@ -163,9 +170,14 @@ const ModuleMarketPlaces = () => {
               <br />
               allocation
             </div>
-            <div className="text-[#2F4644] text-center not-italic underline underline-offset-1 text-2xl font-light !leading-[120%] tracking-[-2px] mb-10">
-              Learn more
-            </div>
+            <HoverEffectBtn
+              className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 w-[100px] h-[40px]"
+              strokeDashoffset={-165}
+              width={100}
+              height={40}
+              handleClick={handleClick}
+              label={"Learn more"}
+            />
           </div>
         </div>
       </Swiper>

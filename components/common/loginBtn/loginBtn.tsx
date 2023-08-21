@@ -2,12 +2,13 @@ import { cx } from "@emotion/css";
 import React from "react";
 
 interface LoginBtnProps {
+  className?:string
   label?: string;
   setIsLogin?: (val: boolean) => void;
   isLogin?: boolean;
 }
 
-const LoginBtn: React.FC<LoginBtnProps> = ({ label, setIsLogin, isLogin }) => {
+const LoginBtn: React.FC<LoginBtnProps> = ({ label, setIsLogin, isLogin, className }) => {
   return (
     // <div
     //   onClick={() => setIsLogin && setIsLogin(!isLogin)}
@@ -44,7 +45,8 @@ const LoginBtn: React.FC<LoginBtnProps> = ({ label, setIsLogin, isLogin }) => {
     <div
       className={cx(
         "signup-btn w-[81px] h-[40px] flex items-center justify-center cursor-pointer text-center fuller-button",
-        label === "Log in" ? "blue" : "red"
+        label === "Log in" ? "blue" : "red",
+        className
       )}
       onClick={() => setIsLogin && setIsLogin(!isLogin)}
     >

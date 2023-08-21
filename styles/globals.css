@@ -172,9 +172,15 @@ body {
 * {
   box-sizing: border-box;
 }
+
 .bg-firstSection {
-  background: linear-gradient(109.6deg, rgb(5, 85, 84) 11.2%, rgb(64, 224, 208) 91.1%);
+  background: linear-gradient(
+    109.6deg,
+    rgb(5, 85, 84) 11.2%,
+    rgb(64, 224, 208) 91.1%
+  );
 }
+
 .signup-btn {
   position: relative;
   /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.85); */
@@ -185,19 +191,23 @@ body {
     -webkit-transform 200ms ease;
   border-radius: 24px;
 }
+
 .signup-btn:active {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
   -webkit-transform: translate(0px, 2px);
   -ms-transform: translate(0px, 2px);
   transform: translate(0px, 2px);
 }
+
 .w-inline-block {
   max-width: 100%;
   display: inline-block;
 }
+
 .signup-btn:hover .gradient {
   opacity: 1 !important;
 }
+
 .button__inner {
   position: relative;
   overflow: hidden;
@@ -219,8 +229,9 @@ body {
   bottom: 0%;
   z-index: 1;
   border-radius: 12px;
-  transition: all ease-in-out .5s;
+  transition: all ease-in-out 0.5s;
 }
+
 .gradient__ball {
   width: 50%;
   height: 50%;
@@ -259,12 +270,18 @@ body {
   bottom: 0%;
   opacity: 0.25;
 }
+
 .gradient__ball.gradient__ball--1 {
   animation: gradient1 10s infinite;
 }
+
 .gradient__ball.gradient__ball--2 {
   animation: gradient2 10s infinite;
 }
+.menuitem:hover {
+  box-shadow: -1px 0px 9px 1px #2b9ab3;
+}
+
 @keyframes gradient1 {
   0% {
     transform: translate3d(0%, -100%, 0px) scale3d(1.5, 1.5, 1) rotateX(0deg)
@@ -272,24 +289,28 @@ body {
     transform-style: preserve-3d;
     will-change: transform;
   }
+
   25% {
     transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
     will-change: transform;
   }
+
   50% {
     transform: translate3d(100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
     will-change: transform;
   }
+
   75% {
     transform: translate3d(100%, -100%, 0px) scale3d(1.5, 1.5, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
     will-change: transform;
   }
+
   100% {
     transform: translate3d(0%, -100%, 0px) scale3d(1.5, 1.5, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -297,6 +318,7 @@ body {
     will-change: transform;
   }
 }
+
 @keyframes gradient2 {
   0% {
     transform: translate3d(-100%, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg)
@@ -304,24 +326,28 @@ body {
     transform-style: preserve-3d;
     will-change: transform;
   }
+
   25% {
     transform: translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
     will-change: transform;
   }
+
   50% {
     transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
     will-change: transform;
   }
+
   75% {
     transform: translate3d(0%, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
     will-change: transform;
   }
+
   100% {
     transform: translate3d(-100%, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -329,6 +355,7 @@ body {
     will-change: transform;
   }
 }
+
 .spot {
   position: absolute;
   width: 100%;
@@ -336,21 +363,23 @@ body {
   top: 0;
   left: 0;
 }
+
 .svg-wrapper {
   margin-top: 0;
   position: relative;
   width: 100px;
   height: 40px;
+  text-align: center;
   display: inline-block;
   border-radius: 3px;
 }
 
 #shape {
-  stroke-width: 6px;
+  stroke-width: 4px;
   fill: transparent;
-  stroke: #009FFD;
+  stroke: #009ffd;
   stroke-dasharray: 50 300;
-  stroke-dashoffset: -165;
+  /* stroke-dashoffset: -165; */
   transition: 1s all ease;
   display: hidden;
 }
@@ -370,58 +399,44 @@ body {
   stroke-dasharray: 50 0;
   stroke-width: 3px;
   stroke-dashoffset: 0;
-  stroke: #06D6A0;
+  stroke: #06d6a0;
   display: block !important;
 }
 
 .fuller-button {
-	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
 .fuller-button.blue {
-	box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,0.5);
-	border: #0dd solid 2px;
+  box-shadow: inset 0 0 1em rgba(0, 170, 170, 0.5),
+    0 0 1em rgba(0, 170, 170, 0.5);
+  border: #0dd solid 2px;
 }
 
 .fuller-button.blue:hover {
-	background-color: #0dd;
-	box-shadow: inset 0 0 0 rgba(0,170,170,0.5), 0 0 1.5em rgba(0,170,170,0.7);
+  background-color: #0dd;
+  box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5),
+    0 0 1.5em rgba(0, 170, 170, 0.7);
 }
+
 .fuller-button.red {
-  box-shadow: inset 0 0 1em rgba(251,81,81,0.4), 0 0 1em rgba(251,81,81,0.4);
+  box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4),
+    0 0 1em rgba(251, 81, 81, 0.4);
   border: #fb5454 solid 2px;
 }
 
 .fuller-button.red:hover {
   background-color: #fb5454;
-  box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 1.5em rgba(251,81,81,0.6);
-}
-/* .swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4),
+    0 0 1.5em rgba(251, 81, 81, 0.6);
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-} */
-
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-} */
-/* .swiper {
-  width: 100%;
-  height: 100%;
-} */
 #__next {
   height: 100vh;
   display: flex;
   justify-content: center;
 }
+
 .mySwiper {
   width: 100%;
   height: 100%;
@@ -439,37 +454,45 @@ body {
   align-items: center;
   height: 100% !important;
 }
+
 .isSticky {
   background-color: rgb(255, 255, 255);
   color: black;
   box-shadow: 0 5px 5px #0000001a;
   transition: all ease-in-out 0.8s;
 }
+
 .sticky {
   transition: all ease-in-out 0.8s;
 }
+
 .navItem:hover .hoverEvent {
   animation: navItemHover 0.5s forwards;
   filter: blur(4px);
   -webkit-filter: blur(4px);
 }
 
-.swiper-button-prev , .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   top: var(--swiper-navigation-top-offset, 25%) !important;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: black;
   width: auto;
   height: auto;
   padding: 5px 8px;
   border-radius: 100%;
 }
-.swiper-button-prev:after, .swiper-button-next:after {
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
   font-size: 10px !important;
 }
+
 .swiper .swiper-button-prev {
   left: 26.6vw !important;
   width: 44px;
 }
+
 .swiper .swiper-button-next {
   right: 26.7vw !important;
   width: 44px;
@@ -486,6 +509,7 @@ body {
     transform-style: preserve-3d;
     will-change: transform;
   }
+
   100% {
     transform: translate3d(0px, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);

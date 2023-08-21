@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules";
 import "swiper/css";
 import { useState } from "react";
+import { useMediaSize } from "components/hooks/media-size";
 
 interface SwiperProps {
   className: string;
@@ -22,6 +23,8 @@ interface SwiperProps {
 
 const Home: NextPage = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
+  const { isMobile } = useMediaSize();
+
 
   const handleSlideChange = (swiper: any) => {
     setActiveSlide(swiper.activeIndex);
@@ -39,6 +42,15 @@ const Home: NextPage = () => {
   return (
     <>
       <Header activeSlide={activeSlide} />
+      {isMobile ? 
+      <div className="flex flex-col w-full">
+        <IntroSection />
+        <VideoSection />
+        <ModuleMarketPlaces />
+        <ProposalSection />
+        <RequestDemo />
+        <Footer />
+      </div>:
       <Swiper {...swiperProps}>
         <SwiperSlide>
           <IntroSection />
@@ -50,11 +62,14 @@ const Home: NextPage = () => {
           <ModuleMarketPlaces />
         </SwiperSlide>
         <SwiperSlide>
+          <div className="flex flex-col justify-between h-full">
           <ProposalSection />
           <RequestDemo />
           <Footer />
+          </div>
         </SwiperSlide>
       </Swiper>
+      }
     </>
   );
 };
