@@ -43,7 +43,7 @@ const ProposalSection = () => {
   ];
   const { isMobile } = useMediaSize();
   return (
-    <div className={isMobile ? "" : "h-[60vh]"}>
+    <div className={isMobile ? "" : "h-[70vh]"}>
       <div className="flex flex-col justify-center items-center mt-[96px]">
         <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
           Get going
