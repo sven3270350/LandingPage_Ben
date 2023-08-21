@@ -23,18 +23,29 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
   const [isLogin, setIsLogin] = useState(false);
   const [ismenuClick, setIsMenuClick] = useState(false);
   const { isMobile } = useMediaSize();
+  const [mousePosition, setMousePosition] = useState(false);
+  const onScroll = () => {
+    if (window.scrollY > window.innerHeight - 70) {
+      setMousePosition(true);
+    } else {
+      setMousePosition(false);
+    }
+  };
   useEffect(() => {
     if (isMobile) {
       setIsMenuClick(false);
     }
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, [isMobile]);
-  console.log("ismenuclick", ismenuClick);
 
   return (
     <nav
       className={cx(
         "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full max-w-[1920px]",
-        activeSlide > 0 ? "isSticky" : "",
+        activeSlide > 0 || mousePosition ? "isSticky" : "",
         isMobile && ismenuClick ? "h-[100vh] !bg-[#03D9C8]" : ""
       )}
     >
@@ -42,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
         <div className="flex justify-between items-center w-full">
           <div className="flex flex-row flex-shrink-0 justify-between 2xl:gap-[121px] gap-0">
             <div>
-              {activeSlide ? (
+              {activeSlide || mousePosition ? (
                 <Image
                   width={116}
                   height={50}
