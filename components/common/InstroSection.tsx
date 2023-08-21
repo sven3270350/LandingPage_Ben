@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ArrowBelow from "public/assets/icons/ArrowBelow";
-import { cx } from "@emotion/css";
+import { cx } from '@emotion/css'
 import { useMediaSize } from "components/hooks/media-size";
 
 const IntroSection = () => {

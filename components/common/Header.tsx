@@ -1,4 +1,4 @@
-import { cx } from "@emotion/css";
+import { cx } from '@emotion/css'
 import React, { useEffect, useState } from "react";
 import LoginBtn from "./loginBtn/loginBtn";
 import { ROUTE_PATH } from "components/hooks/route-path";
@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
   return (
     <nav
       className={cx(
-        "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full max-w-[1920px]",
+        "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full",
         activeSlide > 0 || mousePosition ? "isSticky" : "",
         isMobile && ismenuClick ? "h-[100vh] !bg-[#03D9C8]" : ""
       )}
@@ -155,16 +155,16 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
               )}
               {isLogin ? (
                 <div className="flex flex-row items-center ml-4 gap-4">
-                  <Link href={ROUTE_PATH.HOME} passHref className="w-[20px]">
+                  <Link href={ROUTE_PATH.Login} passHref className="w-[20px]">
                     <Notifications width={20} height={20} />
                   </Link>
-                  <Link href={ROUTE_PATH.HOME} passHref className="w-[20px]">
+                  <Link href={ROUTE_PATH.Login} passHref className="w-[20px]">
                     <Help width={20} height={20} />
                   </Link>
-                  <Link href={ROUTE_PATH.HOME} passHref className="w-[20px]">
+                  <Link href={ROUTE_PATH.Login} passHref className="w-[20px]">
                     <Group width={20} height={20} />
                   </Link>
-                  <Link href={ROUTE_PATH.HOME} passHref className="w-[40px]">
+                  <Link href={ROUTE_PATH.Login} passHref className="w-[40px]">
                     <Image
                       width={40}
                       height={40}
