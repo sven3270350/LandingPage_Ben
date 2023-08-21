@@ -5,10 +5,10 @@ interface HoverEffectBtnProps {
   className?: string;
   width?: number;
   height?: number;
-  handleClick?:() => void;
+  handleClick?: () => void;
   label?: string;
-  strokeDashoffset?:number;
-  role?:string;
+  strokeDashoffset?: number;
+  role?: string;
 }
 
 const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
@@ -18,27 +18,34 @@ const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
   label,
   handleClick,
   strokeDashoffset,
-  role
-}) => 
-{
-  
+  role,
+}) => {
   const [isLoading, setIsLoading] = useState<Boolean>(false);
 
   return (
-    <div className={className} onClick={() => {
-      handleClick;
-      setIsLoading(true);
-    }}>
+    <div
+      className={className}
+      onClick={() => {
+        handleClick;
+        setIsLoading(true);
+      }}
+    >
       <svg height={height} width={width} xmlns="http://www.w3.org/2000/svg">
-        <rect id="shape" strokeDashoffset={strokeDashoffset} height={height} width={width} />
+        <rect
+          id="shape"
+          strokeDashoffset={strokeDashoffset}
+          height={height}
+          width={width}
+        />
       </svg>
       <div id="text">
         <Link href="">
           <span className="spot"></span>
-          {isLoading && role === "Proposal" ? "Coming Soon":label}
+          {isLoading && role === "Proposal" ? "Coming Soon" : label}
         </Link>
       </div>
     </div>
-)};
+  );
+};
 
 export default HoverEffectBtn;

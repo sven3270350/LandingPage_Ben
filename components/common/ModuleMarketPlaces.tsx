@@ -47,17 +47,18 @@ const ModuleMarketPlaces = () => {
       "_blank"
     );
   };
-  const [ swiperPosition, setSwiperPosition ] = useState(0);
+  const [swiperPosition, setSwiperPosition] = useState(0);
   useEffect(() => {
     const handleResize = () => {
-      if(window.innerWidth < 1600)
-      {setSwiperPosition((window.innerWidth - 1600)/2)};
+      if (window.innerWidth < 1600) {
+        setSwiperPosition((window.innerWidth - 1600) / 2);
+      }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -72,7 +73,10 @@ const ModuleMarketPlaces = () => {
       <div className="text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%]">
         Use the modules to make crypto easy
       </div>
-      <Swiper style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }} {...swiperProps}>
+      <Swiper
+        style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
+        {...swiperProps}
+      >
         <SwiperSlide>
           <Image
             className="rounded-[44px]"
@@ -177,25 +181,25 @@ const ModuleMarketPlaces = () => {
         </SwiperSlide>
       </Swiper>
       <div className="flex flex-col justify-center items-center !mt-5">
-          <div className="flex flex-col justify-center items-center w-[513px]">
-            <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-12">
-              Cryptool Marketplace
-            </div>
-            <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-8">
-              Buy or sell tokens, unvested allocations, NFTs,
-              <br />
-              Ambassador Program rights, and more..
-            </div>
-            <HoverEffectBtn
-              className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 !w-[104px] h-[40px]"
-              strokeDashoffset={-168}
-              width={104}
-              height={40}
-              handleClick={handleClick}
-              label={"Learn more"}
-            />
+        <div className="flex flex-col justify-center items-center w-[513px]">
+          <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-12">
+            Cryptool Marketplace
           </div>
+          <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-8">
+            Buy or sell tokens, unvested allocations, NFTs,
+            <br />
+            Ambassador Program rights, and more..
+          </div>
+          <HoverEffectBtn
+            className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 !w-[104px] h-[40px]"
+            strokeDashoffset={-168}
+            width={104}
+            height={40}
+            handleClick={handleClick}
+            label={"Learn more"}
+          />
         </div>
+      </div>
     </div>
   );
 };

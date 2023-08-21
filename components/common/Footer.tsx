@@ -7,7 +7,7 @@ import Linkedin from "public/assets/icons/Linkedin";
 import Telegram from "public/assets/icons/Telegram";
 import Calendar from "public/assets/icons/Calendar";
 import { useMediaSize } from "components/hooks/media-size";
-import { cx } from '@emotion/css'
+import { cx } from "@emotion/css";
 interface MenuItem {
   title: string;
   items: string[];
@@ -26,9 +26,17 @@ const Footer = () => {
   ];
   const { isTablet } = useMediaSize();
   return (
-    <div className={isTablet ? "flex justify-center" : "h-[30vh] flex justify-center"}>
-      <div className={cx("w-full flex justify-between pt-8 pb-12 pr-64 pl-44 border-solid border-t-[1px] border-[#F0F0F0] footer-gradient",
-        isTablet ? "flex-col" : "flex-row-reverse")}>
+    <div
+      className={
+        isTablet ? "flex justify-center" : "h-[30vh] flex justify-center"
+      }
+    >
+      <div
+        className={cx(
+          "w-full flex justify-between pt-8 pb-12 pr-64 pl-44 border-solid border-t-[1px] border-[#F0F0F0] footer-gradient",
+          isTablet ? "flex-col" : "flex-row-reverse"
+        )}
+      >
         <div className="flex flex-wrap justify-around">
           {MenuItems.map((item) => (
             <FooterItem

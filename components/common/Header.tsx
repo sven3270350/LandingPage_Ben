@@ -1,4 +1,4 @@
-import { cx } from '@emotion/css'
+import { cx } from "@emotion/css";
 import React, { useEffect, useState } from "react";
 import LoginBtn from "./loginBtn/loginBtn";
 import { ROUTE_PATH } from "components/hooks/route-path";

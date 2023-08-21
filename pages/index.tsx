@@ -25,7 +25,6 @@ const Home: NextPage = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const { isTablet } = useMediaSize();
 
-
   const handleSlideChange = (swiper: any) => {
     setActiveSlide(swiper.activeIndex);
   };
@@ -42,34 +41,35 @@ const Home: NextPage = () => {
   return (
     <>
       <Header activeSlide={activeSlide} />
-      {isTablet ? 
-      <div className="flex flex-col w-full">
-        <IntroSection />
-        <VideoSection />
-        <ModuleMarketPlaces />
-        <ProposalSection />
-        <RequestDemo />
-        <Footer />
-      </div>:
-      <Swiper {...swiperProps}>
-        <SwiperSlide>
+      {isTablet ? (
+        <div className="flex flex-col w-full">
           <IntroSection />
-        </SwiperSlide>
-        <SwiperSlide>
           <VideoSection />
-        </SwiperSlide>
-        <SwiperSlide>
           <ModuleMarketPlaces />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col justify-between h-full">
           <ProposalSection />
           <RequestDemo />
           <Footer />
-          </div>
-        </SwiperSlide>
-      </Swiper>
-      }
+        </div>
+      ) : (
+        <Swiper {...swiperProps}>
+          <SwiperSlide>
+            <IntroSection />
+          </SwiperSlide>
+          <SwiperSlide>
+            <VideoSection />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ModuleMarketPlaces />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-between h-full">
+              <ProposalSection />
+              <RequestDemo />
+              <Footer />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      )}
     </>
   );
 };

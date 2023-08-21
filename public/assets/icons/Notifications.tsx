@@ -21,7 +21,7 @@ const Notifications: React.FC<NotificationsProps> = ({
   >
     <mask
       id="mask0_157_365"
-      style={{maskType:"alpha"}}
+      style={{ maskType: "alpha" }}
       maskUnits="userSpaceOnUse"
       x="0"
       y="0"

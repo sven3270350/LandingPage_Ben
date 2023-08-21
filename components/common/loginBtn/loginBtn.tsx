@@ -1,15 +1,20 @@
-import { cx } from '@emotion/css'
+import { cx } from "@emotion/css";
 import React from "react";
-import { useCustomRouter } from 'components/hooks/custom-router';
+import { useCustomRouter } from "components/hooks/custom-router";
 
 interface LoginBtnProps {
-  className?:string
+  className?: string;
   label?: string;
   setIsLogin?: (val: boolean) => void;
   isLogin?: boolean;
 }
 
-const LoginBtn: React.FC<LoginBtnProps> = ({ label, setIsLogin, isLogin, className }) => {
+const LoginBtn: React.FC<LoginBtnProps> = ({
+  label,
+  setIsLogin,
+  isLogin,
+  className,
+}) => {
   const { goToLogin, goToSignup } = useCustomRouter();
 
   return (
@@ -20,9 +25,11 @@ const LoginBtn: React.FC<LoginBtnProps> = ({ label, setIsLogin, isLogin, classNa
         className
       )}
       onClick={() => {
-        // setIsLogin && setIsLogin(!isLogin); 
-        {label==="Log in" ? goToLogin() : goToSignup() }
-        }}
+        // setIsLogin && setIsLogin(!isLogin);
+        {
+          label === "Log in" ? goToLogin() : goToSignup();
+        }
+      }}
     >
       {label}
     </div>

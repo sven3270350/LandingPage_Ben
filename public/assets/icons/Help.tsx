@@ -17,7 +17,7 @@ const Help: React.FC<HelpProps> = ({ className, width, height }) => (
   >
     <mask
       id="mask0_328_372"
-      style={{maskType:"alpha"}}
+      style={{ maskType: "alpha" }}
       maskUnits="userSpaceOnUse"
       x="0"
       y="0"

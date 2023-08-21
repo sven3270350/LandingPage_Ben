@@ -17,7 +17,7 @@ const Group: React.FC<GroupProps> = ({ className, width, height }) => (
   >
     <mask
       id="mask0_328_353"
-      style={{maskType:"alpha"}}
+      style={{ maskType: "alpha" }}
       maskUnits="userSpaceOnUse"
       x="0"
       y="0"
