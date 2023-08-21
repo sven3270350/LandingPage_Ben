@@ -41,9 +41,9 @@ const ProposalSection = () => {
       btnLabel: "Sign up",
     },
   ];
-  const { isMobile } = useMediaSize();
+  const { isTablet } = useMediaSize();
   return (
-    <div className={isMobile ? "" : "h-[70vh]"}>
+    <div className={isTablet ? "" : "h-[70vh]"}>
       <div className="flex flex-col justify-center items-center mt-[96px]">
         <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
           Get going
@@ -57,7 +57,7 @@ const ProposalSection = () => {
           return (
             <div
               key={index}
-              className="flex flex-col col-auto w-[410px] h-[489px] items-start"
+              className="flex flex-col col-auto min-w-[350px] w-[30%] h-[489px] items-start"
             >
               <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
                 {item.title}
@@ -65,25 +65,30 @@ const ProposalSection = () => {
               <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px]">
                 ${item.price}
               </div>
-              <div className="text-[#54716F] text-base not-italic font-normal mb-8">
+              <div className="text-[#54716F] text-base not-italic font-normal mb-5">
                 {item.label}
               </div>
-              <div className="flex flex-col items-start gap-4 mb-20">
-                <div className="text-[#54716F] text-base not-italic font-normal flex flex-row gap-4">
+              <div className="flex flex-col items-start gap-4 mb-10">
+                <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                   Wallet acces per account
                   <div className="text-black">{item.walletAccessCount}</div>
                 </div>
-                <div className="text-[#54716F] text-base not-italic font-normal flex flex-row gap-4">
+                <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                   Asset & Allocation Entires
                   <div className="text-black">{item.entires}</div>
                 </div>
-                <div className="text-[#54716F] text-base not-italic font-normal flex flex-row gap-4">
+                <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                   Max Group size (# User Accounts)
                   <div className="text-black">{item.maxGroupSize}</div>
                 </div>
-                <div className="text-[#2F4644] cursor-pointer font-light text-2xl leading-[120%] tracking-[-2px] underline underline-offset-1">
-                  Learn more
-                </div>
+                <HoverEffectBtn
+                  className="svg-wrapper opacity-[.8] hover:opacity-[1] text-[#2F4644] font-light text-2xl !w-[120px] leading-[120%] tracking-[-2px]"
+                  strokeDashoffset={-195}
+                  role="Proposal"
+                  width={120}
+                  height={40}
+                  label={"Learn more"}
+                />
               </div>
               <HoverEffectBtn
                 className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 !w-[120px]"

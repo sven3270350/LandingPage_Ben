@@ -230,6 +230,7 @@ body {
   /* stroke-dashoffset: -165; */
   transition: 1s all ease;
   display: hidden;
+  animation-fill-mode: forwards;
 }
 
 #text {

@@ -22,7 +22,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
   const [isLogin, setIsLogin] = useState(false);
   const [ismenuClick, setIsMenuClick] = useState(false);
-  const { isMobile } = useMediaSize();
+  const { isTablet } = useMediaSize();
   const [mousePosition, setMousePosition] = useState(false);
   const onScroll = () => {
     if (window.scrollY > window.innerHeight - 70) {
@@ -32,21 +32,21 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
     }
   };
   useEffect(() => {
-    if (isMobile) {
+    if (isTablet) {
       setIsMenuClick(false);
     }
     window.addEventListener("scroll", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, [isMobile]);
+  }, [isTablet]);
 
   return (
     <nav
       className={cx(
         "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full",
         activeSlide > 0 || mousePosition ? "isSticky" : "",
-        isMobile && ismenuClick ? "h-[100vh] !bg-[#03D9C8]" : ""
+        isTablet && ismenuClick ? "h-[100vh] !bg-[#03D9C8]" : ""
       )}
     >
       <div className="flex items-center justify-between">
@@ -69,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                 />
               )}
             </div>
-            {!isMobile && (
+            {!isTablet && (
               <div className="hidden md:flex items-center">
                 <HoverEffectBtn
                   className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
@@ -97,9 +97,9 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
           </div>
         </div>
 
-        {!isMobile && (
+        {!isTablet && (
           <div className="flex flex-row items-center">
-            {isLogin && !isMobile && (
+            {isLogin && !isTablet && (
               <div className="hidden 2xl:flex flex-row items-center mr-10 w-[333px]">
                 <HoverEffectBtn
                   className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
@@ -190,7 +190,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
             </div>
           </div>
         )}
-        {isMobile ? (
+        {isTablet ? (
           <button
             className={cx(
               "px-3 py-2 rounded-3xl",
@@ -208,7 +208,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
           <></>
         )}
       </div>
-      {isMobile && ismenuClick && (
+      {isTablet && ismenuClick && (
         <div className="mt-[10px] flex flex-col justify-between h-5/6 text-[#2F4644]">
           <div className="flex flex-col gap-2">
             <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">

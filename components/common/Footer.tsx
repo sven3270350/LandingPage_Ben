@@ -24,11 +24,11 @@ const Footer = () => {
       items: ["Contact Support", "Servieces & Pricing", "FAQ"],
     },
   ];
-  const { isMobile } = useMediaSize();
+  const { isTablet } = useMediaSize();
   return (
-    <div className={isMobile ? "flex justify-center" : "h-[30vh] flex justify-center"}>
+    <div className={isTablet ? "flex justify-center" : "h-[30vh] flex justify-center"}>
       <div className={cx("w-full flex justify-between pt-8 pb-12 pr-64 pl-44 border-solid border-t-[1px] border-[#F0F0F0] footer-gradient",
-        isMobile ? "flex-col" : "flex-row-reverse")}>
+        isTablet ? "flex-col" : "flex-row-reverse")}>
         <div className="flex flex-wrap justify-around">
           {MenuItems.map((item) => (
             <FooterItem

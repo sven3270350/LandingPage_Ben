@@ -23,7 +23,7 @@ interface SwiperProps {
 
 const Home: NextPage = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
-  const { isMobile } = useMediaSize();
+  const { isTablet } = useMediaSize();
 
 
   const handleSlideChange = (swiper: any) => {
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Header activeSlide={activeSlide} />
-      {isMobile ? 
+      {isTablet ? 
       <div className="flex flex-col w-full">
         <IntroSection />
         <VideoSection />
