@@ -1,5 +1,5 @@
-import { ROUTE_PATH } from './route-path';
-import { useRouter } from 'next/router';
+import { ROUTE_PATH } from "./route-path";
+import { useRouter } from "next/router";
 
 export const useCustomRouter = () => {
   const router = useRouter();
@@ -21,7 +21,15 @@ export const useCustomRouter = () => {
   };
 
   const goToManualSignUp = () => {
-    return router.push(ROUTE_PATH.goToManualSignUp);
+    return router.push(ROUTE_PATH.ManualSignUp);
+  };
+
+  const goToChangePassword = () => {
+    return router.push(ROUTE_PATH.ChangePassword);
+  };
+
+  const goToNewEmail = () => {
+    return router.push(ROUTE_PATH.NewEmail);
   };
 
   return {
@@ -30,5 +38,7 @@ export const useCustomRouter = () => {
     goToSignup,
     goToForgotPassword,
     goToManualSignUp,
+    goToChangePassword,
+    goToNewEmail,
   };
 };
