@@ -48,7 +48,7 @@ const ProposalSection = () => {
         <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
           Get going
         </div>
-        <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px]">
+        <div className="text-[#2F4644] text-center font-normal text-[52px] !leading-[120%] tracking-[-2px]">
           Learn about our account options
         </div>
       </div>
