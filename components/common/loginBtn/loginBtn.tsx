@@ -19,7 +19,10 @@ const LoginBtn: React.FC<LoginBtnProps> = ({ label, setIsLogin, isLogin, classNa
         label === "Log in" ? "blue" : "red",
         className
       )}
-      onClick={() => {setIsLogin && setIsLogin(!isLogin); {label==="Log in" ? goToLogin() : goToSignup() } ;}}
+      onClick={() => {
+        // setIsLogin && setIsLogin(!isLogin); 
+        {label==="Log in" ? goToLogin() : goToSignup() }
+        }}
     >
       {label}
     </div>
