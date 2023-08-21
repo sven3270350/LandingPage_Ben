@@ -473,7 +473,7 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  top: var(--swiper-navigation-top-offset, 25%) !important;
+  top: var(--swiper-navigation-top-offset, 45%) !important;
   background-color: #f0f0f0;
   color: black;
   width: auto;

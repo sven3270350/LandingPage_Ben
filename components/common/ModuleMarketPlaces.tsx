@@ -160,7 +160,8 @@ const ModuleMarketPlaces = () => {
             Learn more
           </div>
         </SwiperSlide>
-        <div className="flex flex-col justify-center items-center !mt-11 lg:mx-40 mx-0">
+      </Swiper>
+      <div className="flex flex-col justify-center items-center !mt-11 lg:mx-40 mx-0">
           <div className="flex flex-col justify-center items-center w-[513px]">
             <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-12">
               Cryptool Marketplace
@@ -180,7 +181,6 @@ const ModuleMarketPlaces = () => {
             />
           </div>
         </div>
-      </Swiper>
     </div>
   );
 };
