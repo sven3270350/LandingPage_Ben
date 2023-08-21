@@ -88,6 +88,7 @@ const ProposalSection = () => {
               <HoverEffectBtn
                 className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 !w-[120px]"
                 strokeDashoffset={-195}
+                role="Proposal"
                 width={120}
                 height={40}
                 label={item.btnLabel}

@@ -7,7 +7,8 @@ interface HoverEffectBtnProps {
   height?: number;
   handleClick?:() => void;
   label?: string;
-  strokeDashoffset?:number
+  strokeDashoffset?:number;
+  role?:string;
 }
 
 const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
@@ -16,7 +17,8 @@ const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
   height,
   label,
   handleClick,
-  strokeDashoffset
+  strokeDashoffset,
+  role
 }) => 
 {
   
@@ -33,7 +35,7 @@ const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
       <div id="text">
         <Link href="">
           <span className="spot"></span>
-          {isLoading? "Coming Soon":label}
+          {isLoading && role === "Proposal" ? "Coming Soon":label}
         </Link>
       </div>
     </div>
