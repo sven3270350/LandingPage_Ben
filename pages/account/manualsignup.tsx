@@ -1,10 +1,16 @@
+import Check from "public/assets/icons/Check";
 import CloseEye from "public/assets/icons/CloseEye";
 import OpenEye from "public/assets/icons/OpenEye";
+import UnCheck from "public/assets/icons/UnCheck";
 import React, { useState } from "react";
 
 const ManualSignUpPage = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isRepeatPasswordVisible, setIsRepeatPasswordVisible] = useState(false);
+  const [ email, setEmail ] = useState('');
+  const [ password, setPassword ] = useState('');
+  const [ confirmPassword, setConfirmPassword ] = useState('');
+  const nonAlphanumericRegex = /[^a-zA-Z0-9]/;
   return (
     <div className="flex justify-center items-center bg-slate-300 w-full">
       <div className="w-[425px] flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
@@ -15,13 +21,8 @@ const ManualSignUpPage = () => {
           <div className="text-[#2F4644] text-base font-semibold mb-2">
             Email Address
           </div>
-          <input
-            type="email"
-            id="email"
-            className="bg-[#F0F0F0] border border-gray-300 text-black text-sm block w-full px-3 py-2 rounded-xl"
-            placeholder="Enter your email address"
-            required
-          />
+          <input onChange={(e) => setEmail(e.target.value)} type="email" id="email" className="bg-[#F0F0F0] border border-gray-300 text-black text-sm block w-full px-3 py-2 rounded-xl" placeholder="Enter your email address" required />
+                    {(!email.includes("@") && email !== '') && <div className="text-[#E24747] pl-3 mt-2 font-normal text-xs leading-[180%">Email is not valid</div>}
           <div className="text-[#2F4644] text-base font-semibold mt-6 mb-2">
             Password
           </div>
@@ -29,6 +30,7 @@ const ManualSignUpPage = () => {
             <input
               type={isPasswordVisible ? "text" : "password"}
               id="password"
+              onChange={(e) => setPassword(e.target.value)}
               className="bg-[#F0F0F0] border border-gray-300 text-black text-sm block w-full px-3 py-2 rounded-xl"
               placeholder="Enter your password"
               required
@@ -44,6 +46,23 @@ const ManualSignUpPage = () => {
               )}
             </button>
           </div>
+          <div className="text-[#54716F] text-base font-normal text-start mt-6 mb-[10px]">Password requirement</div>
+                    <div className="text-[#54716F] gap-[15px] font-normal text-xs leading-[180%] flex flex-row items-center">
+                    {(password.length > 5  && password !== '') ? <Check width={16} height={16} />: <UnCheck width={16} height={16} />}
+                        must be at least 6 characters
+                    </div>
+                    <div className="text-[#54716F] gap-[15px] font-normal text-xs leading-[180%] flex flex-row items-center">
+                    {(password.length < 21  && password !== '') ? <Check width={16} height={16} />: <UnCheck width={16} height={16} />}
+                        must be fewer than 20 characters
+                    </div>
+                    <div className="text-[#54716F] gap-[15px] font-normal text-xs leading-[180%] flex flex-row items-center">
+                    {(password.length < 21  && password !== '') ? <Check width={16} height={16} />: <UnCheck width={16} height={16} />}
+                        must be different from previous password
+                    </div>
+                    <div className="text-[#54716F] gap-[15px] font-normal text-xs leading-[180%] flex flex-row items-center">
+                    {(nonAlphanumericRegex.test(password)  && password !== '') ? <Check width={16} height={16} />: <UnCheck width={16} height={16} />}
+                        must include a character that is not a letter or number
+                    </div>
           <div className="text-[#2F4644] text-base font-semibold mt-6 mb-2">
             Repeat Password
           </div>
@@ -51,6 +70,7 @@ const ManualSignUpPage = () => {
             <input
               type={isRepeatPasswordVisible ? "text" : "password"}
               id="password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
               className="bg-[#F0F0F0] border border-gray-300 text-black text-sm block w-full px-3 py-2 rounded-xl"
               placeholder="Enter your password"
               required
@@ -68,6 +88,7 @@ const ManualSignUpPage = () => {
               )}
             </button>
           </div>
+          {((password !== confirmPassword) && confirmPassword !== "") && <div className="text-[#E24747] mt-[10px] text-xs font-normal">Password does not match</div>}
         </div>
         <div className="flex items-center justify-start gap-[15px] w-full">
           <input type="checkbox" />
