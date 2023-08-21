@@ -130,6 +130,16 @@ const ManualSignUpPage = () => {
                 Password does not match
               </div>
             )}
+          <div className="text-[#2F4644] text-base font-semibold mt-6 mb-2">
+            Ambassador Program
+          </div>
+          <input
+            type="text"
+            id="text"
+            className="bg-[#F0F0F0] border border-gray-300 text-black text-sm block w-full px-3 py-2 rounded-xl"
+            placeholder="Enter Referral Code"
+            required
+          />
         </div>
         <div className="flex items-center justify-start gap-[15px] w-full">
           <input type="checkbox" />

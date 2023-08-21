@@ -1,4 +1,5 @@
 import { useCustomRouter } from "components/hooks/custom-router";
+import router from "next/router";
 import NewEmail from "public/assets/icons/NewEmail";
 import React from "react";
 
@@ -18,7 +19,7 @@ const NewEmailPage = () => {
             Instructions have been sent to
           </div>
           <div className="text-center text-[#2F4644] text-base not-italic font-normal">
-            johndoe@gmail.com
+            {router.query.email}
           </div>
         </div>
         <div

@@ -36,7 +36,7 @@ const ForgotPasswordPage = () => {
         </div>
         <div
           className="w-full px-6 py-2 rounded-[29px] bg-[#2F4644] text-white flex justify-center cursor-pointer"
-          onClick={() => goToNewEmail()}
+          onClick={() => goToNewEmail(email)}
         >
           Send Instructions
         </div>

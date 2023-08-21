@@ -28,8 +28,14 @@ export const useCustomRouter = () => {
     return router.push(ROUTE_PATH.ChangePassword);
   };
 
-  const goToNewEmail = () => {
-    return router.push(ROUTE_PATH.NewEmail);
+  const goToNewEmail = (email: string) => {
+    return router.push(
+      {
+        pathname: `${ROUTE_PATH.NewEmail}`,
+        query: { email: email },
+      },
+      `${ROUTE_PATH.NewEmail}`
+    );
   };
 
   return {

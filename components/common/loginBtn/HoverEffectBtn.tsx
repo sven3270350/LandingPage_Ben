@@ -38,7 +38,7 @@ const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
           width={width}
         />
       </svg>
-      <div id="text">
+      <div id="hoverBtnText">
         <Link href="">
           <span className="spot"></span>
           {isLoading && role === "Proposal" ? "Coming Soon" : label}

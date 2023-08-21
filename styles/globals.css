@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 @layer base {
   html {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 }
 
@@ -233,12 +232,12 @@ body {
   animation-fill-mode: forwards;
 }
 
-#text {
+#hoverBtnText {
   margin-top: -31px;
   text-align: center;
 }
 
-#text a {
+#hoverBtnText a {
   text-decoration: none;
   font-weight: 100;
   font-size: 1.1em;
