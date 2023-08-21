@@ -5,6 +5,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import HoverEffectBtn from "components/common/loginBtn/HoverEffectBtn";
+import { useEffect, useState } from "react";
 
 interface SwiperProps {
   modules: (typeof EffectCoverflow | typeof Navigation)[];
@@ -46,8 +47,22 @@ const ModuleMarketPlaces = () => {
       "_blank"
     );
   };
+  const [ swiperPosition, setSwiperPosition ] = useState(0);
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth < 1600)
+      {setSwiperPosition((window.innerWidth - 1600)/2)};
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <div className="lg:mx-40 mx-0 mt-[97px]">
+    <div className="mt-[97px]">
       <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
         Implement
       </div>
@@ -57,7 +72,7 @@ const ModuleMarketPlaces = () => {
       <div className="text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%] tracking-[-2px]">
         Use the modules to make crypto easy
       </div>
-      <Swiper {...swiperProps}>
+      <Swiper style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }} {...swiperProps}>
         <SwiperSlide>
           <Image
             className="rounded-[44px]"
@@ -161,7 +176,7 @@ const ModuleMarketPlaces = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="flex flex-col justify-center items-center !mt-11 lg:mx-40 mx-0">
+      <div className="flex flex-col justify-center items-center !mt-5">
           <div className="flex flex-col justify-center items-center w-[513px]">
             <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-12">
               Cryptool Marketplace

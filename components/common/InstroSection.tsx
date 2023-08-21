@@ -30,7 +30,7 @@ const IntroSection = () => {
           Automated tool to easily manage, raise, {!isMobile && <br />}invest and trade cryptocurrency assets
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center mt-[-32px] lg:mx-40 mx-0">
+      <div className="flex flex-col justify-center items-center mt-[-32px]">
         <ArrowBelow className="z-10" />
         <ArrowBelow className="z-10 mt-[-9px]" />
       </div>
