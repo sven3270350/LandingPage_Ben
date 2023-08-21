@@ -187,9 +187,9 @@ const ModuleMarketPlaces = () => {
               allocation
             </div>
             <HoverEffectBtn
-              className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 w-[100px] h-[40px]"
-              strokeDashoffset={-165}
-              width={100}
+              className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 !w-[104px] h-[40px]"
+              strokeDashoffset={-168}
+              width={104}
               height={40}
               handleClick={handleClick}
               label={"Learn more"}
