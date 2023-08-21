@@ -52,12 +52,12 @@ const ProposalSection = () => {
           Learn about our account options
         </div>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-6 mb-4 mt-4 lg:mx-40 mx-0">
+      <div className="flex flex-wrap justify-between items-center gap-6 mb-4 pt-5 lg:mx-40 mt-5 mx-0 border-t-[1px] border-solid border-[#DCDCDC]">
         {plans.map((item, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col col-auto min-w-[350px] w-[30%] h-[489px] items-start"
+              className="flex flex-col col-auto min-w-[350px] w-[30%] items-start"
             >
               <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
                 {item.title}

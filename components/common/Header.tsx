@@ -55,16 +55,16 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
             <div>
               {activeSlide || mousePosition ? (
                 <Image
-                  width={116}
+                  width={163}
                   height={50}
-                  src="/assets/icons/LogoBlack.png"
                   alt="LogoBlack"
+                  src="/assets/icons/FooterLogo.png"
                 />
               ) : (
                 <Image
-                  width={116}
+                  width={163}
                   height={50}
-                  src="/assets/icons/LogoWhite.png"
+                  src="/assets/icons/LogoWhite.svg"
                   alt="LogoWhite"
                 />
               )}
