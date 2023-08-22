@@ -32,7 +32,7 @@ const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
         setIsLoading(true);
       }}
     >
-      <svg height={height} width={width} xmlns="http://www.w3.org/2000/svg">
+      <svg height={height} width={width} className=" rounded-md" xmlns="http://www.w3.org/2000/svg">
         <rect
           id="shape"
           strokeDashoffset={strokeDashoffset}
