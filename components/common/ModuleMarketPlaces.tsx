@@ -27,7 +27,7 @@ interface SwiperProps {
 const ModuleMarketPlaces = () => {
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation],
-    className: "!pt-11 !pb-20 w-[1600px]",
+    className: "!pt-11 !pb-20 w-[1600px] img-slide",
     navigation: true,
     slidesPerView: 3,
     loop: true,

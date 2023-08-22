@@ -7,7 +7,7 @@ import ModuleMarketPlaces from "components/common/ModuleMarketPlaces";
 import ProposalSection from "components/common/ProposalSection";
 import RequestDemo from "components/common/RequestDemo";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Navigation } from "swiper/modules";
+import { Mousewheel, Navigation, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import { useState } from "react";
 import { useMediaSize } from "components/hooks/media-size";
@@ -20,6 +20,15 @@ interface SwiperProps {
   modules?: any[];
   onSlideChange?: (swiper: any) => void;
   navigation?: boolean;
+  effect?: "slide" | "fade" | "cube" | "coverflow" | "flip";
+  coverflowEffect?: {
+    slideShadows?: boolean;
+    rotate?: number;
+    stretch?: number;
+    depth?: number;
+    scale?: number;
+    modifier?: number;
+  };
 }
 
 const Home: NextPage = () => {
@@ -41,10 +50,19 @@ const Home: NextPage = () => {
     className: "mySwiper",
     direction: "vertical",
     scrollbar: false,
-    modules: [Mousewheel, Navigation],
+    modules: [Mousewheel, Navigation, EffectCoverflow],
     mousewheel: true,
     onSlideChange: handleSlideChange,
     navigation: true,
+    effect: "coverflow",
+    coverflowEffect: {
+      slideShadows: true,
+      rotate: 0,
+      stretch: 0,
+      depth: -60,
+      scale: 1,
+      modifier: 1,
+    },
   };
 
   return (
