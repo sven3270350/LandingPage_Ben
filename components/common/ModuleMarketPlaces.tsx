@@ -50,8 +50,8 @@ const ModuleMarketPlaces = () => {
   const [swiperPosition, setSwiperPosition] = useState(0);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 1600) {
-        setSwiperPosition((window.innerWidth - 1600) / 2);
+      if (window.innerWidth < 1560) {
+        setSwiperPosition((window.innerWidth - 1560) / 2);
       }
     };
 
@@ -68,7 +68,7 @@ const ModuleMarketPlaces = () => {
         Implement
       </div>
       <div className="text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%] tracking-[-2px]">
-        Check out all the integrated the modules
+        Check out the integrated the modules
       </div>
       <div className="text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%]">
         Use the modules to make crypto easy

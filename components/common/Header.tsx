@@ -210,91 +210,91 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
             <></>
           )}
         </div>
-        {isTablet && ismenuClick && (
-          <div className="mt-[10px] flex flex-col justify-between h-5/6 text-[#2F4644]">
-            <div className="flex flex-col gap-2">
-              <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
-                PortFolio
-              </div>
-              <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
-                Raise
-              </div>
-              <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
-                Market
-              </div>
-              {isLogin && (
-                <>
-                  <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
-                    My Cryptool
-                  </div>
-                  <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
-                    My Calendar
-                  </div>
-                  <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
-                    My Group
-                  </div>
-                </>
-              )}
+      </div>
+      {isTablet && ismenuClick && (
+        <div className="mt-[10px] flex flex-col justify-between h-5/6 text-[#2F4644]">
+          <div className="flex flex-col gap-2">
+            <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
+              Portfolio
             </div>
-            <div>
-              <LoginBtn
-                className="w-full"
-                label="Log in"
-                setIsLogin={setIsLogin}
-                isLogin={isLogin}
-              />
-              <LoginBtn
-                className="w-full mt-[10px]"
-                label="Sing up"
-                setIsLogin={setIsLogin}
-                isLogin={isLogin}
-              />
-              <div className="flex flex-col mt-16">
-                <div className="flex flex-row space-x-2 justify-center">
-                  <Link
-                    target="blank"
-                    href={"mailto:info@cryptool.io"}
-                    className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
-                  >
-                    <Mail width={14} height={16} />
-                  </Link>
-                  <Link
-                    target="blank"
-                    href={"https://twitter.com/cryptool_io"}
-                    className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
-                  >
-                    <Twitter width={14} height={16} />
-                  </Link>
-                  <Link
-                    target="blank"
-                    href={"https://linkedin.com/company/cryptool-io"}
-                    className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
-                  >
-                    <Linkedin width={14} height={16} />
-                  </Link>
-                  <Link
-                    target="blank"
-                    href={"https://t.me/cryptool_io"}
-                    className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
-                  >
-                    <Telegram width={14} height={16} />
-                  </Link>
-                  <Link
-                    target="blank"
-                    href={"https://calendly.com/cryptool_io/"}
-                    className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
-                  >
-                    <Calendar width={14} height={16} />
-                  </Link>
+            <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
+              Raise
+            </div>
+            <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
+              Market
+            </div>
+            {isLogin && (
+              <>
+                <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
+                  My Cryptool
                 </div>
-                <div className="mt-2 text-[#54716F] text-base font-normal text-center">
-                  © 2023 Cryptool. All rights reserved
+                <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
+                  My Calendar
                 </div>
+                <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
+                  My Group
+                </div>
+              </>
+            )}
+          </div>
+          <div>
+            <LoginBtn
+              className="w-full"
+              label="Log in"
+              setIsLogin={setIsLogin}
+              isLogin={isLogin}
+            />
+            <LoginBtn
+              className="w-full mt-[10px]"
+              label="Sing up"
+              setIsLogin={setIsLogin}
+              isLogin={isLogin}
+            />
+            <div className="flex flex-col mt-16">
+              <div className="flex flex-row space-x-2 justify-center">
+                <Link
+                  target="blank"
+                  href={"mailto:info@cryptool.io"}
+                  className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
+                >
+                  <Mail width={14} height={16} />
+                </Link>
+                <Link
+                  target="blank"
+                  href={"https://twitter.com/cryptool_io"}
+                  className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
+                >
+                  <Twitter width={14} height={16} />
+                </Link>
+                <Link
+                  target="blank"
+                  href={"https://linkedin.com/company/cryptool-io"}
+                  className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
+                >
+                  <Linkedin width={14} height={16} />
+                </Link>
+                <Link
+                  target="blank"
+                  href={"https://t.me/cryptool_io"}
+                  className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
+                >
+                  <Telegram width={14} height={16} />
+                </Link>
+                <Link
+                  target="blank"
+                  href={"https://calendly.com/cryptool_io/"}
+                  className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base"
+                >
+                  <Calendar width={14} height={16} />
+                </Link>
+              </div>
+              <div className="mt-2 text-[#54716F] text-base font-normal text-center">
+                © 2023 Cryptool. All rights reserved
               </div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 };

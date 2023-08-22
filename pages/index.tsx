@@ -29,6 +29,10 @@ const Home: NextPage = () => {
     setActiveSlide(swiper.activeIndex);
   };
 
+  const handleSlideToTwo = () => {
+    console.log(1);
+  };
+
   const swiperProps: SwiperProps = {
     className: "mySwiper",
     direction: "vertical",
@@ -53,7 +57,7 @@ const Home: NextPage = () => {
       ) : (
         <Swiper {...swiperProps}>
           <SwiperSlide>
-            <IntroSection />
+            <IntroSection handleSlideToTwo={handleSlideToTwo} />
           </SwiperSlide>
           <SwiperSlide>
             <VideoSection />
