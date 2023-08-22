@@ -27,7 +27,7 @@ const FooterItem: React.FC<FooterItemProps> = ({ title, items }) => {
         ) : (
           <div
             key={index}
-            className="mb-4 w-fit text-[#54716F] font-normal cursor-pointer hover:font-bold font-sans"
+            className="mb-4 w-fit text-[#6f9793] font-normal font-sans"
           >
             {item}
           </div>
