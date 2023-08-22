@@ -9,8 +9,9 @@ import RequestDemo from "components/common/RequestDemo";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Navigation, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useMediaSize } from "components/hooks/media-size";
+import { useRouter } from "next/router";
 
 interface SwiperProps {
   className: string;
@@ -64,6 +65,13 @@ const Home: NextPage = () => {
       modifier: 1,
     },
   };
+  const router = useRouter();
+  useEffect(() => {
+    if (!isTablet && router.asPath !== "/") {
+      const next = document.querySelector("#__next");
+      next?.classList.add("h-[100vh]");
+    }
+  }, [isTablet, router.asPath]);
 
   return (
     <>

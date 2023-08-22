@@ -7,8 +7,8 @@ const Signup = () => {
   return (
     <div className="flex justify-center items-center bg-slate-300 w-full">
       <div className="w-[427px] flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
-        <div className="text-[#2F4644] text-center text-[22px] not-italic leading-[22px]">
-          Sign Up using
+        <div className="text-[#2F4644] text-center text-[22px] not-italic leading-[22px] font-medium">
+          Sign Up
         </div>
         <div className="w-full">
           <div>

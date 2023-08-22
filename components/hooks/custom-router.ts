@@ -38,6 +38,10 @@ export const useCustomRouter = () => {
     );
   };
 
+  const goToSignUpSubscribe = () => {
+    return router.push(ROUTE_PATH.SignUpSubscribe);
+  };
+
   return {
     goToHome,
     goToLogin,
@@ -46,5 +50,6 @@ export const useCustomRouter = () => {
     goToManualSignUp,
     goToChangePassword,
     goToNewEmail,
+    goToSignUpSubscribe,
   };
 };
