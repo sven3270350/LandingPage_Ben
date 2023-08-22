@@ -93,7 +93,7 @@ const ProposalSection = () => {
               </div>
               <LoginBtn
                 label={item.btnLabel}
-                className="!flex svg-wrapper opacity-[.8] hover:opacity-[1] !w-[120px] blue"
+                className="!flex svg-wrapper opacity-[.8] hover:opacity-[1] !w-[140px] blue !rounded-3xl"
               />
             </div>
           );
