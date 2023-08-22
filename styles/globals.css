@@ -240,7 +240,7 @@ body {
   stroke-dasharray: 50 0;
   stroke-width: 3px;
   stroke-dashoffset: 0;
-  stroke: #00F2DE;
+  stroke: #00f2de;
   display: block !important;
 }
 
@@ -324,9 +324,9 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  top: var(--swiper-navigation-top-offset, 44%) !important;
+  top: var(--swiper-navigation-top-offset, 39%) !important;
   background-color: #f0f0f0;
-  padding: 35px 35px;
+  padding: 50px 50px;
   border-radius: 100%;
 }
 
@@ -336,11 +336,11 @@ body {
 }
 
 .swiper .swiper-button-prev {
-  left: 497px !important;
+  left: 470px !important;
   width: 44px;
 }
 .swiper .swiper-button-next {
-  right: 497px !important;
+  right: 470px !important;
   width: 44px;
 }
 
