@@ -1,11 +1,12 @@
 import { useCustomRouter } from "components/hooks/custom-router";
-// import router from "next/router";
+import { useRouter } from "next/router";
 import NewEmail from "public/assets/icons/NewEmail";
 import React from "react";
 
 const NewEmailPage = () => {
   const { goToLogin } = useCustomRouter();
-  // const email = router?.query?.email as string;
+  const router = useRouter();
+  const email = router?.query?.email as string;
   return (
     <div className="flex justify-center items-center bg-slate-300 w-full">
       <div className="w-[457px] flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
@@ -20,7 +21,7 @@ const NewEmailPage = () => {
             Instructions have been sent to
           </div>
           <div className="text-center text-[#2F4644] text-base not-italic font-normal">
-            {/* {email} */}John@gmail.com
+            {email}
           </div>
         </div>
         <div

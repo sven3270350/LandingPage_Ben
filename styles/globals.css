@@ -219,6 +219,7 @@ body {
   text-align: center;
   display: inline-block;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 #shape {
