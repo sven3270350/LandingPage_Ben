@@ -67,7 +67,7 @@ const Home: NextPage = () => {
   };
   const router = useRouter();
   useEffect(() => {
-    if (!isTablet && router.asPath !== "/") {
+    if (!isTablet && router.asPath === "/") {
       const next = document.querySelector("#__next");
       next?.classList.add("h-[100vh]");
     }
