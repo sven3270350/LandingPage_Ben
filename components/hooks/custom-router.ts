@@ -42,6 +42,10 @@ export const useCustomRouter = () => {
     return router.push(ROUTE_PATH.SignUpSubscribe);
   };
 
+  const goToSentEmail = () => {
+    return router.push(ROUTE_PATH.SentEmail);
+  };
+
   return {
     goToHome,
     goToLogin,
@@ -51,5 +55,6 @@ export const useCustomRouter = () => {
     goToChangePassword,
     goToNewEmail,
     goToSignUpSubscribe,
+    goToSentEmail,
   };
 };

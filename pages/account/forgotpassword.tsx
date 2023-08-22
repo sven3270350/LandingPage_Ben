@@ -5,7 +5,7 @@ const ForgotPasswordPage = () => {
   const { goToNewEmail } = useCustomRouter();
   const [email, setEmail] = useState("");
   return (
-    <div className="flex justify-center items-center bg-slate-300 w-full">
+    <div className="flex justify-center items-center bg-slate-300 w-full h-[100vh]">
       <div className="w-[424px] flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
         <div>
           <div className="text-[#2F4644] text-center text-[22px] font-medium not-italic leading-[22px]">
