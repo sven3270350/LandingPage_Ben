@@ -63,15 +63,15 @@ const ModuleMarketPlaces = () => {
   }, []);
 
   return (
-    <div className="mt-[97px]">
+    <div className="mt-[97px] font-sans">
       <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
         Implement
       </div>
-      <div className="text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%] tracking-[-2px]">
+      <div className="text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%] tracking-[-2px] font-sans">
         Check out the integrated the modules
       </div>
-      <div className="text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%]">
-        Use the modules to make crypto easy
+      <div className="text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%] font-sans">
+        Learn how the integrated modules work
       </div>
       <Swiper
         style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
@@ -183,15 +183,15 @@ const ModuleMarketPlaces = () => {
       <div className="flex flex-col justify-center items-center !mt-5">
         <div className="flex flex-col justify-center items-center w-[513px]">
           <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-12">
-            Cryptool Marketplace
+            Cryptool Market
           </div>
-          <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-8">
+          <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-8 font-sans">
             Buy or sell tokens, unvested allocations, NFTs,
             <br />
             Ambassador Program rights, and more..
           </div>
           <HoverEffectBtn
-            className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 !w-[104px] h-[40px]"
+            className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 !w-[104px] h-[40px] font-sans"
             strokeDashoffset={-168}
             width={104}
             height={40}

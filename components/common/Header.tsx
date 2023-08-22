@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
   return (
     <nav
       className={cx(
-        "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full",
+        "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full font-sans",
         activeSlide > 0 || mousePosition ? "isSticky" : "",
         isTablet && ismenuClick ? "h-[100vh] !bg-[#03D9C8]" : ""
       )}
@@ -73,21 +73,21 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
               {!isTablet && (
                 <div className="hidden md:flex items-center">
                   <HoverEffectBtn
-                    className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                    className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
                     label="Portfolio"
                   />
                   <HoverEffectBtn
-                    className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                    className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
                     label="Raise"
                   />
                   <HoverEffectBtn
-                    className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                    className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
@@ -103,21 +103,21 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
               {isLogin && !isTablet && (
                 <div className="hidden 2xl:flex flex-row items-center mr-10 w-[333px]">
                   <HoverEffectBtn
-                    className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                    className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
                     label="My Crptool"
                   />
                   <HoverEffectBtn
-                    className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                    className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
                     label="My Calendar"
                   />
                   <HoverEffectBtn
-                    className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1"
+                    className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-165}
                     width={100}
                     height={40}

@@ -9,7 +9,7 @@ interface FooterItemProps {
 const FooterItem: React.FC<FooterItemProps> = ({ title, items }) => {
   return (
     <div className="flex flex-col w-44">
-      <div className="text-[#2f4644] text-start text-base font-semibold mb-6">
+      <div className="text-[#2f4644] text-start text-base font-semibold mb-6 font-sans">
         {title}
       </div>
       {items.map((item, index) =>
@@ -20,14 +20,14 @@ const FooterItem: React.FC<FooterItemProps> = ({ title, items }) => {
             }
             target="blank"
             key={index}
-            className="mb-4 w-fit text-[#54716F] font-normal cursor-pointer hover:font-bold"
+            className="mb-4 w-fit text-[#54716F] font-normal cursor-pointer hover:font-bold font-sans"
           >
             {item}
           </Link>
         ) : (
           <div
             key={index}
-            className="mb-4 w-fit text-[#54716F] font-normal cursor-pointer hover:font-bold"
+            className="mb-4 w-fit text-[#54716F] font-normal cursor-pointer hover:font-bold font-sans"
           >
             {item}
           </div>

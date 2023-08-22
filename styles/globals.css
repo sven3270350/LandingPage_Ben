@@ -290,7 +290,7 @@ body {
 }
 
 .mySwiper > div {
-  transition-duration: 1500ms !important;
+  transition-duration: 1300ms !important;
 }
 
 .mySwiper > .swiper-button-next {

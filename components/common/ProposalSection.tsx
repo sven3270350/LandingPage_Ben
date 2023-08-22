@@ -57,7 +57,7 @@ const ProposalSection = () => {
           return (
             <div
               key={index}
-              className="flex flex-col col-auto min-w-[350px] w-[30%] items-start"
+              className="flex flex-col col-auto min-w-[350px] w-[30%] items-start font-sans"
             >
               <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
                 {item.title}
@@ -82,7 +82,7 @@ const ProposalSection = () => {
                   <div className="text-black">{item.maxGroupSize}</div>
                 </div>
                 <HoverEffectBtn
-                  className="svg-wrapper opacity-[.8] hover:opacity-[1] text-[#2F4644] font-light text-2xl !w-[120px] leading-[120%] tracking-[-2px]"
+                  className="svg-wrapper opacity-[.8] hover:opacity-[1] text-[#2F4644] font-light text-2xl !w-[120px] leading-[120%] tracking-[-2px] font-sans"
                   strokeDashoffset={-195}
                   role="Proposal"
                   width={120}

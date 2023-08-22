@@ -91,7 +91,7 @@ const Footer = () => {
                 <Calendar width={14} height={16} />
               </Link>
             </div>
-            <div className="mt-2 text-[#2F4644] text-base font-normal">
+            <div className="mt-2 text-[#2F4644] text-base font-normal font-sans">
               © 2023 Cryptool. All rights reserved
             </div>
           </div>
