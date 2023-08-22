@@ -77,6 +77,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
+                    textClass="font-normal not-italic text-base"
                     label="Portfolio"
                   />
                   <HoverEffectBtn
@@ -84,6 +85,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
+                    textClass="font-normal not-italic text-base"
                     label="Raise"
                   />
                   <HoverEffectBtn
@@ -91,6 +93,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
+                    textClass="font-normal not-italic text-base"
                     label="Market"
                   />
                 </div>
@@ -107,6 +110,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
+                    textClass="font-normal not-italic text-base"
                     label="My Crptool"
                   />
                   <HoverEffectBtn
@@ -114,6 +118,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
+                    textClass="font-normal not-italic text-base"
                     label="My Calendar"
                   />
                   <HoverEffectBtn
@@ -121,6 +126,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
+                    textClass="font-normal not-italic text-base"
                     label="My Group"
                   />
                 </div>

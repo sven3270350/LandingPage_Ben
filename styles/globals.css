@@ -236,17 +236,11 @@ body {
   text-align: center;
 }
 
-#hoverBtnText a {
-  text-decoration: none;
-  font-weight: 100;
-  font-size: 1.1em;
-}
-
 .svg-wrapper:hover #shape {
   stroke-dasharray: 50 0;
   stroke-width: 3px;
   stroke-dashoffset: 0;
-  stroke: #06d6a0;
+  stroke: #00F2DE;
   display: block !important;
 }
 

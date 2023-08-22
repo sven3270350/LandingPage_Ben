@@ -9,6 +9,7 @@ interface HoverEffectBtnProps {
   label?: string;
   strokeDashoffset?: number;
   role?: string;
+  textClass?: string;
 }
 
 const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
@@ -18,6 +19,7 @@ const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
   label,
   handleClick,
   strokeDashoffset,
+  textClass,
   role,
 }) => {
   const [isLoading, setIsLoading] = useState<Boolean>(false);
@@ -38,7 +40,7 @@ const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
           width={width}
         />
       </svg>
-      <div id="hoverBtnText">
+      <div className={textClass} id="hoverBtnText">
         <Link href="">
           <span className="spot"></span>
           {isLoading && role === "Proposal" ? "Coming Soon" : label}
