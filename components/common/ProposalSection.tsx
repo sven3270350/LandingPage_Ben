@@ -1,6 +1,7 @@
 import HoverEffectBtn from "components/common/loginBtn/HoverEffectBtn";
 import { useMediaSize } from "components/hooks/media-size";
 import React from "react";
+import LoginBtn from "./loginBtn/loginBtn";
 
 interface Plan {
   title: string;
@@ -20,7 +21,7 @@ const ProposalSection = () => {
       walletAccessCount: "2",
       entires: "5",
       maxGroupSize: "10",
-      btnLabel: "Try Now",
+      btnLabel: "Coming Soon",
     },
     {
       title: "Premium",
@@ -29,7 +30,7 @@ const ProposalSection = () => {
       walletAccessCount: "10",
       entires: "unlimited",
       maxGroupSize: "100",
-      btnLabel: "Sign up",
+      btnLabel: "Coming Soon",
     },
     {
       title: "Manager",
@@ -38,12 +39,12 @@ const ProposalSection = () => {
       walletAccessCount: "unlimited",
       entires: "unlimited",
       maxGroupSize: "unlimited",
-      btnLabel: "Sign up",
+      btnLabel: "Coming Soon",
     },
   ];
   const { isTablet } = useMediaSize();
   return (
-    <div className={isTablet ? "" : "h-[70vh]"}>
+    <div className={isTablet ? "" : "h-full"}>
       <div className="flex flex-col justify-center items-center mt-[96px]">
         <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
           Get going
@@ -90,13 +91,9 @@ const ProposalSection = () => {
                   label={"Learn more"}
                 />
               </div>
-              <HoverEffectBtn
-                className="svg-wrapper opacity-[.8] hover:opacity-[1] !w-[120px]"
-                strokeDashoffset={-195}
-                role="Proposal"
-                width={120}
-                height={40}
+              <LoginBtn
                 label={item.btnLabel}
+                className="!flex svg-wrapper opacity-[.8] hover:opacity-[1] !w-[120px] blue"
               />
             </div>
           );

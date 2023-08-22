@@ -28,7 +28,7 @@ const Footer = () => {
   return (
     <div
       className={
-        isTablet ? "flex justify-center" : "h-[30vh] flex justify-center"
+        isTablet ? "flex justify-center" : "h-[289px] flex justify-center"
       }
     >
       <div

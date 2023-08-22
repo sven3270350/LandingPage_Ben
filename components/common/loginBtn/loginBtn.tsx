@@ -21,13 +21,15 @@ const LoginBtn: React.FC<LoginBtnProps> = ({
     <div
       className={cx(
         "signup-btn w-[81px] h-[40px] flex items-center justify-center cursor-pointer text-center fuller-button hover:text-white text-[#2F4644]",
-        label === "Log in" ? "blue" : "red",
+        label === "Log in" && "blue",
+        label === "Sign up" && "red",
         className
       )}
       onClick={() => {
         // setIsLogin && setIsLogin(!isLogin);
         {
-          label === "Log in" ? goToLogin() : goToSignup();
+          label === "Log in" && goToLogin();
+          label === "Sign up" && goToSignup();
         }
       }}
     >
