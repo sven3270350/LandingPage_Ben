@@ -289,6 +289,14 @@ body {
   height: 100%;
 }
 
+.mySwiper > .swiper-button-next {
+  display: none !important;
+}
+
+.mySwiper > .swiper-button-prev {
+  display: none !important;
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -322,9 +330,6 @@ body {
 .swiper-button-next {
   top: var(--swiper-navigation-top-offset, 45%) !important;
   background-color: #f0f0f0;
-  color: black;
-  width: auto;
-  height: auto;
   padding: 5px 8px;
   border-radius: 100%;
 }

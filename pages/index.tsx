@@ -7,7 +7,7 @@ import ModuleMarketPlaces from "components/common/ModuleMarketPlaces";
 import ProposalSection from "components/common/ProposalSection";
 import RequestDemo from "components/common/RequestDemo";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel } from "swiper/modules";
+import { Mousewheel, Navigation } from "swiper/modules";
 import "swiper/css";
 import { useState } from "react";
 import { useMediaSize } from "components/hooks/media-size";
@@ -19,6 +19,7 @@ interface SwiperProps {
   mousewheel?: boolean;
   modules?: any[];
   onSlideChange?: (swiper: any) => void;
+  navigation?: boolean;
 }
 
 const Home: NextPage = () => {
@@ -30,16 +31,20 @@ const Home: NextPage = () => {
   };
 
   const handleSlideToTwo = () => {
-    console.log(1);
+    const NextBtn = document.querySelector(
+      ".mySwiper>.swiper-button-next"
+    ) as HTMLElement;
+    NextBtn.click();
   };
 
   const swiperProps: SwiperProps = {
     className: "mySwiper",
     direction: "vertical",
     scrollbar: false,
-    modules: [Mousewheel],
+    modules: [Mousewheel, Navigation],
     mousewheel: true,
     onSlideChange: handleSlideChange,
+    navigation: true,
   };
 
   return (

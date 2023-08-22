@@ -20,7 +20,7 @@ const LoginBtn: React.FC<LoginBtnProps> = ({
   return (
     <div
       className={cx(
-        "signup-btn w-[81px] h-[40px] flex items-center justify-center cursor-pointer text-center fuller-button",
+        "signup-btn w-[81px] h-[40px] flex items-center justify-center cursor-pointer text-center fuller-button hover:text-white text-[#2F4644]",
         label === "Log in" ? "blue" : "red",
         className
       )}
