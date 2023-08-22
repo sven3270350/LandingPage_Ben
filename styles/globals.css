@@ -289,7 +289,7 @@ body {
   height: 100%;
 }
 
-.mySwiper >div{
+.mySwiper > div {
   transition-duration: 1500ms !important;
 }
 
@@ -352,16 +352,17 @@ body {
   width: 44px;
 }
 
-.img-slide .swiper-slide-visible{
-  transform: translate3d(0px, -20px, 80px) rotateX(0deg) rotateY(0deg) scale(0.8) !important;
+.img-slide .swiper-slide-visible {
+  transform: translate3d(0px, -20px, 80px) rotateX(0deg) rotateY(0deg)
+    scale(0.8) !important;
   transition-duration: 300ms !important;
 }
 
-
-.img-slide .swiper-slide-next{
-  transform: translate3d(0px, 0px, 0.05px) rotateX(0deg) rotateY(0deg) scale(0.999875) !important;
+.img-slide .swiper-slide-next {
+  transform: translate3d(0px, 0px, 0.05px) rotateX(0deg) rotateY(0deg)
+    scale(0.999875) !important;
 }
-  
+
 .swiper-3d .swiper-slide-shadow-coverflow {
   background-image: none !important;
 }
