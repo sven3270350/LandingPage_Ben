@@ -104,8 +104,15 @@ const ModuleMarketPlaces = () => {
             <br />
             in-a-box
           </div>
-          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-            Learn more
+          <div className="absolute top-[70%] left-[20%] z-20 text-white">
+            <HoverEffectBtn
+              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+              strokeDashoffset={-168}
+              width={104}
+              height={40}
+              handleClick={handleClick}
+              label={"Learn more"}
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -121,8 +128,15 @@ const ModuleMarketPlaces = () => {
             <br />
             in-a-box
           </div>
-          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-            Learn more
+          <div className="absolute top-[70%] left-[20%] z-20 text-white">
+            <HoverEffectBtn
+              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+              strokeDashoffset={-168}
+              width={104}
+              height={40}
+              handleClick={handleClick}
+              label={"Learn more"}
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -138,8 +152,15 @@ const ModuleMarketPlaces = () => {
             <br />
             in-a-box
           </div>
-          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-            Learn more
+          <div className="absolute top-[70%] left-[20%] z-20 text-white">
+            <HoverEffectBtn
+              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+              strokeDashoffset={-168}
+              width={104}
+              height={40}
+              handleClick={handleClick}
+              label={"Learn more"}
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -155,8 +176,15 @@ const ModuleMarketPlaces = () => {
             <br />
             in-a-box
           </div>
-          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-            Learn more
+          <div className="absolute top-[70%] left-[20%] z-20 text-white">
+            <HoverEffectBtn
+              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+              strokeDashoffset={-168}
+              width={104}
+              height={40}
+              handleClick={handleClick}
+              label={"Learn more"}
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -172,8 +200,15 @@ const ModuleMarketPlaces = () => {
             <br />
             in-a-box
           </div>
-          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-            Learn more
+          <div className="absolute top-[70%] left-[20%] z-20 text-white">
+            <HoverEffectBtn
+              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+              strokeDashoffset={-168}
+              width={104}
+              height={40}
+              handleClick={handleClick}
+              label={"Learn more"}
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -189,10 +224,9 @@ const ModuleMarketPlaces = () => {
             <br />
             in-a-box
           </div>
-          <div className="absolute top-[70%] underline cursor-pointer underline-offset-1 left-[20%] text-white text-sm">
-            Learn more
+          <div className="absolute top-[70%] left-[20%] z-20 text-white">
             <HoverEffectBtn
-              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold mx-1 !w-[104px] h-[40px] font-sans"
+              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
               strokeDashoffset={-168}
               width={104}
               height={40}
@@ -225,7 +259,7 @@ const ModuleMarketPlaces = () => {
             Ambassador Program rights, and more..
           </div>
           <HoverEffectBtn
-            className="svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-semibold mx-1 !w-[104px] h-[40px] font-sans"
+            className="svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
             strokeDashoffset={-168}
             width={104}
             height={40}
