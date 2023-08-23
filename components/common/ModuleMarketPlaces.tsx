@@ -27,7 +27,7 @@ interface SwiperProps {
 const ModuleMarketPlaces = () => {
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation],
-    className: "!pt-11 !pb-20 w-[1560px] img-slide",
+    className: "!pt-11 !pb-20 w-[1392px] img-slide",
     navigation: true,
     slidesPerView: 3,
     loop: true,
@@ -50,8 +50,8 @@ const ModuleMarketPlaces = () => {
   const [swiperPosition, setSwiperPosition] = useState(0);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 1560) {
-        setSwiperPosition((window.innerWidth - 1560) / 2);
+      if (window.innerWidth < 1392) {
+        setSwiperPosition((window.innerWidth - 1392) / 2);
       }
     };
 
