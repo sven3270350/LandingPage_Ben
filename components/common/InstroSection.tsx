@@ -11,7 +11,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({ handleSlideToTwo }) => {
   const { isTablet } = useMediaSize();
 
   return (
-    <div className="w-full bg-firstSection flex justify-center">
+    <div className="w-full bg-firstSection h-full flex justify-center">
       <div className="max-w-[1560px] w-full">
         <div className="relative h-[100vh]">
           <Image
