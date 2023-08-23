@@ -54,7 +54,7 @@ const ProposalSection = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="flex flex-wrap max-w-[1560px] justify-between items-center gap-6 mb-4 pt-5 lg:mx-40 mt-5 border-t-[1px] border-solid border-[#DCDCDC]">
+        <div className="flex flex-wrap max-w-[1560px] justify-center items-center gap-6 mb-4 pt-5 lg:mx-40 mt-5 border-t-[1px] border-solid border-[#DCDCDC]">
           {plans.map((item, index) => {
             return (
               <div

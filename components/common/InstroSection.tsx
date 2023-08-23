@@ -20,7 +20,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({ handleSlideToTwo }) => {
               isTablet ? "hidden" : "block"
             )}
             width={650}
-            height={200}
+            height={279.92}
             src="/assets/icons/LogoWhiteBlur.png"
             alt="IntroImage"
           />
