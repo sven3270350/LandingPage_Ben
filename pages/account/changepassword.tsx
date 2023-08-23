@@ -5,8 +5,7 @@ import React, { useState } from "react";
 const ChangePasswordPage = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isNewPasswordVisible, setIsNewPasswordVisible] = useState(false);
-  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
-    useState(false);
+  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false);
   return (
     <div className="flex justify-center items-center bg-slate-300 w-full h-[100vh]">
       <div className="w-[424px] flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
