@@ -53,51 +53,53 @@ const ProposalSection = () => {
           Learn about our account options
         </div>
       </div>
-      <div className="flex flex-wrap justify-between items-center gap-6 mb-4 pt-5 lg:mx-40 mt-5 mx-0 border-t-[1px] border-solid border-[#DCDCDC]">
-        {plans.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className="flex flex-col col-auto min-w-[350px] w-[30%] items-start font-sans"
-            >
-              <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
-                {item.title}
-              </div>
-              <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px]">
-                ${item.price}
-              </div>
-              <div className="text-[#54716F] text-base not-italic font-normal mb-5">
-                {item.label}
-              </div>
-              <div className="flex flex-col items-start gap-4 mb-10">
-                <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
-                  Wallet Access per Account
-                  <div className="text-black">{item.walletAccessCount}</div>
+      <div className="flex justify-center">
+        <div className="flex flex-wrap max-w-[1560px] justify-between items-center gap-6 mb-4 pt-5 lg:mx-40 mt-5 mx-0 border-t-[1px] border-solid border-[#DCDCDC]">
+          {plans.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="flex flex-col col-auto min-w-[350px] w-[30%] items-start font-sans"
+              >
+                <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
+                  {item.title}
                 </div>
-                <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
-                  Portfolio Asset & Allocation Entries
-                  <div className="text-black">{item.entires}</div>
+                <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px]">
+                  ${item.price}
                 </div>
-                <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
-                  Max Group Size (# User Accounts)
-                  <div className="text-black">{item.maxGroupSize}</div>
+                <div className="text-[#54716F] text-base not-italic font-normal mb-5">
+                  {item.label}
                 </div>
-                <HoverEffectBtn
-                  className="svg-wrapper opacity-[.8] hover:opacity-[1] text-[#2F4644] font-light text-2xl !w-[120px] leading-[120%] tracking-[-2px] font-sans"
-                  strokeDashoffset={-195}
-                  role="Proposal"
-                  width={120}
-                  height={40}
-                  label={"Learn more"}
+                <div className="flex flex-col items-start gap-4 mb-10">
+                  <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
+                    Wallet Access per Account
+                    <div className="text-black">{item.walletAccessCount}</div>
+                  </div>
+                  <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
+                    Portfolio Asset & Allocation Entries
+                    <div className="text-black">{item.entires}</div>
+                  </div>
+                  <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
+                    Max Group Size (# User Accounts)
+                    <div className="text-black">{item.maxGroupSize}</div>
+                  </div>
+                  <HoverEffectBtn
+                    className="svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-normal text-[#2F4644] font-light text-2xl !w-[120px] leading-[120%] tracking-[-2px] font-sans"
+                    strokeDashoffset={-195}
+                    role="Proposal"
+                    width={120}
+                    height={40}
+                    label={"Learn more"}
+                  />
+                </div>
+                <LoginBtn
+                  label={item.btnLabel}
+                  className="!flex svg-wrapper opacity-[.8] hover:opacity-[1] !w-[140px] blue !rounded-3xl"
                 />
               </div>
-              <LoginBtn
-                label={item.btnLabel}
-                className="!flex svg-wrapper opacity-[.8] hover:opacity-[1] !w-[140px] blue !rounded-3xl"
-              />
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
