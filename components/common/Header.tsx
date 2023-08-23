@@ -245,7 +245,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
           </div>
           <div>
             <LoginBtn
-              className="w-full red"
+              className="w-full blue"
               label="Log In"
               setIsLogin={setIsLogin}
               isLogin={isLogin}
