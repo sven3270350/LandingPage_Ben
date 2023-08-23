@@ -323,9 +323,9 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  top: var(--swiper-navigation-top-offset, 39%) !important;
+  top: var(--swiper-navigation-top-offset, 42%) !important;
   background-color: #f0f0f0;
-  padding: 50px 50px;
+  padding: 22px 22px;
   border-radius: 100%;
 }
 
@@ -335,12 +335,14 @@ body {
 }
 
 .swiper .swiper-button-prev {
-  left: 470px !important;
+  left: 497px !important;
   width: 44px;
+  font-weight: bolder;
 }
 .swiper .swiper-button-next {
-  right: 470px !important;
+  right: 497px !important;
   width: 44px;
+  font-weight: bolder;
 }
 
 .img-slide .swiper-slide-visible {
