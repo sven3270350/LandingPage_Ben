@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                   <Image
                     width={163}
                     height={50}
-                    src="/assets/icons/LogoWhite.svg"
+                    src="/assets/icons/LogoWhite.png"
                     alt="LogoWhite"
                   />
                 )}
