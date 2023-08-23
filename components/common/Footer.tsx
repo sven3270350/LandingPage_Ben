@@ -53,7 +53,7 @@ const Footer = () => {
               width={225}
               height={69}
               alt="LogoBlack"
-              src="/assets/icons/FooterLogo.png"
+              src="/assets/icons/LogoBlack.png"
             />
             <div className="flex flex-col mt-16">
               <div className="flex flex-row space-x-2">
