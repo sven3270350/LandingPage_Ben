@@ -10,10 +10,10 @@ const VideoSection = () => {
             Discover
           </div>
           <div className="mt-2 text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] font-sans">
-            Get to know our platform
+            Platform for Users, VCs, and Start-ups
           </div>
           <div className="text-[#2F4644] text-2xl font-light !leading-[120%] tracking-[-2px] font-sans">
-            Investing and managing capital, made easy
+            See how the Cryptool platform makes investing and managing crypto assets easy
           </div>
         </div>
         <Image
