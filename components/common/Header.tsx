@@ -77,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
-                    textClass="font-normal not-italic text-base"
+                    textClass="font-normal not-italic text-base hover:font-semibold"
                     label="Portfolio"
                   />
                   <HoverEffectBtn
@@ -85,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
-                    textClass="font-normal not-italic text-base"
+                    textClass="font-normal not-italic text-base hover:font-semibold"
                     label="Raise"
                   />
                   <HoverEffectBtn
@@ -93,7 +93,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
-                    textClass="font-normal not-italic text-base"
+                    textClass="font-normal not-italic text-base hover:font-semibold"
                     label="Market"
                   />
                 </div>
@@ -110,7 +110,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
-                    textClass="font-normal not-italic text-base"
+                    textClass="font-normal not-italic text-base hover:font-semibold"
                     label="My Crptool"
                   />
                   <HoverEffectBtn
@@ -118,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
-                    textClass="font-normal not-italic text-base"
+                    textClass="font-normal not-italic text-base hover:font-semibold"
                     label="My Calendar"
                   />
                   <HoverEffectBtn
@@ -126,7 +126,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     strokeDashoffset={-165}
                     width={100}
                     height={40}
-                    textClass="font-normal not-italic text-base"
+                    textClass="font-normal not-italic text-base hover:font-semibold"
                     label="My Group"
                   />
                 </div>
@@ -251,7 +251,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
               isLogin={isLogin}
             />
             <LoginBtn
-              className="w-full mt-[10px] red"
+              className="w-full mt-[10px] blue"
               label="Sing Up"
               setIsLogin={setIsLogin}
               isLogin={isLogin}
