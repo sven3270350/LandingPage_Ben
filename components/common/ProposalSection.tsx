@@ -26,7 +26,7 @@ const ProposalSection = () => {
     {
       title: "Premium",
       price: 2.99,
-      label: "Starting from per month",
+      label: "Starting from",
       walletAccessCount: "10",
       entires: "unlimited",
       maxGroupSize: "100",
@@ -35,7 +35,7 @@ const ProposalSection = () => {
     {
       title: "Manager",
       price: 119.99,
-      label: "Starting from per month",
+      label: "Starting from",
       walletAccessCount: "unlimited",
       entires: "unlimited",
       maxGroupSize: "unlimited",
@@ -64,11 +64,14 @@ const ProposalSection = () => {
                 <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
                   {item.title}
                 </div>
-                <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px]">
-                  ${item.price}
-                </div>
-                <div className="text-[#54716F] text-base not-italic font-normal mb-5">
+                <div className="text-[#54716F] text-base not-italic font-normal">
                   {item.label}
+                </div>
+                <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px] mb-5">
+                  ${item.price}
+                  <label className="text-base font-normal leading-10 ml-[5px]">
+                    {item.price > 0 && "per month"}
+                  </label>
                 </div>
                 <div className="flex flex-col items-start gap-4 mb-10">
                   <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
