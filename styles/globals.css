@@ -46,163 +46,6 @@ body {
   transform: translate(0px, 2px);
 }
 
-.w-inline-block {
-  max-width: 100%;
-  display: inline-block;
-}
-
-.signup-btn:hover .gradient {
-  opacity: 1 !important;
-}
-
-.button__inner {
-  position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  box-shadow: inset 0 0 7px 0 hsla(0, 0%, 100%, 0.28);
-  -webkit-transition: box-shadow 200ms ease;
-  transition: box-shadow 200ms ease;
-}
-
-.button__inner:hover {
-  box-shadow: inset 0 0 7px 0 hsla(0, 0%, 100%, 0.6);
-}
-
-.gradient {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  z-index: 1;
-  border-radius: 12px;
-  transition: all ease-in-out 0.5s;
-}
-
-.gradient__ball {
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
-  mix-blend-mode: overlay;
-}
-
-.gradient__ball.gradient__ball--1 {
-  position: absolute;
-  bottom: 0px;
-  background-color: #fd3846;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#fd3846),
-    to(#ffd000)
-  );
-  background-image: linear-gradient(90deg, #fd3846, #ffd000);
-}
-
-.gradient__ball.gradient__ball--2 {
-  position: absolute;
-  left: 50%;
-  bottom: 0px;
-  background-image: linear-gradient(78deg, #a600ff, #2bff00);
-}
-
-.gradient-glow {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  opacity: 0.25;
-}
-
-.gradient__ball.gradient__ball--1 {
-  animation: gradient1 10s infinite;
-}
-
-.gradient__ball.gradient__ball--2 {
-  animation: gradient2 10s infinite;
-}
-.menuitem:hover {
-  box-shadow: -1px 0px 9px 1px #2b9ab3;
-}
-
-@keyframes gradient1 {
-  0% {
-    transform: translate3d(0%, -100%, 0px) scale3d(1.5, 1.5, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-
-  25% {
-    transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-
-  50% {
-    transform: translate3d(100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-
-  75% {
-    transform: translate3d(100%, -100%, 0px) scale3d(1.5, 1.5, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-
-  100% {
-    transform: translate3d(0%, -100%, 0px) scale3d(1.5, 1.5, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-}
-
-@keyframes gradient2 {
-  0% {
-    transform: translate3d(-100%, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-
-  25% {
-    transform: translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-
-  50% {
-    transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-
-  75% {
-    transform: translate3d(0%, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-
-  100% {
-    transform: translate3d(-100%, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-}
-
 .spot {
   position: absolute;
   width: 100%;
@@ -284,25 +127,14 @@ body {
   transition-duration: 1300ms !important;
 }
 
-.mySwiper > .swiper-button-next {
+.mySwiper .swiper-button-next {
   display: none !important;
 }
 
-.mySwiper > .swiper-button-prev {
+.mySwiper .swiper-button-prev {
   display: none !important;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100% !important;
-}
 .loginpage-toast .Toastify__progress-bar-theme--light {
   background: #26ecd2 !important; /* Change this to your desired color */
 }
@@ -317,64 +149,19 @@ body {
   transition: all ease-in-out 0.8s;
 }
 
-.navItem:hover .hoverEvent {
-  animation: navItemHover 0.5s forwards;
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  top: var(--swiper-navigation-top-offset, 42%) !important;
-  background-color: #f0f0f0;
-  padding: 22px 22px;
-  border-radius: 100%;
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-size: 10px !important;
-}
-
-.swiper .swiper-button-prev {
-  left: 445px !important;
-  width: 44px;
-  font-weight: bolder;
-}
-.swiper .swiper-button-next {
-  right: 445px !important;
-  width: 44px;
-  font-weight: bolder;
-}
-
-.img-slide .swiper-slide-visible {
-  transform: translate3d(0px, -20px, 80px) rotateX(0deg) rotateY(0deg)
+.img-swiper .swiper-slide-visible {
+  transform: translate3d(0px, -16px, 80px) rotateX(0deg) rotateY(0deg)
     scale(0.8) !important;
-  transition-duration: 300ms !important;
+  transition-duration: 400ms !important;
 }
 
-.img-slide .swiper-slide-next {
+.img-swiper .swiper-slide-next {
   transform: translate3d(0px, 0px, 0.05px) rotateX(0deg) rotateY(0deg)
     scale(0.999875) !important;
 }
 
 .swiper-3d .swiper-slide-shadow-coverflow {
   background-image: none !important;
-}
-
-@keyframes navItemHover {
-  0% {
-    transform: translate3d(0px, 30%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
-
-  100% {
-    transform: translate3d(0px, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-  }
 }
 
 .footer-gradient {

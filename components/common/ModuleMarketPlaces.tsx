@@ -6,6 +6,8 @@ import "swiper/css/navigation";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import HoverEffectBtn from "components/common/loginBtn/HoverEffectBtn";
 import { useEffect, useState } from "react";
+import NextBtn from "public/assets/icons/NextBtn";
+import PrevBtn from "public/assets/icons/PrevBtn";
 
 interface SwiperProps {
   modules: (typeof EffectCoverflow | typeof Navigation)[];
@@ -27,7 +29,7 @@ interface SwiperProps {
 const ModuleMarketPlaces = () => {
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation],
-    className: "!pt-11 !pb-20 w-[1392px] img-slide",
+    className: "!pt-11 !pb-20 w-[1392px] img-swiper",
     navigation: true,
     slidesPerView: 3,
     loop: true,
@@ -41,13 +43,25 @@ const ModuleMarketPlaces = () => {
       modifier: 1,
     },
   };
+  const [swiperPosition, setSwiperPosition] = useState(0);
+  const handleNextClick = () => {
+    const NextBtn = document.querySelector(
+      ".img-swiper>.swiper-button-next"
+    ) as HTMLElement;
+    NextBtn.click();
+  };
+  const handlePrevClick = () => {
+    const PrevBtn = document.querySelector(
+      ".img-swiper>.swiper-button-prev"
+    ) as HTMLElement;
+    PrevBtn.click();
+  };
   const handleClick = () => {
     window.open(
       "https://docs.google.com/document/d/19iuROlL5QV43Li6KRaPkuBIDWDIv1c3OdBbwgS9Upew/edit",
       "_blank"
     );
   };
-  const [swiperPosition, setSwiperPosition] = useState(0);
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1392) {
@@ -179,6 +193,18 @@ const ModuleMarketPlaces = () => {
             Learn more
           </div>
         </SwiperSlide>
+        <div
+          className="absolute right-[443px] top-[41%] z-10 cursor-pointer"
+          onClick={handleNextClick}
+        >
+          <NextBtn width={37} />
+        </div>
+        <div
+          className="absolute left-[443px] top-[41%] z-10 cursor-pointer"
+          onClick={handlePrevClick}
+        >
+          <PrevBtn width={37} />{" "}
+        </div>
       </Swiper>
       <div className="flex flex-col justify-center items-center !mt-5">
         <div className="flex flex-col justify-center items-center w-[513px]">
