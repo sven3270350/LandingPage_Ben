@@ -191,7 +191,7 @@ const ModuleMarketPlaces = () => {
             Ambassador Program rights, and more..
           </div>
           <HoverEffectBtn
-            className="svg-wrapper opacity-[.8] hover:opacity-[1] mx-1 !w-[104px] h-[40px] font-sans"
+            className="svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-semibold mx-1 !w-[104px] h-[40px] font-sans"
             strokeDashoffset={-168}
             width={104}
             height={40}
