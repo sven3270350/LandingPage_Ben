@@ -13,7 +13,6 @@
 body {
   padding: 0;
   margin: 0;
-  /* font-family: Roboto; */
 }
 
 * {
@@ -127,7 +126,7 @@ body {
   transition-duration: 1300ms !important;
 }
 
-.mySwiper .swiper-button-next {
+.swiper .swiper-button-next {
   display: none !important;
 }
 
