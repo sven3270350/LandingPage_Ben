@@ -2,7 +2,7 @@ import { useCustomRouter } from "components/hooks/custom-router";
 import NewEmail from "public/assets/icons/NewEmail";
 import React from "react";
 
-const NewEmailPage = () => {
+const SentEmailPage = () => {
   const { goToHome } = useCustomRouter();
   return (
     <div className="flex justify-center items-center bg-slate-300 w-full h-[100vh]">
@@ -35,4 +35,4 @@ const NewEmailPage = () => {
   );
 };
 
-export default NewEmailPage;
+export default SentEmailPage;

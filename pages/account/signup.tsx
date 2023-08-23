@@ -2,7 +2,7 @@ import { useCustomRouter } from "components/hooks/custom-router";
 import Facebook from "public/assets/icons/Facebook";
 import Google from "public/assets/icons/Google";
 
-const Signup = () => {
+const SignUpPage = () => {
   const { goToManualSignUp } = useCustomRouter();
   return (
     <div className="flex justify-center items-center bg-slate-300 w-full h-[100vh]">
@@ -38,4 +38,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUpPage;

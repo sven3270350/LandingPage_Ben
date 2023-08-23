@@ -303,7 +303,9 @@ body {
   align-items: center;
   height: 100% !important;
 }
-
+.loginpage-toast .Toastify__progress-bar-theme--light {
+  background: #26ecd2 !important; /* Change this to your desired color */
+}
 .isSticky {
   background-color: rgb(255, 255, 255);
   color: black;

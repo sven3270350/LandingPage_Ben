@@ -6,7 +6,7 @@ import Telegram from "public/assets/icons/Telegram";
 import Twitter from "public/assets/icons/Twitter";
 import { useState } from "react";
 
-const Signup = () => {
+const SignUpSubscribePage = () => {
   const [email, setEmail] = useState("");
   const { goToManualSignUp } = useCustomRouter();
   return (
@@ -146,4 +146,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUpSubscribePage;
