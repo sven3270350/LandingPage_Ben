@@ -26,7 +26,7 @@ const ProposalSection = () => {
     {
       title: "Premium",
       price: 2.99,
-      label: "Starting from per month",
+      label: "Starting from",
       walletAccessCount: "10",
       entires: "unlimited",
       maxGroupSize: "100",
