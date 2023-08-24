@@ -29,7 +29,7 @@ interface SwiperProps {
 const ModuleMarketPlaces = () => {
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation],
-    className: "!pt-14 !pb-14 w-[1392px] img-swiper",
+    className: "!pt-[58px] !pb-[58px] w-[1392px] img-swiper",
     navigation: true,
     slidesPerView: 3,
     loop: true,
@@ -261,7 +261,7 @@ const ModuleMarketPlaces = () => {
             Ambassador Program rights, and more..
           </div>
           <HoverEffectBtn
-            className="svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+            className="svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans mb-5"
             strokeDashoffset={-168}
             width={104}
             height={40}
