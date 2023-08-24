@@ -9,15 +9,20 @@ import RequestDemo from "components/common/RequestDemo";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Navigation, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaSize } from "components/hooks/media-size";
 import { useRouter } from "next/router";
 
+type SwiperRef = {
+  // add the required 'swiper' property of the specific type
+  swiper: any;
+};
 interface SwiperProps {
   className: string;
   direction: "horizontal" | "vertical";
   scrollbar?: boolean;
   mousewheel?: boolean;
+  initialSlide?: number;
   modules?: any[];
   onSlideChange?: (swiper: any) => void;
   navigation?: boolean;
@@ -33,11 +38,23 @@ interface SwiperProps {
 }
 
 const Home: NextPage = () => {
+  const swiperRef = useRef<SwiperRef>(null);
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const { isTablet } = useMediaSize();
-
+  const [initialSlide, setInitialSlide] = useState<number>(0);
+  const router = useRouter();
+  const handleInitialSlide = () => {
+    let initialNum = sessionStorage.getItem("activeSlide");
+    if (initialNum) {
+      const currentElement = swiperRef.current;
+      if (currentElement !== null) {
+        currentElement.swiper.slideTo(parseInt(initialNum));
+      }
+    }
+  };
   const handleSlideChange = (swiper: any) => {
     setActiveSlide(swiper.activeIndex);
+    sessionStorage.setItem("activeSlide", swiper.activeIndex);
   };
 
   const handleSlideToTwo = () => {
@@ -47,10 +64,21 @@ const Home: NextPage = () => {
     NextBtn.click();
   };
 
+  useEffect(() => {
+    if (!isTablet && router.asPath === "/") {
+      const next = document.querySelector("#__next");
+      next?.classList.add("h-[100vh]");
+    }
+    if (isTablet) {
+      setActiveSlide(0);
+    }
+    handleInitialSlide();
+  }, [isTablet, router.asPath]);
   const swiperProps: SwiperProps = {
     className: "mySwiper",
     direction: "vertical",
     scrollbar: false,
+    initialSlide: initialSlide,
     modules: [Mousewheel, Navigation, EffectCoverflow],
     mousewheel: true,
     onSlideChange: handleSlideChange,
@@ -65,16 +93,6 @@ const Home: NextPage = () => {
       modifier: 1,
     },
   };
-  const router = useRouter();
-  useEffect(() => {
-    if (!isTablet && router.asPath === "/") {
-      const next = document.querySelector("#__next");
-      next?.classList.add("h-[100vh]");
-    }
-    if (isTablet) {
-      setActiveSlide(0)
-    }
-  }, [isTablet, router.asPath]);
 
   return (
     <>
@@ -89,7 +107,7 @@ const Home: NextPage = () => {
           <Footer />
         </div>
       ) : (
-        <Swiper {...swiperProps}>
+        <Swiper ref={swiperRef} {...swiperProps}>
           <SwiperSlide>
             <IntroSection handleSlideToTwo={handleSlideToTwo} />
           </SwiperSlide>
