@@ -22,7 +22,7 @@ const NextBtn: React.FC<NextBtnProps> = ({ className, width, height }) => (
         height="30"
         rx="15"
         fill="#DCDCDC"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
       <mask
         id="mask0_318_831"
@@ -50,9 +50,9 @@ const NextBtn: React.FC<NextBtnProps> = ({ className, width, height }) => (
         width="38"
         height="38"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

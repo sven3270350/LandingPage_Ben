@@ -61,8 +61,8 @@ const Calendar: React.FC<CalendarProps> = ({ className, width, height }) => (
         y2="109"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.0833333" stop-color="#10726B" />
-        <stop offset="1" stop-color="#00F2DE" />
+        <stop offset="0.0833333" stopColor="#10726B" />
+        <stop offset="1" stopColor="#00F2DE" />
       </linearGradient>
       <image
         id="image0_0_1"

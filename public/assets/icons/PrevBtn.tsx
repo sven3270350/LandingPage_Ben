@@ -24,7 +24,7 @@ const PrevBtn: React.FC<PrevBtnProps> = ({ className, width, height }) => (
         rx="15"
         transform="rotate(-180 34 30)"
         fill="#DCDCDC"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
       <mask
         id="mask0_318_837"
@@ -59,9 +59,9 @@ const PrevBtn: React.FC<PrevBtnProps> = ({ className, width, height }) => (
         width="38"
         height="38"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
