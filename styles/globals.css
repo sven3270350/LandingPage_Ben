@@ -155,7 +155,7 @@ body {
 
 .img-swiper .swiper-slide-next {
   transform: translate3d(0px, 0px, 0.05px) rotateX(0deg) rotateY(0deg)
-    scale(0.999875) !important;
+    scale(1) !important;
 }
 
 .swiper-3d .swiper-slide-shadow-coverflow {
