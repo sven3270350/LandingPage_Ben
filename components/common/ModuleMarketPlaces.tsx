@@ -87,167 +87,169 @@ const ModuleMarketPlaces = () => {
       <div className="text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%] font-sans">
         Learn how the integrated modules work
       </div>
-      <Swiper
-        style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
-        {...swiperProps}
-      >
-        <SwiperSlide>
-          <Image
-            className="rounded-[44px]"
-            width={533}
-            alt="Swiper image"
-            height={300}
-            src="/assets/icons/5.jpg"
-          />
-          <div className="absolute top-[20%] left-[20%] text-white text-base">
-            Hedge Fund-
-            <br />
-            in-a-box
-          </div>
-          <div className="absolute top-[70%] left-[20%] z-20 text-white">
-            <HoverEffectBtn
-              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
-              strokeDashoffset={-168}
-              width={104}
-              height={40}
-              handleClick={handleClick}
-              label={"Learn more"}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            className="rounded-[44px]"
-            width={533}
-            alt="Swiper image"
-            height={300}
-            src="/assets/icons/6.jpg"
-          />
-          <div className="absolute top-[20%] left-[20%] text-white text-base">
-            Hedge Fund-
-            <br />
-            in-a-box
-          </div>
-          <div className="absolute top-[70%] left-[20%] z-20 text-white">
-            <HoverEffectBtn
-              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
-              strokeDashoffset={-168}
-              width={104}
-              height={40}
-              handleClick={handleClick}
-              label={"Learn more"}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            className="rounded-[44px]"
-            width={533}
-            alt="Swiper image"
-            height={300}
-            src="/assets/icons/1.jpg"
-          />
-          <div className="absolute top-[20%] left-[20%] text-white text-base">
-            Hedge Fund-
-            <br />
-            in-a-box
-          </div>
-          <div className="absolute top-[70%] left-[20%] z-20 text-white">
-            <HoverEffectBtn
-              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
-              strokeDashoffset={-168}
-              width={104}
-              height={40}
-              handleClick={handleClick}
-              label={"Learn more"}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            className="rounded-[44px]"
-            width={533}
-            height={300}
-            alt="Swiper image"
-            src="/assets/icons/2.jpg"
-          />
-          <div className="absolute top-[20%] left-[20%] text-white text-base">
-            Hedge Fund-
-            <br />
-            in-a-box
-          </div>
-          <div className="absolute top-[70%] left-[20%] z-20 text-white">
-            <HoverEffectBtn
-              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
-              strokeDashoffset={-168}
-              width={104}
-              height={40}
-              handleClick={handleClick}
-              label={"Learn more"}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            className="rounded-[44px]"
-            width={533}
-            alt="Swiper image"
-            height={300}
-            src="/assets/icons/3.jpg"
-          />
-          <div className="absolute top-[20%] left-[20%] text-white text-base">
-            Hedge Fund-
-            <br />
-            in-a-box
-          </div>
-          <div className="absolute top-[70%] left-[20%] z-20 text-white">
-            <HoverEffectBtn
-              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
-              strokeDashoffset={-168}
-              width={104}
-              height={40}
-              handleClick={handleClick}
-              label={"Learn more"}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            className="rounded-[44px]"
-            width={533}
-            alt="Swiper image"
-            height={300}
-            src="/assets/icons/4.jpg"
-          />
-          <div className="absolute top-[20%] left-[20%] text-white text-base">
-            Hedge Fund-
-            <br />
-            in-a-box
-          </div>
-          <div className="absolute top-[70%] left-[20%] z-20 text-white">
-            <HoverEffectBtn
-              className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
-              strokeDashoffset={-168}
-              width={104}
-              height={40}
-              handleClick={handleClick}
-              label={"Learn more"}
-            />
-          </div>
-        </SwiperSlide>
-        <div
-          className="absolute right-[443px] top-[41%] z-10 cursor-pointer"
-          onClick={handleNextClick}
+      <div>
+        <Swiper
+          style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
+          {...swiperProps}
         >
-          <NextBtn width={37} />
-        </div>
-        <div
-          className="absolute left-[443px] top-[41%] z-10 cursor-pointer"
-          onClick={handlePrevClick}
-        >
-          <PrevBtn width={37} />{" "}
-        </div>
-      </Swiper>
+          <SwiperSlide>
+            <Image
+              className="rounded-[44px]"
+              width={533}
+              alt="Swiper image"
+              height={300}
+              src="/assets/icons/5.jpg"
+            />
+            <div className="absolute top-[20%] left-[20%] text-white text-base">
+              Hedge Fund-
+              <br />
+              in-a-box
+            </div>
+            <div className="absolute top-[70%] left-[20%] z-20 text-white">
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                strokeDashoffset={-168}
+                width={104}
+                height={40}
+                handleClick={handleClick}
+                label={"Learn more"}
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              className="rounded-[44px]"
+              width={533}
+              alt="Swiper image"
+              height={300}
+              src="/assets/icons/6.jpg"
+            />
+            <div className="absolute top-[20%] left-[20%] text-white text-base">
+              Hedge Fund-
+              <br />
+              in-a-box
+            </div>
+            <div className="absolute top-[70%] left-[20%] z-20 text-white">
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                strokeDashoffset={-168}
+                width={104}
+                height={40}
+                handleClick={handleClick}
+                label={"Learn more"}
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              className="rounded-[44px]"
+              width={533}
+              alt="Swiper image"
+              height={300}
+              src="/assets/icons/1.jpg"
+            />
+            <div className="absolute top-[20%] left-[20%] text-white text-base">
+              Hedge Fund-
+              <br />
+              in-a-box
+            </div>
+            <div className="absolute top-[70%] left-[20%] z-20 text-white">
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                strokeDashoffset={-168}
+                width={104}
+                height={40}
+                handleClick={handleClick}
+                label={"Learn more"}
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              className="rounded-[44px]"
+              width={533}
+              height={300}
+              alt="Swiper image"
+              src="/assets/icons/2.jpg"
+            />
+            <div className="absolute top-[20%] left-[20%] text-white text-base">
+              Hedge Fund-
+              <br />
+              in-a-box
+            </div>
+            <div className="absolute top-[70%] left-[20%] z-20 text-white">
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                strokeDashoffset={-168}
+                width={104}
+                height={40}
+                handleClick={handleClick}
+                label={"Learn more"}
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              className="rounded-[44px]"
+              width={533}
+              alt="Swiper image"
+              height={300}
+              src="/assets/icons/3.jpg"
+            />
+            <div className="absolute top-[20%] left-[20%] text-white text-base">
+              Hedge Fund-
+              <br />
+              in-a-box
+            </div>
+            <div className="absolute top-[70%] left-[20%] z-20 text-white">
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                strokeDashoffset={-168}
+                width={104}
+                height={40}
+                handleClick={handleClick}
+                label={"Learn more"}
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              className="rounded-[44px]"
+              width={533}
+              alt="Swiper image"
+              height={300}
+              src="/assets/icons/4.jpg"
+            />
+            <div className="absolute top-[20%] left-[20%] text-white text-base">
+              Hedge Fund-
+              <br />
+              in-a-box
+            </div>
+            <div className="absolute top-[70%] left-[20%] z-20 text-white">
+              <HoverEffectBtn
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                strokeDashoffset={-168}
+                width={104}
+                height={40}
+                handleClick={handleClick}
+                label={"Learn more"}
+              />
+            </div>
+          </SwiperSlide>
+          <div
+            className="absolute right-[443px] top-[41%] z-10 cursor-pointer"
+            onClick={handleNextClick}
+          >
+            <NextBtn width={37} />
+          </div>
+          <div
+            className="absolute left-[443px] top-[41%] z-10 cursor-pointer"
+            onClick={handlePrevClick}
+          >
+            <PrevBtn width={37} />{" "}
+          </div>
+        </Swiper>
+      </div>
       <div className="flex flex-col justify-center items-center !mt-5">
         <div className="flex flex-col justify-center items-center w-[513px]">
           <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-12">

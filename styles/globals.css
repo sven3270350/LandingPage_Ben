@@ -68,14 +68,8 @@ body {
   fill: transparent;
   stroke: #009ffd;
   stroke-dasharray: 50 300;
-  /* stroke-dashoffset: -165; */
   transition: 1s all ease;
-  animation-fill-mode: forwards;
-}
-
-#hoverBtnText {
-  margin-top: -31px;
-  text-align: center;
+  /* animation-fill-mode: forwards; */
 }
 
 .svg-wrapper:hover #shape {
@@ -84,6 +78,11 @@ body {
   stroke-dashoffset: 0;
   stroke: #00f2de;
   display: block !important;
+}
+
+#hoverBtnText {
+  margin-top: -31px;
+  text-align: center;
 }
 
 .fuller-button {

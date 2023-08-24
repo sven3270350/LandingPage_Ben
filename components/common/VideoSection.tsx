@@ -19,7 +19,7 @@ const VideoSection = () => {
         <Image
           src="/assets/icons/image_platform.png"
           width={1187}
-          height={500}
+          height={684.5}
           alt="Introduction Video"
         />
       </div>
