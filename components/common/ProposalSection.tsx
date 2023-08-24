@@ -26,7 +26,7 @@ const ProposalSection = () => {
     {
       title: "Premium",
       price: 2.99,
-      label: "Starting from",
+      label: "Starting from per month",
       walletAccessCount: "10",
       entires: "unlimited",
       maxGroupSize: "100",
@@ -54,7 +54,7 @@ const ProposalSection = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="flex flex-wrap max-w-[1560px] justify-center items-center gap-6 mb-5 pb-8 pt-20 mt-10 border-t-[1px] border-solid border-[#DCDCDC]">
+        <div className="flex flex-wrap max-w-[1560px] justify-center items-center gap-6 mb-2 pb-6 pt-14 mt-8 border-t-[1px] border-solid border-[#DCDCDC]">
           {plans.map((item, index) => {
             return (
               <div
@@ -67,13 +67,13 @@ const ProposalSection = () => {
                 <div className="text-[#54716F] text-base not-italic font-normal">
                   {item.label}
                 </div>
-                <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px] mb-12">
+                <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px] mb-8">
                   ${item.price}
                   <label className="text-base font-normal leading-10 ml-[5px]">
                     {item.price > 0 && "per month"}
                   </label>
                 </div>
-                <div className="flex flex-col items-start gap-4 mb-20">
+                <div className="flex flex-col items-start gap-4 mb-8">
                   <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                     Wallet Access per Account
                     <div className="text-black">{item.walletAccessCount}</div>
@@ -86,15 +86,15 @@ const ProposalSection = () => {
                     Max Group Size (# User Accounts)
                     <div className="text-black">{item.maxGroupSize}</div>
                   </div>
+                  <HoverEffectBtn
+                    className="svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-normal text-[#2F4644] font-light text-2xl !w-[120px] leading-[120%] tracking-[-2px] font-sans"
+                    strokeDashoffset={-195}
+                    role="Proposal"
+                    width={120}
+                    height={40}
+                    label={"Learn more"}
+                  />
                 </div>
-                <HoverEffectBtn
-                  className="svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-normal mb-12 text-[#2F4644] font-light text-2xl !w-[120px] leading-[120%] tracking-[-2px] font-sans"
-                  strokeDashoffset={-195}
-                  role="Proposal"
-                  width={120}
-                  height={40}
-                  label={"Learn more"}
-                />
                 <LoginBtn
                   label={item.btnLabel}
                   className="!flex svg-wrapper opacity-[.8] hover:opacity-[1] !w-[140px] blue !rounded-3xl"
