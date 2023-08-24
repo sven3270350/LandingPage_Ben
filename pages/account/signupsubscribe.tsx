@@ -1,4 +1,5 @@
 import { useCustomRouter } from "components/hooks/custom-router";
+import Link from "next/link";
 import Facebook from "public/assets/icons/Facebook";
 import Google from "public/assets/icons/Google";
 import Linkedin from "public/assets/icons/Linkedin";
@@ -102,30 +103,39 @@ const SignUpSubscribePage = () => {
           <div className="text-[#2F4644] text-base font-semibold">
             Follow us on
           </div>
-          <div className="flex flex-row items-center mt-3">
+          <Link
+            href={"https://t.me/cryptool_io"}
+            className="flex flex-row items-center mt-3"
+          >
             <div className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
               <Telegram width={16} height={16} />
             </div>
             <div className="ml-2 text-[#2F4644] font-normal text-sm leading-6">
               Telegram
             </div>
-          </div>
-          <div className="flex flex-row items-center mt-3">
+          </Link>
+          <Link
+            href={"https://twitter.com/cryptool_io"}
+            className="flex flex-row items-center mt-3"
+          >
             <div className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
               <Twitter width={16} height={16} />
             </div>
             <div className="ml-2 text-[#2F4644] font-normal text-sm leading-6">
               Twitter
             </div>
-          </div>
-          <div className="flex flex-row items-center mt-3">
+          </Link>
+          <Link
+            href={"https://linkedin.com/company/cryptool-io"}
+            className="flex flex-row items-center mt-3"
+          >
             <div className="cursor-pointer p-2 rounded-full w-fit bg-[#E2EEED] flex items-center text-base">
               <Linkedin width={16} height={16} />
             </div>
             <div className="ml-2 text-[#2F4644] font-normal text-sm leading-6">
               LinkedIn
             </div>
-          </div>
+          </Link>
         </div>
         <div className="flex items-center justify-start gap-[15px] w-full">
           <input type="checkbox" />

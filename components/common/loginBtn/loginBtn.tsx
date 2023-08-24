@@ -15,12 +15,12 @@ const LoginBtn: React.FC<LoginBtnProps> = ({
   isLogin,
   className,
 }) => {
-  const { goToLogin, goToSignup } = useCustomRouter();
+  const { goToLogin, goToSignup, goToSignUpSubscribe } = useCustomRouter();
 
   return (
     <div
       className={cx(
-        "signup-btn w-[81px] h-[40px] flex items-center justify-center cursor-pointer text-center fuller-button hover:text-white text-[#2F4644]",
+        "signup-btn w-[81px] h-[40px] flex items-center justify-center cursor-pointer text-center fuller-button hover:text-white text-[#2F4644] red",
         label === "Log in" && "blue",
         label === "Sign up" && "red",
         className
@@ -30,6 +30,7 @@ const LoginBtn: React.FC<LoginBtnProps> = ({
         {
           label === "Log in" && goToLogin();
           label === "Sign up" && goToSignup();
+          goToSignUpSubscribe();
         }
       }}
     >

@@ -183,12 +183,8 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                 ) : (
                   <div className="flex flex-row items-center ml-4 gap-3">
                     <LoginBtn
-                      label="Log in"
-                      setIsLogin={setIsLogin}
-                      isLogin={isLogin}
-                    />
-                    <LoginBtn
-                      label="Sign up"
+                      className="!w-[100px]"
+                      label="Subscribe"
                       setIsLogin={setIsLogin}
                       isLogin={isLogin}
                     />
