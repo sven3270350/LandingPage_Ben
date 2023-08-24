@@ -59,7 +59,7 @@ const ProposalSection = () => {
             return (
               <div
                 key={index}
-                className="flex flex-col col-auto min-w-[350px] w-[30%] items-start font-sans"
+                className="flex flex-col col-auto min-w-[390px] w-[30%] items-start font-sans"
               >
                 <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
                   {item.title}
@@ -73,7 +73,7 @@ const ProposalSection = () => {
                     {item.price > 0 && "per month"}
                   </label>
                 </div>
-                <div className="flex flex-col items-start gap-4 mb-[88px]">
+                <div className="flex flex-col items-start gap-4 mb-[88px] w-full">
                   <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                     Wallet Access per Account
                     <div className="text-black">{item.walletAccessCount}</div>
