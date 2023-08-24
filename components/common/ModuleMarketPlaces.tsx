@@ -29,7 +29,7 @@ interface SwiperProps {
 const ModuleMarketPlaces = () => {
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation],
-    className: "!pt-11 !pb-20 w-[1392px] img-swiper",
+    className: "!pt-14 !pb-14 w-[1392px] img-swiper",
     navigation: true,
     slidesPerView: 3,
     loop: true,
@@ -77,9 +77,9 @@ const ModuleMarketPlaces = () => {
   }, []);
 
   return (
-    <div className="mt-[97px] font-sans">
-      <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
-        Implement
+    <div className="mt-[96px] font-sans">
+      <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]">
+        Explore
       </div>
       <div className="text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%] tracking-[-2px] font-sans">
         Check out the integrated the modules
@@ -250,12 +250,12 @@ const ModuleMarketPlaces = () => {
           </div>
         </Swiper>
       </div>
-      <div className="flex flex-col justify-center items-center !mt-5">
+      <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center w-[513px]">
-          <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-12">
+          <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-20">
             Cryptool Market
           </div>
-          <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-8 font-sans">
+          <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14 font-sans">
             Buy or sell tokens, unvested allocations, NFTs,
             <br />
             Ambassador Program rights, and more..
