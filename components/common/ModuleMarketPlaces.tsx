@@ -8,6 +8,7 @@ import HoverEffectBtn from "components/common/loginBtn/HoverEffectBtn";
 import { useEffect, useState } from "react";
 import NextBtn from "public/assets/icons/NextBtn";
 import PrevBtn from "public/assets/icons/PrevBtn";
+import { cx } from "@emotion/css";
 
 interface SwiperProps {
   modules: (typeof EffectCoverflow | typeof Navigation)[];
@@ -25,8 +26,11 @@ interface SwiperProps {
     modifier?: number;
   };
 }
+interface ModuleMarketPlacesProps {
+  activeSlide?: number;
+}
 
-const ModuleMarketPlaces = () => {
+const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) => {
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation],
     className: "!pt-[58px] !pb-[58px] w-[1392px] img-swiper",
@@ -78,13 +82,13 @@ const ModuleMarketPlaces = () => {
 
   return (
     <div className="pt-[96px] font-sans overflow-y-scroll h-full">
-      <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]">
+      <div className={cx("text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]", activeSlide === 2 && "animate-normal-animation duration-1000")}>
         Explore
       </div>
-      <div className="text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%] tracking-[-2px] font-sans">
+      <div className={cx("text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%] tracking-[-2px] font-sans", activeSlide === 2 && "animate-normal-animation duration-1000")}>
         Check out the integrated the modules
       </div>
-      <div className="text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%] font-sans">
+      <div className={cx("text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%] font-sans", activeSlide === 2 && "animate-normal-animation duration-1000")}>
         Learn how the integrated modules work
       </div>
       <div>
@@ -252,16 +256,16 @@ const ModuleMarketPlaces = () => {
       </div>
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center w-[513px]">
-          <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-20">
+          <div className={cx("text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-20", activeSlide === 2 && "animate-normal-animation duration-1000")}>
             Cryptool Market
           </div>
-          <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14 font-sans">
+          <div className={cx("text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14 font-sans", activeSlide === 2 && "animate-normal-animation duration-1000")}>
             Buy or sell tokens, unvested allocations, NFTs,
             <br />
             Ambassador Program rights, and more..
           </div>
           <HoverEffectBtn
-            className="svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans mb-5"
+            className={cx("svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans mb-5", activeSlide === 2 && "animate-normal-animation duration-1000")}
             strokeDashoffset={-168}
             width={104}
             height={40}

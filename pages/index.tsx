@@ -109,17 +109,17 @@ const Home: NextPage = () => {
       ) : (
         <Swiper ref={swiperRef} {...swiperProps}>
           <SwiperSlide>
-            <IntroSection handleSlideToTwo={handleSlideToTwo} />
+            <IntroSection activeSlide={activeSlide} handleSlideToTwo={handleSlideToTwo} />
           </SwiperSlide>
           <SwiperSlide>
-            <VideoSection />
+            <VideoSection activeSlide={activeSlide} />
           </SwiperSlide>
           <SwiperSlide>
-            <ModuleMarketPlaces />
+            <ModuleMarketPlaces activeSlide={activeSlide} />
           </SwiperSlide>
           <SwiperSlide>
             <div className="h-full flex flex-col justify-between overflow-y-scroll">
-              <ProposalSection />
+              <ProposalSection activeSlide={activeSlide} />
               <div>
                 <Footer />
                 <RequestDemo />
