@@ -28,7 +28,7 @@ const ProposalSection = () => {
       price: 2.99,
       label: "Starting from",
       walletAccessCount: "10",
-      entires: "unlimited",
+      entires: "Unlimited",
       maxGroupSize: "100",
       btnLabel: "Coming Soon",
     },
@@ -36,9 +36,9 @@ const ProposalSection = () => {
       title: "Manager",
       price: 119.99,
       label: "Starting from",
-      walletAccessCount: "unlimited",
-      entires: "unlimited",
-      maxGroupSize: "unlimited",
+      walletAccessCount: "Unlimited",
+      entires: "Unlimited",
+      maxGroupSize: "Unlimited",
       btnLabel: "Coming Soon",
     },
   ];
@@ -76,15 +76,15 @@ const ProposalSection = () => {
                 <div className="flex flex-col items-start gap-4 mb-[88px] w-full">
                   <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                     Wallet Access per Account
-                    <div className="text-black">{item.walletAccessCount}</div>
+                    <div className="text-[#2F4644]">{item.walletAccessCount}</div>
                   </div>
                   <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                     Portfolio Asset & Allocation Entries
-                    <div className="text-black">{item.entires}</div>
+                    <div className="text-[#2F4644]">{item.entires}</div>
                   </div>
                   <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                     Max Group Size (# User Accounts)
-                    <div className="text-black">{item.maxGroupSize}</div>
+                    <div className="text-[#2F4644]">{item.maxGroupSize}</div>
                   </div>
                 </div>
                 <HoverEffectBtn
