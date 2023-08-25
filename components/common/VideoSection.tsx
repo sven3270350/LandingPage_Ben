@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const VideoSection = () => {
   return (
-    <div className="flex justify-center ">
-      <div className="flex items-center flex-col mt-[96px] font-sans max-w-[1560px]">
+    <div className="flex justify-center  overflow-y-scroll h-full">
+      <div className="flex items-center flex-col pt-[96px] font-sans max-w-[1560px]">
         <div className="flex flex-col justify-center items-center mb-[79px]">
           <div className="text-[#00F2DE] font-medium text-2xl font-sans tracking-[-2px] leading-[120%]">
             Discover

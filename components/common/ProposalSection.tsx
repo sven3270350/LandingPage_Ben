@@ -1,5 +1,4 @@
 import HoverEffectBtn from "components/common/loginBtn/HoverEffectBtn";
-import { useMediaSize } from "components/hooks/media-size";
 import React from "react";
 import LoginBtn from "./loginBtn/loginBtn";
 
@@ -42,10 +41,9 @@ const ProposalSection = () => {
       btnLabel: "Coming Soon",
     },
   ];
-  const { isTablet } = useMediaSize();
   return (
-    <div className={isTablet ? "" : "h-full"}>
-      <div className="flex flex-col justify-center items-center mt-[96px]">
+    <div>
+      <div className="flex flex-col justify-center items-center pt-[96px]">
         <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]">
           Get going
         </div>
@@ -76,7 +74,9 @@ const ProposalSection = () => {
                 <div className="flex flex-col items-start gap-4 mb-[88px] w-full">
                   <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                     Wallet Access per Account
-                    <div className="text-[#2F4644]">{item.walletAccessCount}</div>
+                    <div className="text-[#2F4644]">
+                      {item.walletAccessCount}
+                    </div>
                   </div>
                   <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
                     Portfolio Asset & Allocation Entries

@@ -77,7 +77,7 @@ const ModuleMarketPlaces = () => {
   }, []);
 
   return (
-    <div className="mt-[96px] font-sans">
+    <div className="pt-[96px] font-sans overflow-y-scroll h-full">
       <div className="text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]">
         Explore
       </div>

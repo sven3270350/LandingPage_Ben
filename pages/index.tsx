@@ -118,7 +118,7 @@ const Home: NextPage = () => {
             <ModuleMarketPlaces />
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col justify-between h-full overflow-y-scroll">
+            <div className="h-full overflow-y-scroll">
               <ProposalSection />
               <RequestDemo />
               <Footer />
