@@ -8,7 +8,7 @@ const RequestDemo = () => {
         alt="request demo"
         width={70}
         height={69}
-        className="absolute right-[50px] top-[11px]"
+        className="absolute right-[50px] top-[-277px]"
         src="/assets/icons/Request_a_demo.png"
       />
     </div>
