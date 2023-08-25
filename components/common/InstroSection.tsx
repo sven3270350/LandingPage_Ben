@@ -15,9 +15,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({ handleSlideToTwo }) => {
       <div className="max-w-[1560px] w-full">
         <div className="relative h-[100vh]">
           <Image
-            className={cx(
-              "absolute top-[20%] left-[8%]"
-            )}
+            className="absolute top-[20%] left-[8%] animate-normal-animation"
             width={650}
             height={279.92}
             src="/assets/icons/LogoWhiteBlur.png"
