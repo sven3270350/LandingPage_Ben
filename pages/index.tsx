@@ -72,8 +72,10 @@ const Home: NextPage = () => {
     if (isTablet) {
       setActiveSlide(0);
     }
-    handleInitialSlide();
   }, [isTablet, router.asPath]);
+  useEffect(()=> {
+    handleInitialSlide();
+  })
   const swiperProps: SwiperProps = {
     className: "mySwiper",
     direction: "vertical",
