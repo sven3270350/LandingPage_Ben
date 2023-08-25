@@ -120,8 +120,10 @@ const Home: NextPage = () => {
           <SwiperSlide>
             <div className="h-full flex flex-col justify-between overflow-y-scroll">
               <ProposalSection />
-              <Footer />
-              <RequestDemo />
+              <div>
+                <Footer />
+                <RequestDemo />
+              </div>
             </div>
           </SwiperSlide>
         </Swiper>
