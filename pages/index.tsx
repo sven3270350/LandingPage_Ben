@@ -73,9 +73,9 @@ const Home: NextPage = () => {
       setActiveSlide(0);
     }
   }, [isTablet, router.asPath]);
-  useEffect(()=> {
+  useEffect(() => {
     handleInitialSlide();
-  })
+  });
   const swiperProps: SwiperProps = {
     className: "mySwiper",
     direction: "vertical",
@@ -111,7 +111,10 @@ const Home: NextPage = () => {
       ) : (
         <Swiper ref={swiperRef} {...swiperProps}>
           <SwiperSlide>
-            <IntroSection activeSlide={activeSlide} handleSlideToTwo={handleSlideToTwo} />
+            <IntroSection
+              activeSlide={activeSlide}
+              handleSlideToTwo={handleSlideToTwo}
+            />
           </SwiperSlide>
           <SwiperSlide>
             <VideoSection activeSlide={activeSlide} />
