@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
   return (
     <nav
       className={cx(
-        "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full font-sans",
+        "fixed z-20 top-0 bg-transparent px-[50px] py-4 text-white w-full",
         activeSlide > 0 || mousePosition ? "isSticky" : "",
         isTablet && ismenuClick ? "h-[100vh] !bg-[#03D9C8]" : ""
       )}

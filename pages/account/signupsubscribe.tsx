@@ -11,7 +11,7 @@ const SignUpSubscribePage = () => {
   const [email, setEmail] = useState("");
   const { goToManualSignUp } = useCustomRouter();
   return (
-    <div className="flex justify-center items-center bg-slate-300 w-full font-sans py-8">
+    <div className="flex justify-center items-center bg-slate-300 w-full py-8">
       <div className="w-[427px] flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
         <div className="w-full">
           <div className="text-[#2F4644] text-center text-[22px] font-medium not-italic leading-[22px]">

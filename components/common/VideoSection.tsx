@@ -8,15 +8,30 @@ interface VideoSectionProps {
 const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
   return (
     <div className="flex justify-center  overflow-y-scroll h-full">
-      <div className="flex items-center flex-col pt-[96px] font-sans max-w-[1560px]">
+      <div className="flex items-center flex-col pt-[96px] max-w-[1560px]">
         <div className="flex flex-col justify-center items-center mb-[79px]">
-          <div className={cx("text-[#00F2DE] font-medium text-2xl font-sans tracking-[-2px] leading-[120%]", activeSlide === 1 && "animate-normal-animation duration-1000")}>
+          <div
+            className={cx(
+              "text-[#00F2DE] font-medium text-2xl tracking-[-2px] leading-[120%]",
+              activeSlide === 1 && "animate-normal-animation duration-1000"
+            )}
+          >
             Discover
           </div>
-          <div className={cx("mt-2 text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] font-sans", activeSlide === 1 && "animate-normal-animation duration-1000")}>
+          <div
+            className={cx(
+              "mt-2 text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px]",
+              activeSlide === 1 && "animate-normal-animation duration-1000"
+            )}
+          >
             Platform for Users, VCs, and Start-ups
           </div>
-          <div className={cx("text-[#2F4644] text-2xl font-light !leading-[120%] tracking-[-2px] font-sans", activeSlide === 1 && "animate-normal-animation duration-1000")}>
+          <div
+            className={cx(
+              "text-[#2F4644] text-2xl font-light !leading-[120%] tracking-[-2px]",
+              activeSlide === 1 && "animate-normal-animation duration-1000"
+            )}
+          >
             See how the Cryptool platform makes investing and managing crypto
             assets easy
           </div>
@@ -26,7 +41,10 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           width={1187}
           height={684.5}
           alt="Introduction Video"
-          className={cx("mb-5", activeSlide === 1 && "animate-normal-animation duration-1000")}
+          className={cx(
+            "mb-5",
+            activeSlide === 1 && "animate-normal-animation duration-1000"
+          )}
         />
       </div>
     </div>

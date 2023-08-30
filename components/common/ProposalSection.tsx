@@ -49,20 +49,35 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center pt-[96px]">
-        <div className={cx("text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]", activeSlide === 3 && "animate-normal-animation duration-1000")}>
+        <div
+          className={cx(
+            "text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]",
+            activeSlide === 3 && "animate-normal-animation duration-1000"
+          )}
+        >
           Get going
         </div>
-        <div className={cx("text-[#2F4644] text-center font-normal text-[52px] !leading-[120%] tracking-[-2px]", activeSlide === 3 && "animate-normal-animation duration-1000")}>
+        <div
+          className={cx(
+            "text-[#2F4644] text-center font-normal text-[52px] !leading-[120%] tracking-[-2px]",
+            activeSlide === 3 && "animate-normal-animation duration-1000"
+          )}
+        >
           Learn about our account options
         </div>
       </div>
-      <div className={cx("flex justify-center", activeSlide === 3 && "animate-normal-animation duration-1000")}>
+      <div
+        className={cx(
+          "flex justify-center",
+          activeSlide === 3 && "animate-normal-animation duration-1000"
+        )}
+      >
         <div className="flex flex-wrap max-w-[1560px] justify-center items-center gap-6 mb-5 pb-8 pt-16 mt-12 border-t-[1px] border-solid border-[#DCDCDC]">
           {plans.map((item, index) => {
             return (
               <div
                 key={index}
-                className="flex flex-col col-auto min-w-[390px] w-[30%] items-start font-sans"
+                className="flex flex-col col-auto min-w-[390px] w-[30%] items-start"
               >
                 <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
                   {item.title}
@@ -85,15 +100,19 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
                   </div>
                   <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
                     Portfolio Asset & Allocation Entries
-                    <div className="text-[#2F4644] font-semibold">{item.entires}</div>
+                    <div className="text-[#2F4644] font-semibold">
+                      {item.entires}
+                    </div>
                   </div>
                   <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
                     Max Group Size (# User Accounts)
-                    <div className="text-[#2F4644] font-semibold">{item.maxGroupSize}</div>
+                    <div className="text-[#2F4644] font-semibold">
+                      {item.maxGroupSize}
+                    </div>
                   </div>
                 </div>
                 <HoverEffectBtn
-                  className="svg-wrapper mb-12 hover:font-normal text-[#2F4644] font-light text-2xl !w-[125px] leading-[120%] tracking-[-2px] font-sans"
+                  className="svg-wrapper mb-12 hover:font-normal text-[#2F4644] font-light text-2xl !w-[125px] leading-[120%] tracking-[-2px]"
                   strokeDashoffset={-195}
                   role="Proposal"
                   width={125}

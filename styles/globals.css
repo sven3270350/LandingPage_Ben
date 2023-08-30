@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/earlyaccess/notosanssc.css");
 
 @layer base {
   html {
-    font-family: "Roboto", sans-serif;
+    font-family: "Noto Sans SC", Helvetica, arial, sans-serif;
   }
 }
 
@@ -154,8 +154,7 @@ body {
 }
 
 .img-swiper .swiper-slide-next {
-  transform: translate3d(0px, 0px, 0.05px) rotateX(0deg) rotateY(0deg)
-    scale(1) !important;
+  transform: translate3d(0px, 0px, 0.05px) rotateX(0deg) rotateY(0deg) scale(1) !important;
 }
 
 .swiper-3d .swiper-slide-shadow-coverflow {

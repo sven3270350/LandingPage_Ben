@@ -30,7 +30,9 @@ interface ModuleMarketPlacesProps {
   activeSlide?: number;
 }
 
-const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) => {
+const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
+  activeSlide,
+}) => {
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation],
     className: "!pt-[58px] !pb-[58px] w-[1392px] img-swiper",
@@ -81,14 +83,29 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) 
   }, []);
 
   return (
-    <div className="pt-[96px] font-sans overflow-y-scroll h-full">
-      <div className={cx("text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]", activeSlide === 2 && "animate-normal-animation duration-1000")}>
+    <div className="pt-[96px] overflow-y-scroll h-full">
+      <div
+        className={cx(
+          "text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]",
+          activeSlide === 2 && "animate-normal-animation duration-1000"
+        )}
+      >
         Explore
       </div>
-      <div className={cx("text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%] tracking-[-2px] font-sans", activeSlide === 2 && "animate-normal-animation duration-1000")}>
+      <div
+        className={cx(
+          "text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%] tracking-[-2px]",
+          activeSlide === 2 && "animate-normal-animation duration-1000"
+        )}
+      >
         Check out the integrated the modules
       </div>
-      <div className={cx("text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%] font-sans", activeSlide === 2 && "animate-normal-animation duration-1000")}>
+      <div
+        className={cx(
+          "text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%]",
+          activeSlide === 2 && "animate-normal-animation duration-1000"
+        )}
+      >
         Learn how the integrated modules work
       </div>
       <div>
@@ -111,7 +128,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) 
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
               <HoverEffectBtn
-                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                 strokeDashoffset={-168}
                 width={104}
                 height={40}
@@ -135,7 +152,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) 
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
               <HoverEffectBtn
-                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                 strokeDashoffset={-168}
                 width={104}
                 height={40}
@@ -159,7 +176,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) 
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
               <HoverEffectBtn
-                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                 strokeDashoffset={-168}
                 width={104}
                 height={40}
@@ -183,7 +200,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) 
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
               <HoverEffectBtn
-                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                 strokeDashoffset={-168}
                 width={104}
                 height={40}
@@ -207,7 +224,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) 
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
               <HoverEffectBtn
-                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                 strokeDashoffset={-168}
                 width={104}
                 height={40}
@@ -231,7 +248,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) 
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
               <HoverEffectBtn
-                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans"
+                className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                 strokeDashoffset={-168}
                 width={104}
                 height={40}
@@ -256,17 +273,33 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) 
       </div>
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center w-[513px]">
-          <div className={cx("text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-20", activeSlide === 2 && "animate-normal-animation duration-1000")}>
+          <div
+            className={cx(
+              "text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-20",
+              activeSlide === 2 && "animate-normal-animation duration-1000"
+            )}
+          >
             Cryptool Market
           </div>
-          <div className={cx("text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14 font-sans", activeSlide === 2 && "animate-normal-animation duration-1000")}>
+          <div
+            className={cx(
+              "text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14",
+              activeSlide === 2 && "animate-normal-animation duration-1000"
+            )}
+          >
             Buy or sell tokens, unvested allocations, NFTs,
             <br />
             Ambassador Program rights, and more..
           </div>
-          <div className={activeSlide === 2 ? "animate-normal-animation duration-1000" : String(false)}>
+          <div
+            className={
+              activeSlide === 2
+                ? "animate-normal-animation duration-1000"
+                : String(false)
+            }
+          >
             <HoverEffectBtn
-              className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] h-[40px] font-sans mb-5"
+              className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] h-[40px] mb-5"
               strokeDashoffset={-168}
               width={104}
               height={40}
