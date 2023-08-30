@@ -85,11 +85,11 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
                 <div className="text-[#54716F] text-base not-italic font-normal">
                   {item.label}
                 </div>
-                <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px] mb-12">
+                <div className="text-[#54716F] text-[52px] flex items-end not-italic font-normal leading-[120%] tracking-[-2px] mb-12">
                   ${item.price}
-                  <label className="text-base leading-[39px] font-normal ml-[5px]">
+                  <div className="text-base leading-[39px] font-normal ml-[5px]">
                     {item.price > 0 && "per month"}
-                  </label>
+                  </div>
                 </div>
                 <div className="flex flex-col items-start gap-4 mb-[88px] w-full">
                   <div className="text-[#54716F] text-base not-italic font-normal flex flex-row gap-4">
