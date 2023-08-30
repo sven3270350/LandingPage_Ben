@@ -1,13 +1,20 @@
 import React from "react";
 import Image from "next/image";
 import { cx } from "@emotion/css";
+import { useMediaSize } from "components/hooks/media-size";
 interface VideoSectionProps {
   activeSlide?: number;
 }
 
 const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
+  const { isTablet } = useMediaSize();
   return (
-    <div className="flex justify-center  overflow-y-scroll h-full">
+    <div
+      className={cx(
+        "flex justify-center h-full",
+        !isTablet && "overflow-y-scroll"
+      )}
+    >
       <div className="flex items-center flex-col pt-[96px] max-w-[1560px]">
         <div className="flex flex-col justify-center items-center mb-[79px]">
           <div

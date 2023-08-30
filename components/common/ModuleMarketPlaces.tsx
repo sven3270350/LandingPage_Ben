@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import NextBtn from "public/assets/icons/NextBtn";
 import PrevBtn from "public/assets/icons/PrevBtn";
 import { cx } from "@emotion/css";
+import { useMediaSize } from "components/hooks/media-size";
 
 interface SwiperProps {
   modules: (typeof EffectCoverflow | typeof Navigation)[];
@@ -33,6 +34,7 @@ interface ModuleMarketPlacesProps {
 const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   activeSlide,
 }) => {
+  const { isTablet } = useMediaSize();
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation],
     className: "!pt-[58px] !pb-[58px] w-[1392px] img-swiper",
@@ -83,7 +85,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   }, []);
 
   return (
-    <div className="pt-[96px] overflow-y-scroll h-full">
+    <div className={cx("pt-[96px] h-full", !isTablet && "overflow-y-scroll")}>
       <div
         className={cx(
           "text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]",

@@ -27,7 +27,12 @@ const Footer = () => {
   ];
   const { isTablet } = useMediaSize();
   return (
-    <div className={cx("flex justify-center", isTablet ? "" : "h-[289px]")}>
+    <div
+      className={cx(
+        "flex justify-center",
+        isTablet ? "" : "min-h-[289px] h-full"
+      )}
+    >
       <div
         className={cx(
           "w-full flex justify-center pt-8 pb-12 pr-64 pl-44 border-solid border-t-[1px] border-[#F0F0F0] footer-gradient",
