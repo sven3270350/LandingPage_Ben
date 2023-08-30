@@ -264,14 +264,16 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({ activeSlide }) 
             <br />
             Ambassador Program rights, and more..
           </div>
-          <HoverEffectBtn
-            className={cx("svg-wrapper opacity-[.8] hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px] font-sans mb-5", activeSlide === 2 && "animate-normal-animation duration-1000")}
-            strokeDashoffset={-168}
-            width={104}
-            height={40}
-            handleClick={handleClick}
-            label={"Learn more"}
-          />
+          <div className={activeSlide === 2 ? "animate-normal-animation duration-1000" : String(false)}>
+            <HoverEffectBtn
+              className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] h-[40px] font-sans mb-5"
+              strokeDashoffset={-168}
+              width={104}
+              height={40}
+              handleClick={handleClick}
+              label={"Learn more"}
+            />
+          </div>
         </div>
       </div>
     </div>

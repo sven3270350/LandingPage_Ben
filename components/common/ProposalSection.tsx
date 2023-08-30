@@ -72,28 +72,28 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
                 </div>
                 <div className="text-[#54716F] text-[52px] not-italic font-normal leading-[120%] tracking-[-2px] mb-12">
                   ${item.price}
-                  <label className="text-base font-normal leading-10 ml-[5px]">
+                  <label className="text-base leading-[39px] font-normal ml-[5px]">
                     {item.price > 0 && "per month"}
                   </label>
                 </div>
                 <div className="flex flex-col items-start gap-4 mb-[88px] w-full">
-                  <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
+                  <div className="text-[#54716F] text-base not-italic font-normal flex flex-row gap-4">
                     Wallet Access per Account
-                    <div className="text-[#2F4644]">
+                    <div className="text-[#2F4644] font-semibold">
                       {item.walletAccessCount}
                     </div>
                   </div>
-                  <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
+                  <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
                     Portfolio Asset & Allocation Entries
-                    <div className="text-[#2F4644]">{item.entires}</div>
+                    <div className="text-[#2F4644] font-semibold">{item.entires}</div>
                   </div>
-                  <div className="text-[#54716F] text-base not-italic font-semibold flex flex-row gap-4">
+                  <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
                     Max Group Size (# User Accounts)
-                    <div className="text-[#2F4644]">{item.maxGroupSize}</div>
+                    <div className="text-[#2F4644] font-semibold">{item.maxGroupSize}</div>
                   </div>
                 </div>
                 <HoverEffectBtn
-                  className="svg-wrapper opacity-[.8] hover:opacity-[1] mb-12 hover:font-normal text-[#2F4644] font-light text-2xl !w-[125px] leading-[120%] tracking-[-2px] font-sans"
+                  className="svg-wrapper mb-12 hover:font-normal text-[#2F4644] font-light text-2xl !w-[125px] leading-[120%] tracking-[-2px] font-sans"
                   strokeDashoffset={-195}
                   role="Proposal"
                   width={125}
