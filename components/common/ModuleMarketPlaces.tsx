@@ -18,6 +18,7 @@ interface SwiperProps {
   slidesPerView?: number;
   loop?: boolean;
   effect?: "slide" | "fade" | "cube" | "coverflow" | "flip";
+  onSlideChange: (swiper: any) => void,
   coverflowEffect?: {
     slideShadows?: boolean;
     rotate?: number;
@@ -30,28 +31,17 @@ interface SwiperProps {
 interface ModuleMarketPlacesProps {
   activeSlide?: number;
 }
+interface TilesProps {
+  tiles: string[]
+}
 
 const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   activeSlide,
 }) => {
+  const Tiles: TilesProps = {tiles: ["Portfolio", "Calendar", "Raise", "Marketplace", "Groups", "My Cryptool"]}
   const { isTablet } = useMediaSize();
-  const swiperProps: SwiperProps = {
-    modules: [EffectCoverflow, Navigation],
-    className: "!pt-[58px] !pb-[58px] w-[1392px] img-swiper",
-    navigation: true,
-    slidesPerView: 3,
-    loop: true,
-    effect: "coverflow",
-    coverflowEffect: {
-      slideShadows: true,
-      rotate: 0,
-      stretch: 0,
-      depth: -80,
-      scale: 0.8,
-      modifier: 1,
-    },
-  };
-  const [swiperPosition, setSwiperPosition] = useState(0);
+  const [swiperPosition, setSwiperPosition] = useState<number>(0);
+  const [activeTile, setActiveTile] = useState<string>('');
   const handleNextClick = () => {
     const NextBtn = document.querySelector(
       ".img-swiper>.swiper-button-next"
@@ -70,7 +60,30 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       "_blank"
     );
   };
+  const handleChange = (swiper: any) => {
+    const nextSlide = document.querySelector(".img-swiper .swiper-slide-next")?.getAttribute('id');
+    console.log(nextSlide, swiper)
+    setActiveTile(nextSlide ?? "");
+  }
+  const swiperProps: SwiperProps = {
+    modules: [EffectCoverflow, Navigation],
+    className: "!pt-[58px] !pb-[58px] w-[1392px] img-swiper",
+    navigation: true,
+    slidesPerView: 3,
+    loop: true,
+    effect: "coverflow",
+    onSlideChange: handleChange,
+    coverflowEffect: {
+      slideShadows: true,
+      rotate: 0,
+      stretch: 0,
+      depth: -80,
+      scale: 0.8,
+      modifier: 1,
+    },
+  };
   useEffect(() => {
+
     const handleResize = () => {
       if (window.innerWidth < 1392) {
         setSwiperPosition((window.innerWidth - 1392) / 2);
@@ -82,7 +95,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  });
 
   return (
     <div className={cx("pt-[96px] h-full", !isTablet && "overflow-y-scroll")}>
@@ -115,7 +128,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
           style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
           {...swiperProps}
         >
-          <SwiperSlide>
+          <SwiperSlide id="Portfolio">
             <Image
               className="rounded-[44px]"
               width={533}
@@ -124,8 +137,9 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               src="/assets/icons/5.jpg"
             />
             <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
+              Portfolio
+            </div>
+            <div className="absolute top-[29%] left-[20%] text-white text-base">
               in-a-box
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
@@ -139,7 +153,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               />
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide id="Calendar">
             <Image
               className="rounded-[44px]"
               width={533}
@@ -148,8 +162,9 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               src="/assets/icons/6.jpg"
             />
             <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
+              Calendar
+            </div>
+            <div className="absolute top-[29%] left-[20%] text-white text-base">
               in-a-box
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
@@ -163,7 +178,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               />
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide id="Raise">
             <Image
               className="rounded-[44px]"
               width={533}
@@ -172,8 +187,9 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               src="/assets/icons/1.jpg"
             />
             <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
+              Raise
+            </div>
+            <div className="absolute top-[29%] left-[20%] text-white text-base">
               in-a-box
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
@@ -187,7 +203,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               />
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide id="Marketplace">
             <Image
               className="rounded-[44px]"
               width={533}
@@ -196,8 +212,9 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               src="/assets/icons/2.jpg"
             />
             <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
+              Marketplace
+            </div>
+            <div className="absolute top-[29%] left-[20%] text-white text-base">
               in-a-box
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
@@ -211,7 +228,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               />
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide id="Groups">
             <Image
               className="rounded-[44px]"
               width={533}
@@ -220,8 +237,9 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               src="/assets/icons/3.jpg"
             />
             <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
+              Groups
+            </div>
+            <div className="absolute top-[29%] left-[20%] text-white text-base">
               in-a-box
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
@@ -235,7 +253,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               />
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide id="My Cryptool">
             <Image
               className="rounded-[44px]"
               width={533}
@@ -244,8 +262,9 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               src="/assets/icons/4.jpg"
             />
             <div className="absolute top-[20%] left-[20%] text-white text-base">
-              Hedge Fund-
-              <br />
+              My Cryptool
+            </div>
+            <div className="absolute top-[29%] left-[20%] text-white text-base">
               in-a-box
             </div>
             <div className="absolute top-[70%] left-[20%] z-20 text-white">
@@ -274,14 +293,14 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         </Swiper>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-col justify-center items-center w-[513px]">
+        <div className="flex flex-col justify-center items-center w-[517px]">
           <div
             className={cx(
               "text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-20",
               activeSlide === 2 && "animate-normal-animation duration-1000"
             )}
           >
-            Cryptool Market
+            {activeTile}
           </div>
           <div
             className={cx(
