@@ -41,7 +41,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   const Tiles: TilesProps = {tiles: ["Portfolio", "Calendar", "Raise", "Marketplace", "Groups", "My Cryptool"]}
   const { isTablet } = useMediaSize();
   const [swiperPosition, setSwiperPosition] = useState<number>(0);
-  const [activeTile, setActiveTile] = useState<string>('');
+  const [activeTile, setActiveTile] = useState<string>('Calendar');
   const handleNextClick = () => {
     const NextBtn = document.querySelector(
       ".img-swiper>.swiper-button-next"
