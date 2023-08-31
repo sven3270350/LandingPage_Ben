@@ -156,11 +156,15 @@ body {
 }
 
 .img-swiper .swiper-slide-visible {
-  transform: translate3d(0px, -16px, 80px) rotateX(0deg) rotateY(0deg)
-    scale(0.8) !important;
+  transform: translate3d(0px, -6px, 80px) rotateX(0deg) rotateY(0deg) scale(0.8) !important;
   transition-duration: 400ms !important;
 }
-
+.swiper-slide-visible > .module-description {
+  display: none;
+}
+.swiper-slide-next > .module-description {
+  display: flex;
+}
 .img-swiper .swiper-slide-next {
   transform: translate3d(0px, 0px, 0.05px) rotateX(0deg) rotateY(0deg) scale(1) !important;
 }
