@@ -18,7 +18,8 @@ interface ProposalSectionProps {
 }
 
 const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
-  const isTablet = useMediaSize();
+  const {isTablet} = useMediaSize();
+  console.log(isTablet)
   const plans: Plan[] = [
     {
       title: "Free",
