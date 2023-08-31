@@ -107,8 +107,8 @@ const Home: NextPage = () => {
           <VideoSection />
           <ModuleMarketPlaces />
           <ProposalSection />
-          <RequestDemo />
           <Footer />
+          <RequestDemo />
         </div>
       ) : (
         <Swiper ref={swiperRef} {...swiperProps}>

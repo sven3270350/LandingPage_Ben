@@ -18,8 +18,8 @@ interface ProposalSectionProps {
 }
 
 const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
-  const {isTablet} = useMediaSize();
-  console.log(isTablet)
+  const { isTablet } = useMediaSize();
+  console.log(isTablet);
   const plans: Plan[] = [
     {
       title: "Free",
@@ -85,7 +85,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
             return (
               <div
                 key={index}
-                className="flex flex-col col-auto min-w-[390px] w-[30%] items-start"
+                className="flex flex-col col-auto min-w-[380px] w-[30%] items-start"
               >
                 <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
                   {item.title}
