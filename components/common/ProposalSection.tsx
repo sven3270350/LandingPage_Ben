@@ -2,6 +2,7 @@ import HoverEffectBtn from "components/common/loginBtn/HoverEffectBtn";
 import React from "react";
 import LoginBtn from "./loginBtn/loginBtn";
 import { cx } from "@emotion/css";
+import { useMediaSize } from "components/hooks/media-size";
 
 interface Plan {
   title: string;
@@ -17,6 +18,7 @@ interface ProposalSectionProps {
 }
 
 const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
+  const isTablet = useMediaSize();
   const plans: Plan[] = [
     {
       title: "Free",
@@ -72,7 +74,12 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
           activeSlide === 3 && "animate-normal-animation duration-1000"
         )}
       >
-        <div className="flex flex-wrap max-w-[1560px] justify-center items-center gap-6 mb-5 pb-8 pt-16 mt-12 border-t-[1px] border-solid border-[#DCDCDC]">
+        <div
+          className={cx(
+            "flex max-w-[1560px] justify-center items-center gap-6 mb-5 pb-8 pt-16 mt-12 border-t-[1px] border-solid border-[#DCDCDC]",
+            isTablet ? "flex-col" : "flex-wrap"
+          )}
+        >
           {plans.map((item, index) => {
             return (
               <div
