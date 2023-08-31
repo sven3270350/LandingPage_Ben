@@ -132,7 +132,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1392) {
-        setSwiperPosition((window.innerWidth - 1392) / 2);
+        setSwiperPosition((window.innerWidth - 1414) / 2);
       }
     };
 
@@ -169,74 +169,76 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       >
         Learn how the integrated modules work
       </div>
-      <Swiper
-        style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
-        {...swiperProps}
-      >
-        {slides.map((item, index) => {
-          return (
-            <>
-              <SwiperSlide key={index} id={item.title} className="relative">
-                <Image
-                  className="rounded-[44px]"
-                  width={533}
-                  alt="Swiper image"
-                  height={300}
-                  src={item.img}
-                />
-                <div className="absolute top-[20%] left-[20%] text-white text-base">
-                  {item.title}
-                </div>
-                <div className="absolute top-[29%] left-[20%] text-white text-base">
-                  {item.label}
-                </div>
-                <div className="absolute top-[70%] left-[20%] z-20 text-white">
-                  <HoverEffectBtn
-                    className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
-                    strokeDashoffset={-168}
-                    width={104}
-                    height={40}
-                    handleClick={handleClick}
-                    label={item.btnlabel}
+      <div className="overflow-hidden">
+        <Swiper
+          style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
+          {...swiperProps}
+        >
+          {slides.map((item, index) => {
+            return (
+              <>
+                <SwiperSlide key={index} id={item.title} className="relative">
+                  <Image
+                    className="rounded-[44px]"
+                    width={533}
+                    alt="Swiper image"
+                    height={300}
+                    src={item.img}
                   />
-                </div>
-                <div className="absolute top-[120%] left-[0%] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                  <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-20">
+                  <div className="absolute top-[20%] left-[20%] text-white text-base">
                     {item.title}
                   </div>
-                  <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14">
-                    Buy or sell tokens, unvested allocations, NFTs,
-                    <br />
-                    Ambassador Program rights, and more..
+                  <div className="absolute top-[29%] left-[20%] text-white text-base">
+                    {item.label}
                   </div>
-                  <div>
+                  <div className="absolute top-[70%] left-[20%] z-20 text-white">
                     <HoverEffectBtn
-                      className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] h-[40px] mb-5"
+                      className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                       strokeDashoffset={-168}
                       width={104}
                       height={40}
                       handleClick={handleClick}
-                      label={"Learn more"}
+                      label={item.btnlabel}
                     />
                   </div>
-                </div>
-              </SwiperSlide>
-            </>
-          );
-        })}
-        <div
-          className="absolute right-[443px] top-[22%] z-10 cursor-pointer"
-          onClick={handleNextClick}
-        >
-          <NextBtn width={37} />
-        </div>
-        <div
-          className="absolute left-[443px] top-[22%] z-10 cursor-pointer"
-          onClick={handlePrevClick}
-        >
-          <PrevBtn width={37} />{" "}
-        </div>
-      </Swiper>
+                  <div className="absolute top-[120%] left-[0%] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
+                    <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-20">
+                      {item.title}
+                    </div>
+                    <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14">
+                      Buy or sell tokens, unvested allocations, NFTs,
+                      <br />
+                      Ambassador Program rights, and more..
+                    </div>
+                    <div>
+                      <HoverEffectBtn
+                        className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] h-[40px] mb-5"
+                        strokeDashoffset={-168}
+                        width={104}
+                        height={40}
+                        handleClick={handleClick}
+                        label={"Learn more"}
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </>
+            );
+          })}
+          <div
+            className="absolute right-[443px] top-[22%] z-10 cursor-pointer"
+            onClick={handleNextClick}
+          >
+            <NextBtn width={37} />
+          </div>
+          <div
+            className="absolute left-[443px] top-[22%] z-10 cursor-pointer"
+            onClick={handlePrevClick}
+          >
+            <PrevBtn width={37} />{" "}
+          </div>
+        </Swiper>
+      </div>
     </div>
   );
 };
