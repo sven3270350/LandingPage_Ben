@@ -147,7 +147,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   }, [isTablet]);
 
   return (
-    <div className={cx("pt-[96px] h-full", !isTablet && "overflow-y-scroll")}>
+    <div className={cx("pt-[96px]", !isTablet && "overflow-y-scroll")}>
       <div
         className={cx(
           "text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]",

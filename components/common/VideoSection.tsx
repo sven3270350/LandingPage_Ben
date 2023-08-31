@@ -27,7 +27,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           </div>
           <div
             className={cx(
-              "mt-2 text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px]",
+              "mt-2 text-[#2F4644] font-normal text-center text-[52px] !leading-[120%] tracking-[-2px]",
               activeSlide === 1 && "animate-normal-animation duration-1000"
             )}
           >
@@ -35,7 +35,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           </div>
           <div
             className={cx(
-              "text-[#2F4644] text-2xl font-light !leading-[120%] tracking-[-2px]",
+              "text-[#2F4644] text-2xl font-light text-center !leading-[120%] tracking-[-2px]",
               activeSlide === 1 && "animate-normal-animation duration-1000"
             )}
           >
