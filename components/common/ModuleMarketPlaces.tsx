@@ -135,13 +135,16 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         setSwiperPosition((window.innerWidth - 1414) / 2);
       }
     };
+    if (isTablet) {
+      handleResize();
+    }
 
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, [isTablet]);
 
   return (
     <div className={cx("pt-[96px] h-full", !isTablet && "overflow-y-scroll")}>
