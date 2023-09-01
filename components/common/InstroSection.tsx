@@ -31,7 +31,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
               className={cx(
                 "mb-14",
                 activeSlide === 0 && "animate-normal-animation duration-1000",
-                isTablet && "mb-0"
+                isTablet && "!mb-0"
               )}
               width={isTablet ? 400 : 650}
               height={279.92}
@@ -43,7 +43,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
               className={cx(
                 "fuller-button mb-32 blue rounded-3xl text-white flex justify-center items-center flex-shrink-0 w-[324px] py-2 px-6 font-normal text-base shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:bg-info-600 hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:bg-info-600 focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:bg-info-700 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]",
                 activeSlide === 0 && "animate-normal-animation duration-1000",
-                isTablet && "mb-0"
+                isTablet && "!mb-0"
               )}
             >
               Start Managing Today
