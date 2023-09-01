@@ -33,7 +33,7 @@ interface SlidesProps {
   title: string;
   label: string;
   btnlabel: string;
-  description: string
+  description: string;
 }
 
 interface ModuleMarketPlacesProps {
@@ -98,42 +98,47 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       title: "Portfolio",
       label: "in-a-box",
       btnlabel: "Learn more",
-      description: "Manage and monitor your entire crypto portfolio, including, vested, unvested, staked assets, and more.."
+      description:
+        "Manage and monitor your entire crypto portfolio, including, vested, unvested, staked assets, and more..",
     },
     {
       img: "/assets/icons/6.jpg",
       title: "Calendar",
       label: "in-a-box",
       btnlabel: "Learn more",
-      description: "Monitor and sync all events related to your groups or portfolio, and never miss a thing.."
+      description:
+        "Monitor and sync all events related to your groups or portfolio, and never miss a thing..",
     },
     {
       img: "/assets/icons/1.jpg",
       title: "Raise",
       label: "in-a-box",
       btnlabel: "Learn more",
-      description: "Create or participate in VC, presale, and crowdfunding pools in one-click.."
+      description:
+        "Create or participate in VC, presale, and crowdfunding pools in one-click..",
     },
     {
       img: "/assets/icons/2.jpg",
       title: "Market",
       label: "in-a-box",
       btnlabel: "Learn more",
-      description: "Buy or sell tokens, unvested allocations, NFTs, Ambassador Program rights, and more.."
+      description:
+        "Buy or sell tokens, unvested allocations, NFTs, Ambassador Program rights, and more..",
     },
     {
       img: "/assets/icons/3.jpg",
       title: "Groups",
       label: "in-a-box",
       btnlabel: "Learn more",
-      description: "Create, manage or join VC or Investment groups with ease.."
+      description: "Create, manage or join VC or Investment groups with ease..",
     },
     {
       img: "/assets/icons/4.jpg",
       title: "My Cryptool",
       label: "in-a-box",
       btnlabel: "Learn more",
-      description: "Combine your Cryptool most important widgets into one overview.."
+      description:
+        "Combine your Cryptool most important widgets into one overview..",
     },
   ];
   useEffect(() => {
@@ -154,7 +159,12 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   }, [isTablet]);
 
   return (
-    <div className={cx("pt-[96px]", !isTablet && "overflow-y-scroll")}>
+    <div
+      className={cx(
+        "pt-[96px] h-full flex flex-col justify-center",
+        !isTablet && "overflow-y-scroll"
+      )}
+    >
       <div
         className={cx(
           "text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]",

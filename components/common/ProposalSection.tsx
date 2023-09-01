@@ -50,7 +50,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
     },
   ];
   return (
-    <div>
+    <div className="flex flex-col justify-center h-full">
       <div className="flex flex-col justify-center items-center pt-[96px]">
         <div
           className={cx(
