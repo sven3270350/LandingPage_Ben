@@ -8,6 +8,7 @@ interface HoverEffectBtnProps {
   handleClick?: () => void;
   label?: string;
   strokeDashoffset?: number;
+  strokeDasharray?: string;
   role?: string;
   textClass?: string;
 }
@@ -19,6 +20,7 @@ const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
   label,
   handleClick,
   strokeDashoffset,
+  strokeDasharray,
   textClass,
   role,
 }) => {
@@ -41,6 +43,7 @@ const HoverEffectBtn: React.FC<HoverEffectBtnProps> = ({
         <rect
           id="shape"
           strokeDashoffset={strokeDashoffset}
+          strokeDasharray={strokeDasharray}
           height={height}
           width={width}
         />

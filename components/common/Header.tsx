@@ -74,7 +74,8 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                 <div className="hidden md:flex items-center">
                   <HoverEffectBtn
                     className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
-                    strokeDashoffset={-165}
+                    strokeDashoffset={-153}
+                    strokeDasharray="71 300"
                     width={100}
                     height={40}
                     textClass="font-normal not-italic text-base hover:font-semibold"
@@ -82,7 +83,8 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                   />
                   <HoverEffectBtn
                     className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
-                    strokeDashoffset={-165}
+                    strokeDashoffset={-169}
+                    strokeDasharray="43 300"
                     width={100}
                     height={40}
                     textClass="font-normal not-italic text-base hover:font-semibold"
@@ -90,7 +92,8 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                   />
                   <HoverEffectBtn
                     className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
-                    strokeDashoffset={-165}
+                    strokeDashoffset={-162}
+                    strokeDasharray="56 300"
                     width={100}
                     height={40}
                     textClass="font-normal not-italic text-base hover:font-semibold"

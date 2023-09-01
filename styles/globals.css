@@ -72,7 +72,7 @@ body {
   cursor: pointer;
 }
 #shape {
-  stroke-width: 0px;
+  stroke-width: 3px;
   fill: transparent;
   stroke: #009ffd;
   stroke-dasharray: 50 300;
@@ -81,7 +81,7 @@ body {
 }
 
 .svg-wrapper:hover #shape {
-  stroke-dasharray: 150 0;
+  stroke-dasharray: 50 0;
   stroke-width: 5px;
   stroke-dashoffset: 0;
   stroke: #00f2de;

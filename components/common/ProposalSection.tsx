@@ -115,10 +115,11 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
                   </div>
                 </div>
                 <HoverEffectBtn
-                  className="svg-wrapper mb-12 hover:font-normal text-[#2F4644] font-light text-2xl !w-[125px] leading-[120%]"
-                  strokeDashoffset={-195}
+                  className="svg-wrapper mb-12 hover:font-normal text-[#2F4644] font-light text-2xl !w-[140px] leading-[120%]"
+                  strokeDashoffset={-180}
+                  strokeDasharray="135 300"
                   role="Proposal"
-                  width={125}
+                  width={140}
                   height={40}
                   label={"Learn more"}
                 />

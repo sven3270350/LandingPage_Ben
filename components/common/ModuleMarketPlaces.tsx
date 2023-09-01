@@ -231,7 +231,8 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     <div>
                       <HoverEffectBtn
                         className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] h-[40px] mb-5"
-                        strokeDashoffset={-168}
+                        strokeDashoffset={-150}
+                        strokeDasharray="90 300"
                         width={104}
                         height={40}
                         handleClick={handleClick}
