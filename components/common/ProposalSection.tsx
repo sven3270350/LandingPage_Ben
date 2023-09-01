@@ -54,7 +54,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
       <div className="flex flex-col justify-center items-center pt-[96px]">
         <div
           className={cx(
-            "text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-2px]",
+            "text-[#00F2DE] text-center text-2xl font-medium !leading-[120%]",
             activeSlide === 3 && "animate-normal-animation duration-1000"
           )}
         >
@@ -62,7 +62,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
         </div>
         <div
           className={cx(
-            "text-[#2F4644] text-center font-normal text-[52px] !leading-[120%] tracking-[-2px]",
+            "text-[#2F4644] text-center font-normal text-[52px] !leading-[120%]",
             activeSlide === 3 && "animate-normal-animation duration-1000"
           )}
         >
@@ -93,7 +93,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
                 <div className="text-[#54716F] text-base not-italic font-normal">
                   {item.label}
                 </div>
-                <div className="text-[#54716F] text-[52px] flex items-end not-italic font-normal leading-[120%] tracking-[-2px] mb-12">
+                <div className="text-[#54716F] text-[52px] flex items-end not-italic font-normal leading-[120%] mb-12">
                   ${item.price}
                   <div className="text-base leading-[39px] font-normal ml-[5px]">
                     {item.price > 0 && "per month"}
@@ -120,7 +120,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
                   </div>
                 </div>
                 <HoverEffectBtn
-                  className="svg-wrapper mb-12 hover:font-normal text-[#2F4644] font-light text-2xl !w-[125px] leading-[120%] tracking-[-2px]"
+                  className="svg-wrapper mb-12 hover:font-normal text-[#2F4644] font-light text-2xl !w-[125px] leading-[120%]"
                   strokeDashoffset={-195}
                   role="Proposal"
                   width={125}

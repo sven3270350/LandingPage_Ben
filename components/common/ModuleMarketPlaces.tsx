@@ -158,7 +158,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       </div>
       <div
         className={cx(
-          "text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%] tracking-[-2px]",
+          "text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%]",
           activeSlide === 2 && "animate-normal-animation duration-1000"
         )}
       >
@@ -205,7 +205,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     />
                   </div>
                   <div className="absolute top-[120%] left-[0%] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                    <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] tracking-[-2px] mb-20">
+                    <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] mb-20">
                       {item.title}
                     </div>
                     <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14">

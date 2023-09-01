@@ -19,7 +19,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
         <div className="flex flex-col justify-center items-center mb-[79px]">
           <div
             className={cx(
-              "text-[#00F2DE] font-medium text-2xl tracking-[-2px] leading-[120%]",
+              "text-[#00F2DE] font-medium text-2xl leading-[120%]",
               activeSlide === 1 && "animate-normal-animation duration-1000"
             )}
           >
@@ -27,7 +27,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           </div>
           <div
             className={cx(
-              "mt-2 text-[#2F4644] font-normal text-center text-[52px] !leading-[120%] tracking-[-2px]",
+              "mt-2 text-[#2F4644] font-normal text-center text-[52px] !leading-[120%]",
               activeSlide === 1 && "animate-normal-animation duration-1000"
             )}
           >
@@ -35,7 +35,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           </div>
           <div
             className={cx(
-              "text-[#2F4644] text-2xl font-light text-center !leading-[120%] tracking-[-2px]",
+              "text-[#2F4644] text-2xl font-light text-center !leading-[120%]",
               activeSlide === 1 && "animate-normal-animation duration-1000"
             )}
           >
