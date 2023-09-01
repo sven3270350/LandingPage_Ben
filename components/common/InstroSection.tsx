@@ -31,7 +31,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
               className={cx(
                 "mt-14",
                 activeSlide === 0 && "animate-normal-animation duration-1000",
-                isTablet && "!mb-0"
+                isTablet && "!mt-0"
               )}
               width={isTablet ? 400 : 650}
               height={279.92}
