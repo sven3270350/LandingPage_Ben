@@ -111,7 +111,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
                     Max Group Size (# User Accounts)
                     <div className="text-[#2F4644] font-semibold">
                       {item.maxGroupSize}
-                    </div>
+                    </div>   
                   </div>
                 </div>
                 <HoverEffectBtn
