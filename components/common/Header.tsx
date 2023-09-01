@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
       <div className="flex justify-center">
         <div className="flex items-center justify-between max-w-[1560px] w-full">
           <div className="flex justify-between items-center w-full">
-            <div className="flex flex-row flex-shrink-0 justify-between 2xl:gap-[121px] gap-0">
+            <div className="flex flex-row flex-shrink-0 justify-between gap-[121px]">
               <div>
                 {activeSlide || mousePosition ? (
                   <Image
