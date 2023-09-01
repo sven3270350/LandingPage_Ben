@@ -23,7 +23,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
         >
           <div
             className={cx(
-              "w-full items-center flex flex-col h-[100vh] gap-10 justify-center max-w-[700px]",
+              "w-full items-center flex flex-col h-[100vh] gap-10 justify-center max-w-[700px] pt-20",
               isTablet && "!justify-start"
             )}
           >
@@ -50,7 +50,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
             </button>
             <div
               className={cx(
-                "text-white opacity-[.8] font-robotic text-center text-4xl tracking-wide max-w-[668px]",
+                "text-white opacity-[.8] font-robotic text-center tracking-wide max-w-[668px] xl:text-4xl text-3xl",
                 activeSlide === 0 && "animate-normal-animation duration-1000"
               )}
             >
