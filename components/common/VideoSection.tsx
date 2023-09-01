@@ -48,10 +48,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           width={1187}
           height={684.5}
           alt="Introduction Video"
-          className={cx(
-            "mb-5",
-            activeSlide === 1 && "animate-normal-animation duration-1000"
-          )}
+          className="mb-5"
         />
       </div>
     </div>

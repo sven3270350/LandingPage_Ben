@@ -69,12 +69,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
           Learn about our account options
         </div>
       </div>
-      <div
-        className={cx(
-          "flex justify-center",
-          activeSlide === 3 && "animate-normal-animation duration-1000"
-        )}
-      >
+      <div className="flex justify-center">
         <div
           className={cx(
             "flex max-w-[1560px] justify-center items-center gap-6 mb-5 pb-8 pt-16 mt-12 border-t-[1px] border-solid border-[#DCDCDC]",
