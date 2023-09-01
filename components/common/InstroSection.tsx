@@ -13,7 +13,12 @@ const IntroSection: React.FC<IntroSectionProps> = ({
 }) => {
   const { isTablet } = useMediaSize();
   return (
-    <div className={cx("w-full bg-firstSection flex justify-center", !isTablet && "h-full")}>
+    <div
+      className={cx(
+        "w-full bg-firstSection flex justify-center",
+        !isTablet && "h-full"
+      )}
+    >
       <div className="max-w-[1560px] w-full flex flex-col justify-between">
         <div
           className={cx(
@@ -50,7 +55,8 @@ const IntroSection: React.FC<IntroSectionProps> = ({
             </button>
             <div
               className={cx(
-                "text-white opacity-[.8] font-robotic text-center tracking-wide max-w-[668px] xl:text-4xl text-3xl", isTablet && "pb-10",
+                "text-white opacity-[.8] font-robotic text-center tracking-wide max-w-[668px] xl:text-4xl text-3xl",
+                isTablet && "pb-10",
                 activeSlide === 0 && "animate-normal-animation duration-1000"
               )}
             >
