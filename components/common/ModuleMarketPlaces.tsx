@@ -33,6 +33,7 @@ interface SlidesProps {
   title: string;
   label: string;
   btnlabel: string;
+  description: string
 }
 
 interface ModuleMarketPlacesProps {
@@ -97,36 +98,42 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       title: "Portfolio",
       label: "in-a-box",
       btnlabel: "Learn more",
+      description: "Manage and monitor your entire crypto portfolio, including, vested, unvested, staked assets, and more.."
     },
     {
       img: "/assets/icons/6.jpg",
       title: "Calendar",
       label: "in-a-box",
       btnlabel: "Learn more",
+      description: "Monitor and sync all events related to your groups or portfolio, and never miss a thing.."
     },
     {
       img: "/assets/icons/1.jpg",
       title: "Raise",
       label: "in-a-box",
       btnlabel: "Learn more",
+      description: "Create or participate in VC, presale, and crowdfunding pools in one-click.."
     },
     {
       img: "/assets/icons/2.jpg",
-      title: "Marketplace",
+      title: "Market",
       label: "in-a-box",
       btnlabel: "Learn more",
+      description: "Buy or sell tokens, unvested allocations, NFTs, Ambassador Program rights, and more.."
     },
     {
       img: "/assets/icons/3.jpg",
       title: "Groups",
       label: "in-a-box",
       btnlabel: "Learn more",
+      description: "Create, manage or join VC or Investment groups with ease.."
     },
     {
       img: "/assets/icons/4.jpg",
       title: "My Cryptool",
       label: "in-a-box",
       btnlabel: "Learn more",
+      description: "Combine your Cryptool most important widgets into one overview.."
     },
   ];
   useEffect(() => {
@@ -162,7 +169,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
           activeSlide === 2 && "animate-normal-animation duration-1000"
         )}
       >
-        Check out the integrated the modules
+        Check out the integrated modules
       </div>
       <div
         className={cx(
@@ -170,7 +177,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
           activeSlide === 2 && "animate-normal-animation duration-1000"
         )}
       >
-        Learn how the integrated modules work
+        Learn how all the Cryptool integrated modules work together
       </div>
       <div className="overflow-hidden">
         <Swiper
@@ -204,14 +211,12 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       label={item.btnlabel}
                     />
                   </div>
-                  <div className="absolute top-[120%] left-[0%] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
+                  <div className="absolute top-[120%] left-[-27px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
                     <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] mb-20">
                       {item.title}
                     </div>
-                    <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14">
-                      Buy or sell tokens, unvested allocations, NFTs,
-                      <br />
-                      Ambassador Program rights, and more..
+                    <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14 max-w-[517px]">
+                      {item.description}
                     </div>
                     <div>
                       <HoverEffectBtn
