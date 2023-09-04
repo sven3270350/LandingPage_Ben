@@ -132,7 +132,7 @@ body {
   transition-duration: 0.6s;
 }
 .img-swiper .swiper-pagination {
-  top: var(--swiper-pagination-top, 46%) !important;
+  top: var(--swiper-pagination-top, 48%) !important;
 }
 .swiper-pagination-bullet-active {
   width: 60px !important;
