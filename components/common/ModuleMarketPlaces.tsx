@@ -68,7 +68,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   };
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation, Pagination],
-    className: "!pt-[58px] !pb-[430px] w-[1560px] img-swiper",
+    className: "!pt-[58px] !pb-[480px] w-[1560px] img-swiper",
     navigation: true,
     pagination: {
       clickable: true,
@@ -276,7 +276,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     </div>
                     <div>
                       <HoverEffectBtn
-                        className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] h-[40px] mb-5"
+                        className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] !h-[40px] mb-5"
                         strokeDashoffset={-150}
                         strokeDasharray="90 300"
                         width={104}

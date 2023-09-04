@@ -132,7 +132,7 @@ body {
   transition-duration: 0.6s;
 }
 .img-swiper .swiper-pagination {
-  top: var(--swiper-pagination-top, 52%) !important;
+  top: var(--swiper-pagination-top, 47%) !important;
 }
 .swiper-pagination-bullet-active {
   width: 60px !important;
@@ -185,6 +185,13 @@ body {
 .img-swiper .swiper-slide-next {
   transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg)
     scale(1.1538) !important;
+}
+
+.img-swiper .swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  height: 30px !important;
 }
 
 .swiper-3d .swiper-slide-shadow-coverflow {
