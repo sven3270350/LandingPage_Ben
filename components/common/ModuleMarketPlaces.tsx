@@ -178,7 +178,10 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         Number(currentElement.getAttribute("data-swiper-slide-index")) > index
       ) {
         handlePrevClick();
-      } else {
+      }
+      if (
+        Number(currentElement.getAttribute("data-swiper-slide-index")) < index
+      ) {
         handleNextClick();
       }
     }
