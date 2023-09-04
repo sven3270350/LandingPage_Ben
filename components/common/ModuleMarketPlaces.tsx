@@ -243,7 +243,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                   }}
                 >
                   <Image
-                    className="rounded-[44px]"
+                    className=" rounded-lg"
                     width={533}
                     alt="Swiper image"
                     height={300}
