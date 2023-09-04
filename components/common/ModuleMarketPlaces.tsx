@@ -68,7 +68,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   };
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation, Pagination],
-    className: "!pt-[58px] !pb-[480px] w-[1560px] img-swiper",
+    className: "!pt-[58px] !pb-[428px] w-[1560px] img-swiper",
     navigation: true,
     pagination: {
       clickable: true,
@@ -267,7 +267,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       label={item.btnlabel}
                     />
                   </div>
-                  <div className="absolute top-[120%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
+                  <div className="absolute top-[109%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
                     <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] mb-20">
                       {item.title}
                     </div>
