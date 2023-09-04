@@ -141,6 +141,48 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         "Combine your Cryptool most important widgets into one overview..",
     },
   ];
+  const handlePrevNext = (index: number) => {
+    const currentElement = document.querySelector(
+      ".img-swiper .swiper-slide-next"
+    ) as HTMLElement;
+    console.log(
+      "data-swiper",
+      Number(currentElement.getAttribute("data-swiper-slide-index"))
+    );
+    console.log(index, "click");
+    if (Number(currentElement.getAttribute("data-swiper-slide-index")) === 5) {
+      if (index === 0) {
+        handleNextClick();
+      }
+      if (
+        index < Number(currentElement.getAttribute("data-swiper-slide-index"))
+      ) {
+        handlePrevClick();
+      }
+    }
+    if (Number(currentElement.getAttribute("data-swiper-slide-index")) === 0) {
+      if (index === 5) {
+        handlePrevClick();
+      }
+      if (
+        index > Number(currentElement.getAttribute("data-swiper-slide-index"))
+      ) {
+        handleNextClick();
+      }
+    }
+    if (
+      Number(currentElement.getAttribute("data-swiper-slide-index")) !== 0 &&
+      Number(currentElement.getAttribute("data-swiper-slide-index")) !== 5
+    ) {
+      if (
+        Number(currentElement.getAttribute("data-swiper-slide-index")) > index
+      ) {
+        handlePrevClick();
+      } else {
+        handleNextClick();
+      }
+    }
+  };
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1392) {
@@ -196,8 +238,15 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         >
           {slides.map((item, index) => {
             return (
-              <>
-                <SwiperSlide key={index} id={item.title} className="relative">
+              <div key={index}>
+                <SwiperSlide
+                  id={item.title}
+                  className="relative"
+                  key={index}
+                  onClick={() => {
+                    handlePrevNext(index);
+                  }}
+                >
                   <Image
                     className="rounded-[44px]"
                     width={533}
@@ -241,7 +290,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     </div>
                   </div>
                 </SwiperSlide>
-              </>
+              </div>
             );
           })}
           <div
