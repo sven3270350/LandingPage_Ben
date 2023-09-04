@@ -183,7 +183,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1560) {
-        setSwiperPosition((window.innerWidth - 1560) / 2);
+        setSwiperPosition((window.innerWidth - 1585) / 2);
       }
     };
     if (isTablet) {
