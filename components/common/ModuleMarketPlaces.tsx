@@ -81,8 +81,8 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       slideShadows: true,
       rotate: 0,
       stretch: 0,
-      depth: 50,
-      scale: 0.8,
+      depth: -100,
+      scale: 0.5,
       modifier: 1,
     },
   };
