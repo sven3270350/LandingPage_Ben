@@ -3,18 +3,20 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
-import { EffectCoverflow, Navigation } from "swiper/modules";
+import "swiper/css/pagination";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import HoverEffectBtn from "components/common/loginBtn/HoverEffectBtn";
 import { useEffect, useState } from "react";
-import NextBtn from "public/assets/icons/NextBtn";
-import PrevBtn from "public/assets/icons/PrevBtn";
+// import NextBtn from "public/assets/icons/NextBtn";
+// import PrevBtn from "public/assets/icons/PrevBtn";
 import { cx } from "@emotion/css";
 import { useMediaSize } from "components/hooks/media-size";
 
 interface SwiperProps {
-  modules: (typeof EffectCoverflow | typeof Navigation)[];
+  modules: (typeof EffectCoverflow | typeof Navigation | typeof Pagination)[];
   className?: string;
   navigation?: boolean;
+  pagination?: boolean | { clickable: boolean };
   slidesPerView?: number;
   loop?: boolean;
   effect?: "slide" | "fade" | "cube" | "coverflow" | "flip";
@@ -39,23 +41,10 @@ interface SlidesProps {
 interface ModuleMarketPlacesProps {
   activeSlide?: number;
 }
-interface TilesProps {
-  tiles: string[];
-}
 
 const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   activeSlide,
 }) => {
-  const Tiles: TilesProps = {
-    tiles: [
-      "Portfolio",
-      "Calendar",
-      "Raise",
-      "Marketplace",
-      "Groups",
-      "My Cryptool",
-    ],
-  };
   const { isTablet } = useMediaSize();
   const [swiperPosition, setSwiperPosition] = useState<number>(0);
   const handleNextClick = () => {
@@ -77,9 +66,12 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
     );
   };
   const swiperProps: SwiperProps = {
-    modules: [EffectCoverflow, Navigation],
+    modules: [EffectCoverflow, Navigation, Pagination],
     className: "!pt-[58px] !pb-[400px] w-[1392px] img-swiper",
     navigation: true,
+    pagination: {
+      clickable: true,
+    },
     slidesPerView: 3,
     loop: true,
     effect: "coverflow",
@@ -296,7 +288,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
               </div>
             );
           })}
-          <div
+          {/* <div
             className="absolute right-[443px] top-[22%] z-10 cursor-pointer"
             onClick={handleNextClick}
           >
@@ -307,7 +299,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
             onClick={handlePrevClick}
           >
             <PrevBtn width={37} />{" "}
-          </div>
+          </div> */}
         </Swiper>
       </div>
     </div>
