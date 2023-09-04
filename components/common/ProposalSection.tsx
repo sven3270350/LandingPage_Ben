@@ -72,62 +72,66 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
       <div className="flex justify-center">
         <div
           className={cx(
-            "flex max-w-[1560px] justify-center items-center gap-6 mb-5 pb-8 pt-16 mt-12 border-t-[1px] border-solid border-[#DCDCDC]",
+            "flex max-w-[1560px] justify-center items-center mb-5 pb-8 pt-9 mt-12 border-t-[1px] border-solid border-[#DCDCDC]",
             isTablet ? "flex-col" : "flex-wrap"
           )}
         >
           {plans.map((item, index) => {
             return (
-              <div
-                key={index}
-                className="flex flex-col col-auto min-w-[380px] w-[30%] items-start"
-              >
-                <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
-                  {item.title}
-                </div>
-                <div className="text-[#54716F] text-base not-italic font-normal">
-                  {item.label}
-                </div>
-                <div className="text-[#54716F] text-[52px] flex items-end not-italic font-normal leading-[120%] mb-12">
-                  ${item.price}
-                  <div className="text-base leading-[39px] font-normal ml-[5px]">
-                    {item.price > 0 && "per month"}
+              <>
+              <div className="flex flex-col">
+                <div
+                  key={index}
+                  className="flex flex-col col-auto min-w-[390px] w-[] py-7 mb-5 px-[22px] items-start border border-solid rounded-xl bg-[#dcdcdc33]"
+                >
+                  <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
+                    {item.title}
                   </div>
-                </div>
-                <div className="flex flex-col items-start gap-4 mb-[88px] w-full">
-                  <div className="text-[#54716F] text-base not-italic font-normal flex flex-row gap-4">
-                    Wallet Access per Account
-                    <div className="text-[#2F4644] font-semibold">
-                      {item.walletAccessCount}
+                  <div className="text-[#54716F] text-base not-italic font-normal">
+                    {item.label}
+                  </div>
+                  <div className="text-[#54716F] text-[52px] flex items-end not-italic font-normal leading-[120%] mb-12">
+                    ${item.price}
+                    <div className="text-base leading-[39px] font-normal ml-[5px]">
+                      {item.price > 0 && "per month"}
                     </div>
                   </div>
-                  <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
-                    Portfolio Asset & Allocation Entries
-                    <div className="text-[#2F4644] font-semibold">
-                      {item.entires}
+                  <div className="flex flex-col items-start gap-4 mb-[88px] w-full">
+                    <div className="text-[#54716F] text-base not-italic font-normal flex flex-row gap-4">
+                      Wallet Access per Account
+                      <div className="text-[#2F4644] font-semibold">
+                        {item.walletAccessCount}
+                      </div>
+                    </div>
+                    <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
+                      Portfolio Asset & Allocation Entries
+                      <div className="text-[#2F4644] font-semibold">
+                        {item.entires}
+                      </div>
+                    </div>
+                    <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
+                      Max Group Size (# User Accounts)
+                      <div className="text-[#2F4644] font-semibold">
+                        {item.maxGroupSize}
+                      </div>
                     </div>
                   </div>
-                  <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
-                    Max Group Size (# User Accounts)
-                    <div className="text-[#2F4644] font-semibold">
-                      {item.maxGroupSize}
-                    </div>   
-                  </div>
+                  <HoverEffectBtn
+                    className="svg-wrapper hover:font-normal text-[#2F4644] font-light text-2xl !w-[140px] leading-[120%]"
+                    strokeDashoffset={-180}
+                    strokeDasharray="135 300"
+                    role="Proposal"
+                    width={140}
+                    height={40}
+                    label={"Learn more"}
+                  />
                 </div>
-                <HoverEffectBtn
-                  className="svg-wrapper mb-12 hover:font-normal text-[#2F4644] font-light text-2xl !w-[140px] leading-[120%]"
-                  strokeDashoffset={-180}
-                  strokeDasharray="135 300"
-                  role="Proposal"
-                  width={140}
-                  height={40}
-                  label={"Learn more"}
-                />
                 <LoginBtn
                   label={item.btnLabel}
                   className="!flex svg-wrapper opacity-[.8] hover:opacity-[1] !w-[140px] blue !rounded-3xl"
                 />
-              </div>
+                </div>
+              </>
             );
           })}
         </div>
