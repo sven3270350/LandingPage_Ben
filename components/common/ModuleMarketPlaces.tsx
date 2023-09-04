@@ -20,6 +20,7 @@ interface SwiperProps {
   slidesPerView?: number;
   loop?: boolean;
   effect?: "slide" | "fade" | "cube" | "coverflow" | "flip";
+  initialSlide?: number;
   coverflowEffect?: {
     slideShadows?: boolean;
     rotate?: number;
@@ -75,6 +76,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
     slidesPerView: 3,
     loop: true,
     effect: "coverflow",
+    initialSlide: 2,
     coverflowEffect: {
       slideShadows: true,
       rotate: 0,
