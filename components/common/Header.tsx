@@ -16,6 +16,8 @@ import Twitter from "public/assets/icons/Twitter";
 import Linkedin from "public/assets/icons/Linkedin";
 import Telegram from "public/assets/icons/Telegram";
 import Calendar from "public/assets/icons/Calendar";
+import { useCustomRouter } from "components/hooks/custom-router";
+import { Router, useRouter } from "next/router";
 interface HeaderProps {
   activeSlide: number;
 }
@@ -24,6 +26,8 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
   const [ismenuClick, setIsMenuClick] = useState(false);
   const { isTablet } = useMediaSize();
   const [mousePosition, setMousePosition] = useState(false);
+  const { goToHome } = useCustomRouter();
+  const router = useRouter();
   const onScroll = () => {
     if (window.scrollY > window.innerHeight - 70) {
       setMousePosition(true);
@@ -53,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
         <div className="flex items-center justify-between max-w-[1560px] w-full">
           <div className="flex justify-between items-center w-full">
             <div className="flex flex-row flex-shrink-0 justify-between gap-[121px]">
-              <div>
+              <div onClick={() => router.pathname !== "/" && goToHome()}>
                 {activeSlide || mousePosition ? (
                   <Image
                     width={163}
