@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import ArrowBelow from "public/assets/icons/ArrowBelow";
+import Lottie from "react-lottie";
 import { cx } from "@emotion/css";
 import { useMediaSize } from "components/hooks/media-size";
+import IntroSVGAnimation from "public/assets/icons/Cryptool_Homepage_Animation.json";
 interface IntroSectionProps {
   activeSlide?: number;
   handleSlideToTwo?: () => void;
@@ -71,12 +73,13 @@ const IntroSection: React.FC<IntroSectionProps> = ({
                 activeSlide === 0 && "animate-normal-animation duration-1000"
               )}
             >
-              <video
+              {/* <video
                 src="/assets/icons/Modules.mp4"
                 width={600}
                 autoPlay
                 loop
-              />
+              /> */}
+              <Lottie options={{ animationData: IntroSVGAnimation }} />
             </div>
           </div>
         </div>

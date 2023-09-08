@@ -5,7 +5,8 @@ import OpenEye from "public/assets/icons/OpenEye";
 import UnCheck from "public/assets/icons/UnCheck";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
+import Image from "next/image";
 
 const LoginPage = () => {
   const { goToForgotPassword } = useCustomRouter();
@@ -14,7 +15,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const nonAlphanumericRegex = /[^a-zA-Z0-9]/;
   const [btnClick, setBtnClick] = useState(false);
-  const notify = () => toast("Log in Button is Clicked!")
+  const notify = () => toast("Log in Button is Clicked!");
   return (
     <div className="flex justify-center items-center bg-slate-300 w-full h-[100vh]">
       <div className="w-[425px] flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
@@ -109,7 +110,12 @@ const LoginPage = () => {
           >
             Log In
           </div>
-          <ToastContainer className={"loginpage-toast"} position="bottom-left" autoClose={2000} closeButton={false} />
+          <ToastContainer
+            className={"loginpage-toast"}
+            position="bottom-left"
+            autoClose={2000}
+            closeButton={false}
+          />
           <div
             className="text-center text-[#54716F] text-xs leading-[180%] font-normal mt-4 cursor-pointer"
             onClick={() => goToForgotPassword()}
