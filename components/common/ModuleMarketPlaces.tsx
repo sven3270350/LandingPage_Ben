@@ -258,24 +258,32 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     {item.label}
                   </div>
                   <div className="absolute top-[70%] left-[20%] z-20 text-white">
-                    <HoverEffectBtn
+                    {/* <HoverEffectBtn
                       className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                       strokeDashoffset={-168}
                       width={104}
                       height={40}
                       handleClick={handleClick}
                       label={item.btnlabel}
-                    />
+                    /> */}
+                    <button
+                      type="button"
+                      className={cx(
+                        "inline-block text-white font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                      )}
+                    >
+                      {item.btnlabel}
+                    </button>
                   </div>
                   <div className="absolute top-[109%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                    <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] mb-20">
+                    <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] mb-7">
                       {item.title}
                     </div>
                     <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14 max-w-[517px]">
                       {item.description}
                     </div>
                     <div>
-                      <HoverEffectBtn
+                      {/* <HoverEffectBtn
                         className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] !h-[40px] mb-5"
                         strokeDashoffset={-150}
                         strokeDasharray="90 300"
@@ -283,7 +291,15 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                         height={40}
                         handleClick={handleClick}
                         label={"Learn more"}
-                      />
+                      /> */}
+                      <button
+                        type="button"
+                        className={cx(
+                          "inline-block text-[#2F4644] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                        )}
+                      >
+                        Learn more
+                      </button>
                     </div>
                   </div>
                 </SwiperSlide>
