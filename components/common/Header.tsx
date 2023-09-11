@@ -23,7 +23,11 @@ interface HeaderProps {
   setActiveSlide: Dispatch<SetStateAction<number>>;
   handleSlideTo: () => void;
 }
-const Header: React.FC<HeaderProps> = ({ activeSlide, setActiveSlide, handleSlideTo }) => {
+const Header: React.FC<HeaderProps> = ({
+  activeSlide,
+  setActiveSlide,
+  handleSlideTo,
+}) => {
   const [isLogin, setIsLogin] = useState(false);
   const [ismenuClick, setIsMenuClick] = useState(false);
   const { isTablet } = useMediaSize();
@@ -59,11 +63,13 @@ const Header: React.FC<HeaderProps> = ({ activeSlide, setActiveSlide, handleSlid
         <div className="flex items-center justify-between max-w-[1560px] w-full">
           <div className="flex justify-between items-center w-full">
             <div className="flex flex-row flex-shrink-0 justify-between gap-[121px]">
-              <div className="cursor-pointer" onClick={() =>
-                {//  router.pathname !== "/" && goToHome()
-                setActiveSlide(0),
-                handleSlideTo()}
-                 }>
+              <div
+                className="cursor-pointer"
+                onClick={() => {
+                  //  router.pathname !== "/" && goToHome()
+                  setActiveSlide(0), handleSlideTo();
+                }}
+              >
                 {activeSlide || mousePosition ? (
                   <Image
                     width={163}
@@ -94,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide, setActiveSlide, handleSlid
                   <button
                     type="button"
                     className={cx(
-                      "inline-block text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
+                      "inline-block mb-[-3px] text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
                       activeSlide > 0 && "!text-black"
                     )}
                   >
@@ -112,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide, setActiveSlide, handleSlid
                   <button
                     type="button"
                     className={cx(
-                      "inline-block text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
+                      "inline-block mb-[-3px] text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
                       activeSlide > 0 && "!text-black"
                     )}
                   >
@@ -130,7 +136,7 @@ const Header: React.FC<HeaderProps> = ({ activeSlide, setActiveSlide, handleSlid
                   <button
                     type="button"
                     className={cx(
-                      "inline-block text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
+                      "inline-block mb-[-3px] text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
                       activeSlide > 0 && "!text-black"
                     )}
                   >
