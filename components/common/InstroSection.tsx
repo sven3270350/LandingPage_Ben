@@ -25,7 +25,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
         <div
           className={cx(
             "flex justify-between items-center h-full",
-            isTablet ? "flex-col-reverse mt-11" : "flex-row"
+            isTablet ? "flex-col-reverse" : "flex-row"
           )}
         >
           <div
