@@ -12,6 +12,7 @@ import "swiper/css";
 import { useEffect, useRef, useState } from "react";
 import { useMediaSize } from "components/hooks/media-size";
 import { useRouter } from "next/router";
+import LeftNavBar from "components/common/basic/LeftNavBar";
 
 type SwiperRef = {
   // add the required 'swiper' property of the specific type
@@ -100,6 +101,7 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <LeftNavBar />
       <Header activeSlide={activeSlide} />
       {isTablet ? (
         <div className="flex flex-col w-full">
