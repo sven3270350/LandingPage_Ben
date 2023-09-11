@@ -79,7 +79,11 @@ const IntroSection: React.FC<IntroSectionProps> = ({
                 autoPlay
                 loop
               /> */}
-              <Lottie options={{ animationData: IntroSVGAnimation }} />
+              <Lottie
+                options={{ animationData: IntroSVGAnimation }}
+                isPaused={false}
+                isClickToPauseDisabled={true}
+              />
             </div>
           </div>
         </div>
