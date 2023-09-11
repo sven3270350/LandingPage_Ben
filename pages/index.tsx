@@ -101,7 +101,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <LeftNavBar />
+      {/* <LeftNavBar /> */}
       <Header activeSlide={activeSlide} />
       {isTablet ? (
         <div className="flex flex-col w-full">
