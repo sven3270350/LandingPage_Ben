@@ -1,5 +1,5 @@
 import { cx } from "@emotion/css";
-import React, { useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import LoginBtn from "./loginBtn/loginBtn";
 import { ROUTE_PATH } from "components/hooks/route-path";
 import Link from "next/link";
@@ -20,8 +20,10 @@ import { useCustomRouter } from "components/hooks/custom-router";
 import { Router, useRouter } from "next/router";
 interface HeaderProps {
   activeSlide: number;
+  setActiveSlide: Dispatch<SetStateAction<number>>;
+  handleSlideTo: () => void;
 }
-const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
+const Header: React.FC<HeaderProps> = ({ activeSlide, setActiveSlide, handleSlideTo }) => {
   const [isLogin, setIsLogin] = useState(false);
   const [ismenuClick, setIsMenuClick] = useState(false);
   const { isTablet } = useMediaSize();
@@ -57,7 +59,11 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
         <div className="flex items-center justify-between max-w-[1560px] w-full">
           <div className="flex justify-between items-center w-full">
             <div className="flex flex-row flex-shrink-0 justify-between gap-[121px]">
-              <div onClick={() => router.pathname !== "/" && goToHome()}>
+              <div className="cursor-pointer" onClick={() =>
+                {//  router.pathname !== "/" && goToHome()
+                setActiveSlide(0),
+                handleSlideTo()}
+                 }>
                 {activeSlide || mousePosition ? (
                   <Image
                     width={163}
@@ -75,8 +81,8 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                 )}
               </div>
               {!isTablet && (
-                <div className="hidden md:flex items-center">
-                  <HoverEffectBtn
+                <div className="hidden md:flex items-center gap-10">
+                  {/* <HoverEffectBtn
                     className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-153}
                     strokeDasharray="71 300"
@@ -84,8 +90,17 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     height={40}
                     textClass="font-normal not-italic text-base hover:font-semibold"
                     label="Portfolio"
-                  />
-                  <HoverEffectBtn
+                  /> */}
+                  <button
+                    type="button"
+                    className={cx(
+                      "inline-block text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
+                      activeSlide > 0 && "!text-black"
+                    )}
+                  >
+                    Portfolio
+                  </button>
+                  {/* <HoverEffectBtn
                     className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-169}
                     strokeDasharray="43 300"
@@ -93,8 +108,17 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     height={40}
                     textClass="font-normal not-italic text-base hover:font-semibold"
                     label="Raise"
-                  />
-                  <HoverEffectBtn
+                  /> */}
+                  <button
+                    type="button"
+                    className={cx(
+                      "inline-block text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
+                      activeSlide > 0 && "!text-black"
+                    )}
+                  >
+                    Raise
+                  </button>
+                  {/* <HoverEffectBtn
                     className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-162}
                     strokeDasharray="56 300"
@@ -102,7 +126,16 @@ const Header: React.FC<HeaderProps> = ({ activeSlide }) => {
                     height={40}
                     textClass="font-normal not-italic text-base hover:font-semibold"
                     label="Market"
-                  />
+                  /> */}
+                  <button
+                    type="button"
+                    className={cx(
+                      "inline-block text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
+                      activeSlide > 0 && "!text-black"
+                    )}
+                  >
+                    Market
+                  </button>
                 </div>
               )}
             </div>
