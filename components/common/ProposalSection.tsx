@@ -72,7 +72,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
       <div className="flex justify-center">
         <div
           className={cx(
-            "flex max-w-[1560px] justify-center items-center mb-5 pb-8 pt-9 mt-12 border-t-[1px] border-solid border-[#DCDCDC]",
+            "flex max-w-[1560px] justify-center items-center mb-5 pb-0 md:pb-4 lg:pb-6 xl:pb-8 pt-9 mt-8 md:mt-9 lg:mt-10 xl:mt-12 border-t-[1px] border-solid border-[#DCDCDC]",
             isTablet ? "flex-col gap-5" : "flex-wrap"
           )}
         >
@@ -81,39 +81,39 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
               <div key={index}>
                 <div className="flex flex-col">
                   <div className="flex flex-col col-auto min-w-[390px] w-[] py-7 mb-5 px-[22px] items-start border border-solid rounded-xl bg-[#dcdcdc33]">
-                    <div className="text-[#2F4644] text-[22px] font-medium not-italic leading-[100%] mb-6">
+                    <div className="text-[#2F4644] text-base md:text-lg lg:text-xl xl:text-[22px] font-medium not-italic leading-[100%] mb-6">
                       {item.title}
                     </div>
-                    <div className="text-[#54716F] text-base not-italic font-normal">
+                    <div className="text-[#54716F] text-sm xl:text-base not-italic font-normal">
                       {item.label}
                     </div>
-                    <div className="text-[#54716F] text-[52px] flex items-end not-italic font-normal leading-[120%] mb-12">
+                    <div className="text-[#54716F] text-3xl md:text-4xl lg:text-5xl xl:text-[52px] flex items-end not-italic font-normal leading-[120%] mb-6 md:mb-8 lg:mb-10 xl:mb-12">
                       ${item.price}
                       <div className="text-base leading-[39px] font-normal ml-[5px]">
                         {item.price > 0 && "per month"}
                       </div>
                     </div>
-                    <div className="flex flex-col items-start gap-4 mb-[88px] w-full">
-                      <div className="text-[#54716F] text-base not-italic font-normal flex flex-row gap-4">
+                    <div className="flex flex-col items-start gap-4 mb-10 md:mb-12 lg:mb-16 xl:mb-[88px] w-full">
+                      <div className="text-[#54716F] text-sm xl:text-base not-italic font-normal flex flex-row gap-4">
                         Wallet Access per Account
                         <div className="text-[#2F4644] font-semibold">
                           {item.walletAccessCount}
                         </div>
                       </div>
-                      <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
+                      <div className="text-[#54716F] text-sm xl:text-base not-italic flex flex-row gap-4">
                         Portfolio Asset & Allocation Entries
                         <div className="text-[#2F4644] font-semibold">
                           {item.entires}
                         </div>
                       </div>
-                      <div className="text-[#54716F] text-base not-italic flex flex-row gap-4">
+                      <div className="text-[#54716F] text-sm xl:text-base not-italic flex flex-row gap-4">
                         Max Group Size (# User Accounts)
                         <div className="text-[#2F4644] font-semibold">
                           {item.maxGroupSize}
                         </div>
                       </div>
                     </div>
-                    <HoverEffectBtn
+                    {/* <HoverEffectBtn
                       className="svg-wrapper hover:font-normal text-[#2F4644] font-light text-2xl !w-[140px] leading-[120%]"
                       strokeDashoffset={-180}
                       strokeDasharray="135 300"
@@ -121,7 +121,15 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
                       width={140}
                       height={40}
                       label={"Learn more"}
-                    />
+                    /> */}
+                    <button
+                      type="button"
+                      className={cx(
+                        "inline-block text-[#2F4644] font-normal not-italic text-base md:text-lg lg:text-xl xl:text-2xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                      )}
+                    >
+                      Learn more
+                    </button>
                   </div>
                   <LoginBtn
                     label={item.btnLabel}
