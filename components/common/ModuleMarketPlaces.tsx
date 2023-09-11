@@ -68,7 +68,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   };
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation, Pagination],
-    className: "!pt-[58px] !pb-[325px] w-[1560px] img-swiper",
+    className: "!pt-[58px] !pb-[328px] w-[1560px] img-swiper",
     navigation: true,
     pagination: {
       clickable: true,
