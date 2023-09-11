@@ -54,7 +54,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
       <div className="flex flex-col justify-center items-center pt-[96px]">
         <div
           className={cx(
-            "text-[#00F2DE] text-center text-2xl font-medium !leading-[120%]",
+            "text-[#00F2DE] text-center text-base md:text-lg lg:text-xl xl:text-2xl font-medium !leading-[120%]",
             activeSlide === 3 && "animate-normal-animation duration-1000"
           )}
         >
@@ -62,7 +62,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
         </div>
         <div
           className={cx(
-            "text-[#2F4644] text-center font-normal text-[52px] !leading-[120%]",
+            "text-[#2F4644] text-center font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%]",
             activeSlide === 3 && "animate-normal-animation duration-1000"
           )}
         >
@@ -73,7 +73,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
         <div
           className={cx(
             "flex max-w-[1560px] justify-center items-center mb-5 pb-8 pt-9 mt-12 border-t-[1px] border-solid border-[#DCDCDC]",
-            isTablet ? "flex-col" : "flex-wrap"
+            isTablet ? "flex-col gap-5" : "flex-wrap"
           )}
         >
           {plans.map((item, index) => {

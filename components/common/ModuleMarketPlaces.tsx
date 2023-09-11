@@ -206,7 +206,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
     >
       <div
         className={cx(
-          "text-[#00F2DE] text-center text-2xl font-medium !leading-[120%] tracking-[-1px]",
+          "text-[#00F2DE] text-center text-base md:text-lg lg:text-xl xl:text-2xl font-medium !leading-[120%] tracking-[-1px]",
           activeSlide === 2 && "animate-normal-animation duration-1000"
         )}
       >
@@ -214,7 +214,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       </div>
       <div
         className={cx(
-          "text-[#2F4644] text-center not-italic font-normal text-[52px] !leading-[120%]",
+          "text-[#2F4644] text-center not-italic font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%]",
           activeSlide === 2 && "animate-normal-animation duration-1000"
         )}
       >
@@ -222,7 +222,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       </div>
       <div
         className={cx(
-          "text-[#2F4644] text-center text-2xl not-italic font-light !leading-[120%]",
+          "text-[#2F4644] text-center text-base md:text-lg lg:text-xl xl:text-2xl not-italic font-light !leading-[120%]",
           activeSlide === 2 && "animate-normal-animation duration-1000"
         )}
       >
@@ -276,10 +276,10 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     </button>
                   </div>
                   <div className="absolute top-[109%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                    <div className="text-[#2F4644] font-normal text-[52px] !leading-[120%] mb-7">
+                    <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-7">
                       {item.title}
                     </div>
-                    <div className="text-[#2F4644] text-center text-2xl font-light !leading-[120%] mb-14 max-w-[517px]">
+                    <div className="text-[#2F4644] text-center text-base md:text-lg lg:text-xl xl:text-2xl font-light !leading-[120%] mb-14 max-w-[517px]">
                       {item.description}
                     </div>
                     <div>
@@ -295,7 +295,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       <button
                         type="button"
                         className={cx(
-                          "inline-block text-[#2F4644] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                          "inline-block text-[#2F4644] font-normal not-italic text-sm md:text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
                         )}
                       >
                         Learn more
