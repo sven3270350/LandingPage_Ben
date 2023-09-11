@@ -7,9 +7,16 @@ module.exports = {
   theme: {
     screens: {
       xs: "320px",
+      "2xs": "480px",
       sm: "640px",
+      "2sm": "770px",
       md: "768px",
+      "2md": "806px",
+      "3md": "982px",
       lg: "1024px",
+      "2lg": "1168px",
+      "3lg": "1228px",
+      "4lg": "1248px",
       xl: "1280px",
       "2xl": "1440px",
       "3xl": "1920px",

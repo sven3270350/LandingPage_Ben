@@ -200,7 +200,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   return (
     <div
       className={cx(
-        "pt-[96px] h-full flex flex-col justify-center",
+        "pt-[96px] flex flex-col justify-center",
         !isTablet && "overflow-y-scroll"
       )}
     >
@@ -276,10 +276,10 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     </button>
                   </div>
                   <div className="absolute top-[109%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                    <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-7">
+                    <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-2 md:mb-3 lg:mb-5 xl:mb-7">
                       {item.title}
                     </div>
-                    <div className="text-[#2F4644] text-center text-base md:text-lg lg:text-xl xl:text-2xl font-light !leading-[120%] mb-14 max-w-[517px]">
+                    <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light !leading-[120%] mb-6 md:mb-10 lg:mb-12 xl:mb-14 max-w-[517px]">
                       {item.description}
                     </div>
                     <div>
