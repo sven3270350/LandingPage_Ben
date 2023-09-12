@@ -21,7 +21,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
         !isTablet && "h-full"
       )}
     >
-      <div className="max-w-[1560px] w-full flex flex-col justify-between mx-[2cm]">
+      <div className="max-w-[1560px] w-full flex flex-col justify-between ">
         <div
           className={cx(
             "flex justify-between items-center h-full",
@@ -66,7 +66,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
               cryptocurrency assets
             </div>
           </div>
-          <div className="relative w-full max-w-[600px]">
+          <div className="relative w-full max-w-[600px] mr-[3cm]">
             <div
               className={cx(
                 isTablet && "mt-24",
