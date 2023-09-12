@@ -84,9 +84,9 @@ const IntroSection: React.FC<IntroSectionProps> = ({
                   animationData: IntroSVGAnimation,
                   loop: false,
                 }}
-                isPaused={activeSlide !== 0}
+                isPaused={!isTablet && activeSlide !== 0}
                 isClickToPauseDisabled={true}
-                isStopped={activeSlide !== 0}
+                isStopped={!isTablet && activeSlide !== 0}
               />
             </div>
           </div>
