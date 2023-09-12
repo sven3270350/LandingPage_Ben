@@ -277,7 +277,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       {item.btnlabel}
                     </button>
                   </div>
-                  <div className="absolute top-[107%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
+                  <div className="absolute top-[109%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
                     <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
                       {item.title}
                     </div>
