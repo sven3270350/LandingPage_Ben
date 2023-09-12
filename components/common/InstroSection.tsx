@@ -69,7 +69,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
           <div className="relative w-full max-w-[600px]">
             <div
               className={cx(
-                isTablet && "mt-10",
+                isTablet && "mt-24",
                 activeSlide === 0 && "animate-normal-animation duration-1000"
               )}
             >
