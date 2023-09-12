@@ -68,7 +68,8 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   };
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation, Pagination],
-    className: "!pt-[58px] !pb-[328px] w-[1560px] img-swiper",
+    className:
+      "!pt-[48px] !pb-[190px] sm:!pb-[191px] md:!pb-[219px] lg:!pb-[257px] xl:!pb-[328px] w-[1560px] img-swiper",
     navigation: true,
     pagination: {
       clickable: true,
@@ -200,8 +201,9 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   return (
     <div
       className={cx(
-        "pt-[96px] flex flex-col justify-center",
-        !isTablet && "overflow-y-scroll h-full"
+        "mt-[96px] flex flex-col justify-center",
+        !isTablet && "overflow-y-scroll h-full",
+        isTablet && "!mt-5"
       )}
     >
       <div
@@ -275,11 +277,11 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       {item.btnlabel}
                     </button>
                   </div>
-                  <div className="absolute top-[112%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                    <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-2 md:mb-3 lg:mb-5 xl:mb-7">
+                  <div className="absolute top-[107%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
+                    <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
                       {item.title}
                     </div>
-                    <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light !leading-[120%] mb-6 md:mb-10 lg:mb-12 xl:mb-14 max-w-[517px]">
+                    <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light !leading-[120%] mb-4 md:mb-6 lg:mb-8 xl:mb-10 max-w-[517px]">
                       {item.description}
                     </div>
                     <div>

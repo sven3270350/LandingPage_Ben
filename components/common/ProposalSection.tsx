@@ -51,7 +51,12 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
   ];
   return (
     <div className="flex flex-col justify-center">
-      <div className="flex flex-col justify-center items-center pt-[96px]">
+      <div
+        className={cx(
+          "flex flex-col justify-center items-center mt-[96px]",
+          isTablet && "!mt-5"
+        )}
+      >
         <div
           className={cx(
             "text-[#00F2DE] text-center text-base md:text-lg lg:text-xl xl:text-2xl font-medium !leading-[120%]",

@@ -15,7 +15,12 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
         !isTablet && "overflow-y-scroll"
       )}
     >
-      <div className="flex items-center flex-col pt-[96px] max-w-[1560px]">
+      <div
+        className={cx(
+          "flex items-center flex-col mt-[96px] max-w-[1560px]",
+          isTablet && "!mt-5"
+        )}
+      >
         <div className="flex flex-col justify-center items-center mb-[40px]">
           <div
             className={cx(
@@ -48,7 +53,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           width={1187}
           height={684.5}
           alt="Introduction Video"
-          className="mb-5"
+          className="mb-5 w-[75%]"
         />
       </div>
     </div>
