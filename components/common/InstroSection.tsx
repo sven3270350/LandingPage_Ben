@@ -32,7 +32,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
           <div
             className={cx(
               "w-full items-center flex flex-col gap-10 justify-center max-w-[700px]",
-              isTablet && "!justify-start !gap-3"
+              isTablet && "!justify-start !gap-5"
             )}
           >
             <Image

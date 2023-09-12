@@ -69,7 +69,7 @@ const Home: NextPage = () => {
     if (currentElement !== null) {
       currentElement.swiper.slideTo(0);
     }
-  }
+  };
 
   useEffect(() => {
     if (!isTablet && router.asPath === "/") {
@@ -78,6 +78,9 @@ const Home: NextPage = () => {
     }
     if (isTablet) {
       setActiveSlide(0);
+      const next = document.querySelector("#__next");
+      console.log(next);
+      next?.classList.remove("h-[100vh]");
     }
   }, [isTablet, router.asPath]);
   useEffect(() => {
@@ -108,7 +111,11 @@ const Home: NextPage = () => {
   return (
     <>
       {/* <LeftNavBar /> */}
-      <Header activeSlide={activeSlide} setActiveSlide={setActiveSlide} handleSlideTo={handleSlideTo} />
+      <Header
+        activeSlide={activeSlide}
+        setActiveSlide={setActiveSlide}
+        handleSlideTo={handleSlideTo}
+      />
       {isTablet ? (
         <div className="flex flex-col w-full">
           <IntroSection />

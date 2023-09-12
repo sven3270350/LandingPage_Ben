@@ -11,8 +11,8 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
   return (
     <div
       className={cx(
-        "flex justify-center h-full items-center",
-        !isTablet && "overflow-y-scroll"
+        "flex justify-center  items-center",
+        !isTablet && "overflow-y-scroll h-full"
       )}
     >
       <div
