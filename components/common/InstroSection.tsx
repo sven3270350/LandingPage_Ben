@@ -21,7 +21,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
         !isTablet && "h-full"
       )}
     >
-      <div className="max-w-[1560px] w-full flex flex-col justify-between">
+      <div className="max-w-[1560px] w-full flex flex-col justify-between mx-[2cm]">
         <div
           className={cx(
             "flex justify-between items-center h-full",
