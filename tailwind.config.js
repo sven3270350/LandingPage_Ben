@@ -14,7 +14,7 @@ module.exports = {
       "3sm": "770px",
       md: "768px",
       "2md": "806px",
-      "3md": "917px",
+      "3md": "897px",
       lg: "1024px",
       "2lg": "1168px",
       "3lg": "1219px",
