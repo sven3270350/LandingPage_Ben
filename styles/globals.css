@@ -172,7 +172,7 @@ body {
 
 .img-swiper .swiper-slide-visible {
   /* transform: translate3d(0px, -6px, 80px) rotateX(0deg) rotateY(0deg) scale(0.8) !important; */
-  transform: translate3d(0px, -27px, 86px) rotateX(0deg) rotateY(0deg)
+  transform: translate3d(0px, -31px, 86px) rotateX(0deg) rotateY(0deg)
     scale(0.795) !important;
   transition-duration: 400ms !important;
 }
