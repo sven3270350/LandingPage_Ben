@@ -39,7 +39,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
               className={cx(
                 "mt-14",
                 activeSlide === 0 && "animate-normal-animation duration-1000",
-                isTablet && "!mt-0 w-[60%]"
+                isTablet && "!mt-0 hidden"
               )}
               width={isTablet ? 400 : 650}
               height={279.92}
@@ -67,7 +67,12 @@ const IntroSection: React.FC<IntroSectionProps> = ({
               cryptocurrency assets
             </div>
           </div>
-          <div className={cx("relative w-full max-w-[600px]", isTablet ? "flex justify-center" : "mr-[3cm]")}>
+          <div
+            className={cx(
+              "relative w-full max-w-[600px]",
+              isTablet ? "flex justify-center" : "mr-[3cm]"
+            )}
+          >
             <div
               className={cx(
                 isTablet && "mt-24 w-[73%] flex justify-center",

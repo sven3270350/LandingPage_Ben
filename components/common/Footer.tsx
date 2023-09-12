@@ -38,7 +38,7 @@ const Footer = () => {
                 alt="LogoBlack"
                 src="/assets/icons/LogoBlack.png"
               />
-              <div className="flex flex-wrap justify-start">
+              <div className="flex flex-wrap justify-start mt-10">
                 {MenuItems.map((item) => (
                   <FooterItem
                     key={item.title}
