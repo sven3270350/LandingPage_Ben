@@ -53,7 +53,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           width={1187}
           height={684.5}
           alt="Introduction Video"
-          className="mb-5 w-full"
+          className="mb-5 w-full rounded-3xl"
         />
       </div>
     </div>

@@ -18,7 +18,8 @@ const IntroSection: React.FC<IntroSectionProps> = ({
     <div
       className={cx(
         "w-full bg-firstSection flex justify-center",
-        !isTablet && "h-full"
+        !isTablet && "h-full",
+        isTablet && "h-[100vh]"
       )}
     >
       <div className="max-w-[1560px] w-full flex flex-col justify-between ">
@@ -31,14 +32,14 @@ const IntroSection: React.FC<IntroSectionProps> = ({
           <div
             className={cx(
               "w-full items-center flex flex-col gap-10 justify-center max-w-[700px]",
-              isTablet && "!justify-start"
+              isTablet && "!justify-start !gap-3"
             )}
           >
             <Image
               className={cx(
                 "mt-14",
                 activeSlide === 0 && "animate-normal-animation duration-1000",
-                isTablet && "!mt-0"
+                isTablet && "!mt-0 w-[60%]"
               )}
               width={isTablet ? 400 : 650}
               height={279.92}
@@ -58,7 +59,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
             <div
               className={cx(
                 "text-white opacity-[.8] font-robotic text-center tracking-wide max-w-[668px] xl:text-4xl text-3xl",
-                isTablet && "pb-10",
+                isTablet && "pb-10 !text-2xl",
                 activeSlide === 0 && "animate-normal-animation duration-1000"
               )}
             >
@@ -66,10 +67,10 @@ const IntroSection: React.FC<IntroSectionProps> = ({
               cryptocurrency assets
             </div>
           </div>
-          <div className={cx("relative w-full max-w-[600px]", !isTablet && "mr-[3cm]")}>
+          <div className={cx("relative w-full max-w-[600px]", isTablet ? "flex justify-center" : "mr-[3cm]")}>
             <div
               className={cx(
-                isTablet && "mt-24",
+                isTablet && "mt-24 w-[73%] flex justify-center",
                 activeSlide === 0 && "animate-normal-animation duration-1000"
               )}
             >
