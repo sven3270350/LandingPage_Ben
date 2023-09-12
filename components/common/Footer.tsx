@@ -54,7 +54,7 @@ const Footer = () => {
               />
             ))}
           </div>
-          <div>
+          <div className="flex flex-col justify-center items-center">
             <Image
               width={225}
               height={69}
