@@ -49,7 +49,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           </div>
         </div>
         <Image
-          src="/assets/icons/CRT_001_Background_Video_Coming_Soon.png"
+          src="/assets/icons/CRT_002_Background_Video_Coming_Soon.png"
           width={1187}
           height={684.5}
           alt="Introduction Video"
