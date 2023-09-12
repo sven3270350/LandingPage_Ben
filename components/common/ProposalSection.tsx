@@ -85,7 +85,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
             return (
               <div key={index} className={isTablet ? "w-full" : ""}>
                 <div className="flex flex-col h-full">
-                  <div className="flex flex-col col-auto w-[396px] py-7 mb-5 px-[22px] items-start border border-solid rounded-xl bg-[#dcdcdc33]">
+                  <div className="flex flex-col col-auto sm:w-[396px] py-7 mb-5 px-2 sm:px-[22px] items-start border border-solid rounded-xl bg-[#dcdcdc33]">
                     <div className="text-[#2F4644] text-base md:text-lg lg:text-xl xl:text-[22px] font-medium not-italic leading-[100%] mb-6">
                       {item.title}
                     </div>

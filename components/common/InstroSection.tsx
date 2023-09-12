@@ -66,7 +66,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
               cryptocurrency assets
             </div>
           </div>
-          <div className="relative w-full max-w-[600px] mr-[3cm]">
+          <div className={cx("relative w-full max-w-[600px]", !isTablet && "mr-[3cm]")}>
             <div
               className={cx(
                 isTablet && "mt-24",
