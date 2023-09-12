@@ -144,7 +144,7 @@ const Home: NextPage = () => {
               <ProposalSection activeSlide={activeSlide} />
               <div>
                 <Footer />
-                <RequestDemo />
+                {/* <RequestDemo /> */}
               </div>
             </div>
           </SwiperSlide>
