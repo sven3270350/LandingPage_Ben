@@ -286,7 +286,7 @@ const Header: React.FC<HeaderProps> = ({
               </>
             )}
           </div>
-          <div>
+          <div className="pr-[30px]">
             <LoginBtn
               className="w-full mt-[10px] red"
               label="Subscribe"
