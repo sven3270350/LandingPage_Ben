@@ -108,7 +108,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   };
   const MobileSwiperProps: MobileSwiperProps = {
     modules: [EffectCoverflow, Navigation, Pagination],
-    className: "!pt-[24px] !pb-[132px] w-[900px] mobile-swiper",
+    className: "!pt-[24px] !pb-[135px] w-[900px] mobile-swiper",
     navigation: true,
     pagination: {
       clickable: true,
@@ -459,7 +459,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       {item.btnlabel}
                     </button>
                   </div>
-                  <div className="absolute top-[108%] left-[-110px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
+                  <div className="absolute top-[110%] left-[-110px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
                     <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
                       {item.title}
                     </div>
