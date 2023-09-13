@@ -262,7 +262,7 @@ const Header: React.FC<HeaderProps> = ({
       </div>
       {isTablet && ismenuClick && (
         <div className="mt-[10px] flex flex-col justify-between h-5/6 text-[#2F4644]">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 mt-[1cm]">
             <div className="text-[#2F4644] text-base not-italic font-normal cursor-pointer menuitem px-3 py-2 rounded-2xl">
               Portfolio
             </div>

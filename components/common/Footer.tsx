@@ -37,7 +37,7 @@ const Footer = () => {
                 height={69}
                 alt="LogoBlack"
                 src="/assets/icons/LogoBlack.png"
-                className="mt-10 mb-[1cm]"
+                className="mt-10"
               />
               <div className="flex flex-wrap justify-start mt-10">
                 {MenuItems.map((item) => (
