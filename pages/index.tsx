@@ -123,7 +123,7 @@ const Home: NextPage = () => {
           <ModuleMarketPlaces />
           <ProposalSection />
           <Footer />
-          <RequestDemo />
+          {/* <RequestDemo /> */}
         </div>
       ) : (
         <Swiper ref={swiperRef} {...swiperProps}>
