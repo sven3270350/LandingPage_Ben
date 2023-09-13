@@ -5,6 +5,7 @@ import Lottie from "react-lottie";
 import { cx } from "@emotion/css";
 import { useMediaSize } from "components/hooks/media-size";
 import IntroSVGAnimation from "public/assets/icons/Cryptool_Homepage_Animation.json";
+import { useCustomRouter } from "components/hooks/custom-router";
 interface IntroSectionProps {
   activeSlide?: number;
   handleSlideToTwo?: () => void;
@@ -14,6 +15,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
   activeSlide,
 }) => {
   const { isTablet } = useMediaSize();
+  const { goToSignUpSubscribe } = useCustomRouter();
   return (
     <div
       className={cx(
@@ -53,6 +55,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
                 activeSlide === 0 && "animate-normal-animation duration-1000",
                 isTablet && "!mb-0"
               )}
+              onClick={() => goToSignUpSubscribe()}
             >
               Start Managing Today
             </button>
