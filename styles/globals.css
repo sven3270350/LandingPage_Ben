@@ -133,7 +133,7 @@ body {
 }
 @media (min-width: 320px) {
   .mobile-swiper .swiper-pagination {
-    top: var(--swiper-pagination-top, 62.5%) !important;
+    top: var(--swiper-pagination-top, 61%) !important;
   }
 }
 @media (max-width: 639px) {

@@ -79,7 +79,6 @@ const Home: NextPage = () => {
     if (isTablet) {
       setActiveSlide(0);
       const next = document.querySelector("#__next");
-      console.log(next);
       next?.classList.remove("h-[100vh]");
     }
   }, [isTablet, router.asPath]);
