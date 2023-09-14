@@ -110,7 +110,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
         </div>
       </div>
     </div>
-    <Image alt="" className="w-auto h-full z-[0] absolute top-0 right-0" width={300} height={300} src="/assets/icons/Wireframe.png" />
+    <Image alt="" className="w-auto h-full z-[0] absolute top-0 right-0" width={300} height={300} src="/assets/icons/Wireframe_v2.png" />
     </>
   );
 };

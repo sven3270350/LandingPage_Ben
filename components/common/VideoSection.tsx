@@ -50,7 +50,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           </div>
         </div>
         <Image
-          src="/assets/icons/CRT_002_Background_Video_Coming_Soon.png"
+          src="/assets/icons/CRT_001_SlideDeck_Final.png"
           width={1187}
           height={684.5}
           alt="Introduction Video"
@@ -59,6 +59,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
             isTablet ? "px-2" : " h-[63vh]"
           )}
         />
+        <Image src="/assets/icons/coming_soon.png" className=" absolute top-[43.5%] w-[66%]" width={300} height={300} alt="coming soon" />
         <Play className="w-[100px] cursor-pointer absolute top-[82%]" />
       </div>
     </div>
