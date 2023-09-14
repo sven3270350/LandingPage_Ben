@@ -60,7 +60,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           )}
         />
         <Image src="/assets/icons/coming_soon.png" className=" absolute top-[43.5%] w-[66%]" width={300} height={300} alt="coming soon" />
-        <Play className="w-[100px] cursor-pointer absolute top-[82%]" />
+        <Play className={cx("w-[100px] cursor-pointer absolute top-[82%]", isTablet && "!w-[8%]")} />
       </div>
     </div>
   );
