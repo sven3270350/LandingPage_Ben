@@ -128,7 +128,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   };
   const slides: SlidesProps[] = [
     {
-      img: "/assets/icons/Calendar_Graph.png",
+      img: "/assets/icons/Portfolio_Graph.png",
       title: "Portfolio",
       label: "in-a-box",
       btnlabel: "Learn more",
@@ -136,7 +136,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         "Manage and monitor your entire crypto portfolio, including, vested, unvested, staked assets, and more..",
     },
     {
-      img: "/assets/icons/Calendar_Graph.png",
+      img: "/assets/icons/Calendar_Graph_v2.png",
       title: "Calendar",
       label: "in-a-box",
       btnlabel: "Learn more",
@@ -144,7 +144,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         "Monitor and sync all events related to your groups or portfolio, and never miss a thing..",
     },
     {
-      img: "/assets/icons/Calendar_Graph.png",
+      img: "/assets/icons/Raise_Graph.png",
       title: "Raise",
       label: "in-a-box",
       btnlabel: "Learn more",
@@ -152,7 +152,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         "Create or participate in VC, presale, and crowdfunding pools in one-click..",
     },
     {
-      img: "/assets/icons/Calendar_Graph.png",
+      img: "/assets/icons/Market_Graph.png",
       title: "Market",
       label: "in-a-box",
       btnlabel: "Learn more",
@@ -160,14 +160,14 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         "Buy or sell tokens, unvested allocations, NFTs, Ambassador Program rights, and more..",
     },
     {
-      img: "/assets/icons/Calendar_Graph.png",
+      img: "/assets/icons/Groups_Graph_v2.png",
       title: "Groups",
       label: "in-a-box",
       btnlabel: "Learn more",
       description: "Create, manage or join VC or Investment groups with ease..",
     },
     {
-      img: "/assets/icons/Calendar_Graph.png",
+      img: "/assets/icons/My_Cryptool_Graph.png",
       title: "My Cryptool",
       label: "in-a-box",
       btnlabel: "Learn more",
