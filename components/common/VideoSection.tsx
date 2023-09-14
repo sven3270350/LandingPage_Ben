@@ -59,7 +59,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
             isTablet ? "px-2" : " h-[63vh]"
           )}
         />
-        <Image src="/assets/icons/coming_soon.png" className=" absolute top-[41%] w-[100%]" width={300} height={300} alt="coming soon" />
+        <Image src="/assets/icons/coming_soon.png" className=" absolute top-[41%] w-[100%]" width={1200} height={300} alt="coming soon" />
         <Play className={cx("w-[100px] cursor-pointer absolute top-[82%] hover:scale-150 duration-700", isTablet && "!w-[8%]")} />
       </div>
     </div>
