@@ -211,6 +211,19 @@ body {
 .swiper-slide-visible > .module-description {
   display: none;
 }
+.mobile-swiper img {
+  height: 200px;
+}
+.mobile-swiper .swiper-slide-visible {
+  /* transform: translate3d(0px, -6px, 80px) rotateX(0deg) rotateY(0deg) scale(0.8) !important; */
+  transform: translate3d(0px, -20px, 0px) rotateX(0deg) rotateY(0deg)
+    scale(0.76775) !important;
+  transition-duration: 400ms !important;
+}
+.mobile-swiper .swiper-slide-next {
+  transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+}
+
 .swiper-slide-next > .module-description {
   display: flex;
 }

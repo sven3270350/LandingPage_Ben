@@ -330,13 +330,15 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     handlePrevNext(index);
                   }}
                 >
-                  <Image
-                    className="rounded-lg"
-                    width={600}
-                    alt="Swiper image"
-                    height={300}
-                    src={item.img}
-                  />
+                  <div>
+                    <Image
+                      className="rounded-lg"
+                      width={600}
+                      alt="Swiper image"
+                      height={300}
+                      src={item.img}
+                    />
+                  </div>
                   {/* <div className="absolute top-[20%] left-[20%] text-white text-base">
                     {item.title}
                   </div>
@@ -344,7 +346,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     {item.label}
                   </div>
                   <div className="absolute top-[70%] left-[20%] z-20 text-white"> */}
-                    {/* <HoverEffectBtn
+                  {/* <HoverEffectBtn
                       className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                       strokeDashoffset={-168}
                       width={104}
@@ -352,7 +354,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       handleClick={handleClick}
                       label={item.btnlabel}
                     /> */}
-                    {/* <button
+                  {/* <button
                       type="button"
                       className={cx(
                         "inline-block text-white font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
@@ -381,7 +383,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       <button
                         type="button"
                         className={cx(
-                          "inline-block text-[#2F4644] font-normal not-italic text-base md:text-lg lg:text-xl xl:text-2xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                          "inline-block cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-lg lg:text-xl xl:text-2xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
                         )}
                       >
                         Learn more
@@ -412,7 +414,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
           }}
           {...MobileSwiperProps}
         >
-          {mobileSlides.map((item, index) => {
+          {slides.map((item, index) => {
             return (
               <div key={index}>
                 <SwiperSlide
@@ -423,13 +425,15 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     handlePrevNext(index);
                   }}
                 >
-                  <Image
-                    className="rounded-lg"
-                    width={600}
-                    alt="Swiper image"
-                    height={300}
-                    src={item.img}
-                  />
+                  <div>
+                    <Image
+                      className="rounded-lg"
+                      width={600}
+                      alt="Swiper image"
+                      height={300}
+                      src={item.img}
+                    />
+                  </div>
                   {/* <div className="absolute top-[20%] left-[20%] text-white text-base">
                     {item.title}
                   </div>
@@ -437,7 +441,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     {item.label}
                   </div> */}
                   {/* <div className="absolute top-[70%] left-[20%] z-20 text-white"> */}
-                    {/* <HoverEffectBtn
+                  {/* <HoverEffectBtn
                       className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                       strokeDashoffset={-168}
                       width={104}
@@ -445,7 +449,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       handleClick={handleClick}
                       label={item.btnlabel}
                     /> */}
-                    {/* <button
+                  {/* <button
                       type="button"
                       className={cx(
                         "inline-block text-white font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
@@ -474,7 +478,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       <button
                         type="button"
                         className={cx(
-                          "inline-block text-[#2F4644] font-normal not-italic text-base md:text-lg lg:text-xl xl:text-2xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                          "inline-block cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-lg lg:text-xl xl:text-2xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
                         )}
                       >
                         Learn more
