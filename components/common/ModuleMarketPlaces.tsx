@@ -337,13 +337,13 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     height={300}
                     src={item.img}
                   />
-                  <div className="absolute top-[20%] left-[20%] text-white text-base">
+                  {/* <div className="absolute top-[20%] left-[20%] text-white text-base">
                     {item.title}
                   </div>
                   <div className="absolute top-[29%] left-[20%] text-white text-base">
                     {item.label}
                   </div>
-                  <div className="absolute top-[70%] left-[20%] z-20 text-white">
+                  <div className="absolute top-[70%] left-[20%] z-20 text-white"> */}
                     {/* <HoverEffectBtn
                       className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                       strokeDashoffset={-168}
@@ -352,7 +352,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       handleClick={handleClick}
                       label={item.btnlabel}
                     /> */}
-                    <button
+                    {/* <button
                       type="button"
                       className={cx(
                         "inline-block text-white font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
@@ -360,7 +360,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     >
                       {item.btnlabel}
                     </button>
-                  </div>
+                  </div> */}
                   <div className="absolute top-[108%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
                     <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
                       {item.title}
@@ -430,13 +430,13 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     height={300}
                     src={item.img}
                   />
-                  <div className="absolute top-[20%] left-[20%] text-white text-base">
+                  {/* <div className="absolute top-[20%] left-[20%] text-white text-base">
                     {item.title}
                   </div>
                   <div className="absolute top-[29%] left-[20%] text-white text-base">
                     {item.label}
-                  </div>
-                  <div className="absolute top-[70%] left-[20%] z-20 text-white">
+                  </div> */}
+                  {/* <div className="absolute top-[70%] left-[20%] z-20 text-white"> */}
                     {/* <HoverEffectBtn
                       className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
                       strokeDashoffset={-168}
@@ -445,15 +445,15 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       handleClick={handleClick}
                       label={item.btnlabel}
                     /> */}
-                    <button
+                    {/* <button
                       type="button"
                       className={cx(
                         "inline-block text-white font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
                       )}
                     >
                       {item.btnlabel}
-                    </button>
-                  </div>
+                    </button> */}
+                  {/* </div> */}
                   <div className="absolute top-[112%] left-[-110px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
                     <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
                       {item.title}
