@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({
                 )}
               </div>
               {!isTablet && (
-                <div className="hidden md:flex items-center gap-10">
+                <div className="hidden md:flex items-center gap-8">
                   {/* <HoverEffectBtn
                     className="svg-wrapper opacity-[.9] hover:opacity-[1] mx-1"
                     strokeDashoffset={-153}
