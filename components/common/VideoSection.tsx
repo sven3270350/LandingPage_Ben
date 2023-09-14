@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { cx } from "@emotion/css";
 import { useMediaSize } from "components/hooks/media-size";
+import Play from "public/assets/icons/Play";
 interface VideoSectionProps {
   activeSlide?: number;
 }
@@ -17,7 +18,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
     >
       <div
         className={cx(
-          "flex items-center flex-col mt-[96px] max-w-[1560px]",
+          "flex items-center flex-col mt-[96px] max-w-[1560px] relative",
           isTablet && "!mt-5"
         )}
       >
@@ -53,8 +54,12 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           width={1187}
           height={684.5}
           alt="Introduction Video"
-          className={cx("mb-5 w-full rounded-3xl", isTablet ? "px-2" : " h-[63vh]",)}
+          className={cx(
+            "mb-5 w-full rounded-3xl",
+            isTablet ? "px-2" : " h-[63vh]"
+          )}
         />
+        <Play className="w-[100px] absolute top-[82%]" />
       </div>
     </div>
   );
