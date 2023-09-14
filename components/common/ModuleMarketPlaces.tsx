@@ -287,7 +287,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       className={cx(
         "mt-[96px] flex flex-col justify-center",
         !isTablet && "overflow-y-scroll h-full",
-        isTablet && "!mt-5"
+        isTablet && "!mt-0"
       )}
     >
       <div

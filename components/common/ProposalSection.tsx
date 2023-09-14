@@ -54,7 +54,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
       <div
         className={cx(
           "flex flex-col justify-center items-center mt-[96px]",
-          isTablet && "!mt-5"
+          isTablet && "!mt-3"
         )}
       >
         <div
@@ -77,7 +77,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
       <div className="flex justify-center">
         <div
           className={cx(
-            "flex max-w-[1560px] justify-center items-center mb-5 pt-9 md:mt-2 lg:mt-4 xl:mt-6 border-t-[1px] border-solid border-[#DCDCDC]",
+            "flex max-w-[1560px] justify-center items-center mb-5 pt-9 mt-2 lg:mt-4 xl:mt-6 border-t-[1px] border-solid border-[#DCDCDC]",
             isTablet ? "flex-col gap-5" : "flex-wrap"
           )}
         >
@@ -85,7 +85,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
             return (
               <div key={index} className={isTablet ? "w-full" : ""}>
                 <div className="flex flex-col h-full">
-                  <div className="flex flex-col col-auto sm:w-[396px] py-7 mb-5 px-2 sm:px-[22px] items-start border border-solid rounded-xl bg-[#dcdcdc33]">
+                  <div className="flex flex-col col-auto sm:w-[396px] py-7 px-2 sm:px-[22px] items-start border border-solid rounded-xl bg-[#dcdcdc33]">
                     <div className="text-[#2F4644] text-base md:text-lg lg:text-xl xl:text-[22px] font-medium not-italic leading-[100%] mb-6">
                       {item.title}
                     </div>
