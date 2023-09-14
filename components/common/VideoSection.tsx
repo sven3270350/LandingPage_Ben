@@ -59,7 +59,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
             isTablet ? "px-2" : " h-[63vh]"
           )}
         />
-        <Play className="w-[100px] absolute top-[82%]" />
+        <Play className="w-[100px] cursor-pointer absolute top-[82%]" />
       </div>
     </div>
   );
