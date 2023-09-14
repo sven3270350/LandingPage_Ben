@@ -17,6 +17,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
   const { isTablet } = useMediaSize();
   const { goToSignUpSubscribe } = useCustomRouter();
   return (
+    <>
     <div
       className={cx(
         "w-full bg-firstSection flex justify-center",
@@ -72,12 +73,12 @@ const IntroSection: React.FC<IntroSectionProps> = ({
           </div>
           <div
             className={cx(
-              "relative w-full max-w-[600px]",
+              "relative w-full max-w-[600px] z-20",
               isTablet ? "flex justify-center" : "mr-[3cm]"
             )}
           >
             <div
-              className={cx(
+              className={cx("z-10",
                 isTablet && "mt-24 flex justify-center",
                 activeSlide === 0 && "animate-normal-animation duration-1000"
               )}
@@ -109,6 +110,8 @@ const IntroSection: React.FC<IntroSectionProps> = ({
         </div>
       </div>
     </div>
+    <Image alt="" className="w-auto h-full z-[0] absolute top-0 right-0" width={300} height={300} src="/assets/icons/Wireframe.png" />
+    </>
   );
 };
 

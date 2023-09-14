@@ -28,11 +28,7 @@ body {
 }
 
 .bg-firstSection {
-  background: linear-gradient(
-    109.6deg,
-    rgb(5, 85, 84) 11.2%,
-    rgb(64, 224, 208) 91.1%
-  );
+  background: linear-gradient( 64deg, rgb(5, 85, 84) 29.2%, rgb(64, 224, 208) 116.1% );
 }
 
 .signup-btn {
