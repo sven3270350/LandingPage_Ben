@@ -11,7 +11,11 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
   const { isTablet } = useMediaSize();
   return (
     <div
-      className={cx("flex justify-center items-center", !isTablet && "h-full", isTablet && "mb-10")}
+      className={cx(
+        "flex justify-center items-center",
+        !isTablet && "h-full",
+        isTablet && "mb-10"
+      )}
     >
       <div
         className={cx(
@@ -66,12 +70,12 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
           alt="coming soon"
         />
         <div className="h-[120px] w-full absolute sm:top-[78%] top-[73%] flex items-center justify-center">
-        <Play
-          className={cx(
-            "w-[100px] rounded-full cursor-pointer hover:w-[120px] duration-300",
-            isTablet && "!w-[8%] hover:!w-[10%]"
-          )}
-        />
+          <Play
+            className={cx(
+              "w-[100px] rounded-full cursor-pointer hover:w-[120px] duration-300",
+              isTablet && "!w-[8%] hover:!w-[10%]"
+            )}
+          />
         </div>
       </div>
     </div>

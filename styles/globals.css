@@ -30,6 +30,9 @@ body {
 .bg-firstSection {
   /* background: linear-gradient( 48deg, #0F2421 56.2%, #00F2DE 116.1% ); */
   /* background: linear-gradient( 48deg, #0F2421 56.2%, #00F2DE 139.1% ), lightgray -0.314px 0px / 100.033% 108.073% no-repeat; */
+
+  /* background-image: url("/assets/icons/IntroBg.png"); */
+
   background: hsla(171, 41%, 10%, 1);
 
   background: linear-gradient(

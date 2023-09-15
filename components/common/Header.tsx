@@ -101,7 +101,7 @@ const Header: React.FC<HeaderProps> = ({
                   <button
                     type="button"
                     className={cx(
-                      "inline-block  font-sans mb-[-3px] text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
+                      "inline-block  font-sans mb-[-3px] w-[64px] text-center text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
                       activeSlide > 0 && "!text-black"
                     )}
                   >
@@ -119,7 +119,7 @@ const Header: React.FC<HeaderProps> = ({
                   <button
                     type="button"
                     className={cx(
-                      "inline-block  font-sans mb-[-3px] text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
+                      "inline-block  font-sans mb-[-3px] w-[38px] text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
                       activeSlide > 0 && "!text-black"
                     )}
                   >
@@ -137,7 +137,7 @@ const Header: React.FC<HeaderProps> = ({
                   <button
                     type="button"
                     className={cx(
-                      "inline-block  font-sans mb-[-3px] text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
+                      "inline-block  font-sans mb-[-3px] w-[52px] text-[#FFF] font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid",
                       activeSlide > 0 && "!text-black"
                     )}
                   >
