@@ -383,7 +383,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       <button
                         type="button"
                         className={cx(
-                          "inline-block cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-lg lg:text-xl xl:text-2xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                          "inline-block font-sans cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-lg lg:text-xl xl:text-2xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
                         )}
                       >
                         Learn more
