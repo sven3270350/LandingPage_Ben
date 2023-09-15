@@ -1,15 +1,30 @@
 import { useCustomRouter } from "components/hooks/custom-router";
 import Link from "next/link";
-import Facebook from "public/assets/icons/Facebook";
-import Google from "public/assets/icons/Google";
+import router from "next/router";
+import Check from "public/assets/icons/Check";
 import Linkedin from "public/assets/icons/Linkedin";
 import Telegram from "public/assets/icons/Telegram";
 import Twitter from "public/assets/icons/Twitter";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUpSubscribePage = () => {
   const [email, setEmail] = useState("");
   const { goToManualSignUp } = useCustomRouter();
+  const notify = () =>
+    toast(
+      <div className="flex justify-between items-center">
+        Response successfully submitted
+        <Check width={24} height={24} />
+      </div>
+    );
+  useEffect(() => {
+    if (router.asPath !== "/") {
+      const next = document.querySelector("#__next");
+      next?.classList.remove("h-[100vh]");
+    }
+  });
   return (
     <div className="flex justify-center items-center bg-slate-300 w-full py-8">
       <div className="w-[427px] flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
@@ -54,19 +69,19 @@ const SignUpSubscribePage = () => {
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
             <input type="checkbox" />
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
-              Project
+              Venture Capital
             </div>
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
             <input type="checkbox" />
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
-              Venture Capital
+              Project
             </div>
           </div>
         </div>
         <div className="w-full">
           <div className="text-[#2F4644] text-base font-semibold">
-            What type of User are you?
+            How large is your Network or Community?
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
             <input type="checkbox" />
@@ -146,10 +161,21 @@ const SignUpSubscribePage = () => {
         <div className="w-full">
           <div
             className="w-full px-6 py-2 rounded-[29px] bg-[#2F4644] text-white flex justify-center mt-4 cursor-pointer"
-            onClick={() => goToManualSignUp()}
+            onClick={
+              () => notify()
+              // goToManualSignUp()
+            }
           >
             Submit
           </div>
+          <ToastContainer
+            className={"loginpage-toast custom-toast-container"}
+            position="bottom-right"
+            autoClose={2000}
+            closeButton={false}
+            pauseOnHover={false}
+            theme={"dark"}
+          />
         </div>
       </div>
     </div>

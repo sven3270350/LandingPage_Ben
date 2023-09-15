@@ -69,9 +69,15 @@ body {
   animation-iteration-count: infinite;
 }
 @keyframes bounce-1 {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-8px); }
-    100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .signup-btn {
   position: relative;
@@ -233,6 +239,24 @@ body {
 
 .loginpage-toast .Toastify__progress-bar-theme--light {
   background: #26ecd2 !important; /* Change this to your desired color */
+}
+.custom-toast-container {
+  right: 8em !important;
+}
+/* .custom-toast-container .Toastify__progress-bar {
+  display: none;
+} */
+.custom-toast-container .Toastify__toast-theme--dark {
+  background-color: #2f4644;
+  min-height: 48px !important;
+  width: 430px;
+  display: flex;
+  align-items: center;
+}
+.custom-toast-container .Toastify__toast-body {
+  padding: 4px;
+  height: 24px;
+  margin: 0;
 }
 .isSticky {
   background-color: rgb(255, 255, 255);

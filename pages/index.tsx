@@ -76,7 +76,7 @@ const Home: NextPage = () => {
       const next = document.querySelector("#__next");
       next?.classList.add("h-[100vh]");
     }
-    if (isTablet) {
+    if (isTablet || router.asPath !== "/") {
       setActiveSlide(0);
       const next = document.querySelector("#__next");
       next?.classList.remove("h-[100vh]");
