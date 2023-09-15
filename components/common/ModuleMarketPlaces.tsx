@@ -333,9 +333,9 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                   <div>
                     <Image
                       className="rounded-lg"
-                      width={600}
+                      width={6000}
                       alt="Swiper image"
-                      height={430}
+                      height={4300}
                       src={item.img}
                     />
                   </div>
@@ -428,9 +428,9 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                   <div>
                     <Image
                       className="rounded-lg"
-                      width={600}
+                      width={6000}
                       alt="Swiper image"
-                      height={300}
+                      height={4300}
                       src={item.img}
                     />
                   </div>

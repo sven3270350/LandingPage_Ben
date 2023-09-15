@@ -112,8 +112,11 @@ const IntroSection: React.FC<IntroSectionProps> = ({
         </div>
       </div>
       <Image
-        alt=""
-        className="w-auto h-[150%] z-[0] absolute bottom-0 right-0 !opacity-90"
+        alt="Wireframe"
+        className={cx(
+          "w-auto h-[150%] z-[0] absolute bottom-0 right-0 !opacity-90 wireframe",
+          isTablet && "h-auto"
+        )}
         width={1700}
         height={1650}
         src="/assets/icons/Wireframe_v2.png"
