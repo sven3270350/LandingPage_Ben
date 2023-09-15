@@ -73,6 +73,14 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ activeSlide }) => {
         >
           Learn about our account options
         </div>
+        <div
+          className={cx(
+            "text-[#2F4644] text-center text-base md:text-lg lg:text-xl xl:text-2xl not-italic font-light !leading-[120%]",
+            activeSlide === 3 && "animate-normal-animation duration-1000"
+          )}
+        >
+          Sign-up and start enjoying all benefits according your needs
+        </div>
       </div>
       <div className="flex justify-center">
         <div
