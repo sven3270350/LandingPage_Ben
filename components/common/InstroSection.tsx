@@ -103,10 +103,10 @@ const IntroSection: React.FC<IntroSectionProps> = ({
             </div>
           </div>
           <div
-            className="flex flex-col justify-center items-center mt-[-32px]"
+            className="flex flex-col justify-center items-center mt-[-32px] swing"
             onClick={handleSlideToTwo}
           >
-            <ArrowBelow className="z-10" />
+            <ArrowBelow className="z-10 " />
             <ArrowBelow className="z-10 mt-[-9px]" />
           </div>
         </div>
