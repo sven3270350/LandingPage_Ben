@@ -11,10 +11,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
   const { isTablet } = useMediaSize();
   return (
     <div
-      className={cx(
-        "flex justify-center  items-center",
-        !isTablet && "overflow-y-scroll h-full"
-      )}
+      className={cx("flex justify-center  items-center", !isTablet && "h-full")}
     >
       <div
         className={cx(
@@ -59,8 +56,21 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
             isTablet ? "px-2" : " h-[63vh]"
           )}
         />
-        <Image src="/assets/icons/coming_soon.png" className=" absolute top-[45%] w-[66%]" width={800} height={200} alt="coming soon" />
-        <Play className={cx("w-[100px] cursor-pointer absolute top-[78%] hover:scale-150 duration-700", isTablet && "!w-[8%]")} />
+        <Image
+          src="/assets/icons/coming_soon.png"
+          className={cx(
+            " absolute 3xs:top-[45%] 2xs:top-[55%] top-[60%] w-[66%]"
+          )}
+          width={800}
+          height={200}
+          alt="coming soon"
+        />
+        <Play
+          className={cx(
+            "w-[120px] rounded-full cursor-pointer absolute top-[78%] hover:scale-150 duration-700",
+            isTablet && "!w-[8%]"
+          )}
+        />
       </div>
     </div>
   );

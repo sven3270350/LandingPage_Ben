@@ -88,7 +88,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   const swiperProps: SwiperProps = {
     modules: [EffectCoverflow, Navigation, Pagination],
     className:
-      "!pt-[48px] !pb-[190px] sm:!pb-[210px] md:!pb-[240px] lg:!pb-[277px] xl:!pb-[348px] w-[1560px] img-swiper",
+      "!pt-[48px] !pb-[220px] sm:!pb-[250px] md:!pb-[290px] lg:!pb-[320px] xl:!pb-[360px] w-[1560px] img-swiper",
     navigation: true,
     pagination: {
       clickable: true,
@@ -108,7 +108,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   };
   const MobileSwiperProps: MobileSwiperProps = {
     modules: [EffectCoverflow, Navigation, Pagination],
-    className: "!pt-[24px] !pb-[145px] w-[900px] mobile-swiper",
+    className: "!pt-[24px] !pb-[175px] w-[900px] mobile-swiper",
     navigation: true,
     pagination: {
       clickable: true,
@@ -285,8 +285,8 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   return (
     <div
       className={cx(
-        "mt-[96px] flex flex-col justify-center",
-        !isTablet && "overflow-y-scroll h-full",
+        "mt-[48px] flex flex-col justify-center",
+        !isTablet && "h-full",
         isTablet && "!mt-0"
       )}
     >
@@ -363,11 +363,11 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       {item.btnlabel}
                     </button>
                   </div> */}
-                  <div className="absolute top-[108%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                    <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
+                  <div className="absolute top-[112%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
+                    <div className="text-[#2F4644] font-normal text-2xl md:text-3xl lg:text-4xl xl:text-5xl !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
                       {item.title}
                     </div>
-                    <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light !leading-[120%] mb-4 md:mb-6 lg:mb-8 xl:mb-10 max-w-[517px]">
+                    <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-base md:text-base lg:text-lg xl:text-xl font-light !leading-[120%] mb-4 md:mb-6 lg:mb-8 xl:mb-10 max-w-[517px]">
                       {item.description}
                     </div>
                     <div>
@@ -383,7 +383,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       <button
                         type="button"
                         className={cx(
-                          "inline-block font-sans cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-lg lg:text-xl xl:text-2xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                          "inline-block font-sans cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-base lg:text-lg xl:text-xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
                         )}
                       >
                         Learn more
@@ -459,10 +459,10 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                     </button> */}
                   {/* </div> */}
                   <div className="absolute top-[112%] left-[-110px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                    <div className="text-[#2F4644] font-normal text-3xl md:text-4xl lg:text-5xl xl:text-[52px] !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
+                    <div className="text-[#2F4644] font-normal text-2xl md:text-3xl lg:text-4xl xl:text-5xl !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
                       {item.title}
                     </div>
-                    <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light !leading-[120%] mb-4 md:mb-6 lg:mb-8 xl:mb-10 max-w-[517px]">
+                    <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-base sm:text-base md:text-base lg:text-lg xl:text-xl font-light !leading-[120%] mb-4 md:mb-6 lg:mb-8 xl:mb-10 max-w-[517px]">
                       {item.description}
                     </div>
                     <div>
@@ -478,7 +478,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       <button
                         type="button"
                         className={cx(
-                          "inline-block cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-lg lg:text-xl xl:text-2xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                          "inline-block cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-base lg:text-lg xl:text-xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
                         )}
                       >
                         Learn more

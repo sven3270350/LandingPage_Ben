@@ -139,7 +139,7 @@ const Home: NextPage = () => {
             <ModuleMarketPlaces activeSlide={activeSlide} />
           </SwiperSlide>
           <SwiperSlide>
-            <div className="h-full flex flex-col justify-between overflow-y-scroll">
+            <div className="h-full flex flex-col justify-between">
               <ProposalSection activeSlide={activeSlide} />
               <div>
                 <Footer />
