@@ -68,7 +68,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
         <div className="h-[120px] w-full absolute sm:top-[78%] top-[73%] flex items-center justify-center">
         <Play
           className={cx(
-            "w-[100px] rounded-full cursor-pointer hover:!w-[120px] duration-300",
+            "w-[100px] rounded-full cursor-pointer hover:w-[120px] duration-300",
             isTablet && "!w-[8%] hover:!w-[10%]"
           )}
         />
