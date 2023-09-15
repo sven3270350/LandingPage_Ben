@@ -335,7 +335,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
                       className="rounded-lg"
                       width={600}
                       alt="Swiper image"
-                      height={300}
+                      height={430}
                       src={item.img}
                     />
                   </div>
