@@ -287,7 +287,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       className={cx(
         "mt-[48px] flex flex-col justify-center",
         !isTablet && "h-full",
-        isTablet && "!mt-0"
+        isTablet && "!mt-0 mb-10"
       )}
     >
       <div

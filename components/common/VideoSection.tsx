@@ -11,7 +11,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ activeSlide }) => {
   const { isTablet } = useMediaSize();
   return (
     <div
-      className={cx("flex justify-center  items-center", !isTablet && "h-full")}
+      className={cx("flex justify-center items-center", !isTablet && "h-full", isTablet && "mb-10")}
     >
       <div
         className={cx(
