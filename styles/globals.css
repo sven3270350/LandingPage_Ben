@@ -28,7 +28,35 @@ body {
 }
 
 .bg-firstSection {
-  background: linear-gradient( 64deg, rgb(5, 85, 84) 29.2%, rgb(64, 224, 208) 116.1% );
+  /* background: linear-gradient( 48deg, #0F2421 56.2%, #00F2DE 116.1% ); */
+  /* background: linear-gradient( 48deg, #0F2421 56.2%, #00F2DE 139.1% ), lightgray -0.314px 0px / 100.033% 108.073% no-repeat; */
+  background: hsla(171, 41%, 10%, 1);
+
+  background: linear-gradient(
+    50deg,
+    hsla(171, 41%, 10%, 1) 9%,
+    hsla(176, 33%, 16%, 1) 51%,
+    hsla(180, 37%, 20%, 1) 65%,
+    hsla(175, 100%, 47%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    50deg,
+    hsla(171, 41%, 10%, 1) 9%,
+    hsla(176, 33%, 16%, 1) 51%,
+    hsla(180, 37%, 20%, 1) 65%,
+    hsla(175, 100%, 47%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(171, 41%, 10%, 1) 9%,
+    hsla(176, 33%, 16%, 1) 51%,
+    hsla(180, 37%, 20%, 1) 65%,
+    hsla(175, 100%, 47%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0F2421", endColorstr="#1C3836", GradientType=1 );
 }
 
 .signup-btn {
