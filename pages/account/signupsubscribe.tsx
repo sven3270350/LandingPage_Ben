@@ -271,7 +271,7 @@ const SignUpSubscribePage = () => {
           </div>
           <ToastContainer
             className={"loginpage-toast custom-toast-container"}
-            position="bottom-right"
+            position="top-left"
             autoClose={2000}
             closeButton={false}
             pauseOnHover={false}
