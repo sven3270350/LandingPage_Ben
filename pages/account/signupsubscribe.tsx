@@ -2,10 +2,12 @@ import { useCustomRouter } from "components/hooks/custom-router";
 import Link from "next/link";
 import router from "next/router";
 import Check from "public/assets/icons/Check";
+import Click from "public/assets/icons/Click";
 import Close from "public/assets/icons/Close";
 import Linkedin from "public/assets/icons/Linkedin";
 import Telegram from "public/assets/icons/Telegram";
 import Twitter from "public/assets/icons/Twitter";
+import UnClick from "public/assets/icons/UnClick";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,6 +15,8 @@ import "react-toastify/dist/ReactToastify.css";
 const SignUpSubscribePage = () => {
   const [email, setEmail] = useState("");
   const { goToManualSignUp } = useCustomRouter();
+  const [userType, setUserType] = useState("");
+  const [netSize, setNetSize] = useState("");
   const notify = () =>
     toast(
       <div className="flex justify-between items-center">
@@ -27,7 +31,7 @@ const SignUpSubscribePage = () => {
     }
   });
   return (
-    <div className="flex justify-center items-center bg-slate-300 w-full py-8">
+    <div className="flex justify-center items-center bg-slate-300 w-full py-8 subscription">
       <div className="w-[427px] relative flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
         <div className="w-full">
           <div className="text-[#2F4644] text-center text-[22px] font-medium not-italic leading-[22px]">
@@ -62,19 +66,55 @@ const SignUpSubscribePage = () => {
             What type of User are you?
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
-            <input type="checkbox" />
+            {userType === "Individual Investor" ? (
+              <div onClick={() => setUserType("")}>
+                <Click
+                  width={20}
+                  height={20}
+                  className="cursor-pointer bg-[#00F2DE] rounded-[4px]"
+                />
+              </div>
+            ) : (
+              <div onClick={() => setUserType("Individual Investor")}>
+                <UnClick width={20} height={20} className="cursor-pointer" />
+              </div>
+            )}
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
               Individual Investor
             </div>
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
-            <input type="checkbox" />
+            {userType === "Venture Capital" ? (
+              <div onClick={() => setUserType("")}>
+                <Click
+                  width={20}
+                  height={20}
+                  className="cursor-pointer bg-[#00F2DE] rounded-[4px]"
+                />
+              </div>
+            ) : (
+              <div onClick={() => setUserType("Venture Capital")}>
+                <UnClick width={20} height={20} className="cursor-pointer" />
+              </div>
+            )}
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
               Venture Capital
             </div>
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
-            <input type="checkbox" />
+            {userType === "Project" ? (
+              <div onClick={() => setUserType("")}>
+                <Click
+                  width={20}
+                  height={20}
+                  className="cursor-pointer bg-[#00F2DE] rounded-[4px]"
+                />
+              </div>
+            ) : (
+              <div onClick={() => setUserType("Project")}>
+                <UnClick width={20} height={20} className="cursor-pointer" />
+              </div>
+            )}
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
               Project
             </div>
@@ -85,31 +125,91 @@ const SignUpSubscribePage = () => {
             How large is your Network or Community?
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
-            <input type="checkbox" />
+            {netSize === "Not Applicable" ? (
+              <div onClick={() => setNetSize("")}>
+                <Click
+                  width={20}
+                  height={20}
+                  className="cursor-pointer bg-[#00F2DE] rounded-[4px]"
+                />
+              </div>
+            ) : (
+              <div onClick={() => setNetSize("Not Applicable")}>
+                <UnClick width={20} height={20} className="cursor-pointer" />
+              </div>
+            )}
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
               Not Applicable
             </div>
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
-            <input type="checkbox" />
+            {netSize === "Less than 100" ? (
+              <div onClick={() => setNetSize("")}>
+                <Click
+                  width={20}
+                  height={20}
+                  className="cursor-pointer bg-[#00F2DE] rounded-[4px]"
+                />
+              </div>
+            ) : (
+              <div onClick={() => setNetSize("Less than 100")}>
+                <UnClick width={20} height={20} className="cursor-pointer" />
+              </div>
+            )}
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
               Less than 100
             </div>
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
-            <input type="checkbox" />
+            {netSize === "In between 100 and 1,000" ? (
+              <div onClick={() => setNetSize("")}>
+                <Click
+                  width={20}
+                  height={20}
+                  className="cursor-pointer bg-[#00F2DE] rounded-[4px]"
+                />
+              </div>
+            ) : (
+              <div onClick={() => setNetSize("In between 100 and 1,000")}>
+                <UnClick width={20} height={20} className="cursor-pointer" />
+              </div>
+            )}
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
               In between 100 and 1,000
             </div>
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
-            <input type="checkbox" />
+            {netSize === "In between 1,000 and 10,000" ? (
+              <div onClick={() => setNetSize("")}>
+                <Click
+                  width={20}
+                  height={20}
+                  className="cursor-pointer bg-[#00F2DE] rounded-[4px]"
+                />
+              </div>
+            ) : (
+              <div onClick={() => setNetSize("In between 1,000 and 10,000")}>
+                <UnClick width={20} height={20} className="cursor-pointer" />
+              </div>
+            )}
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
               In between 1,000 and 10,000
             </div>
           </div>
           <div className="flex items-center justify-start gap-[15px] w-full mt-[13px]">
-            <input type="checkbox"></input>
+            {netSize === "More than 10,000" ? (
+              <div onClick={() => setNetSize("")}>
+                <Click
+                  width={20}
+                  height={20}
+                  className="cursor-pointer bg-[#00F2DE] rounded-[4px]"
+                />
+              </div>
+            ) : (
+              <div onClick={() => setNetSize("More than 10,000")}>
+                <UnClick width={20} height={20} className="cursor-pointer" />
+              </div>
+            )}
             <div className="text-[#54716F] font-normal text-xs leading-[180%]">
               More than 10,000
             </div>
