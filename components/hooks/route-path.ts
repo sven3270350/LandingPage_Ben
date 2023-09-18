@@ -6,6 +6,5 @@ export enum ROUTE_PATH {
   ForgotPassword = "/account/forgotpassword",
   ChangePassword = "/account/changepassword",
   NewEmail = "/account/newemail",
-  SignUpSubscribe = "/account/signupsubscribe",
   SentEmail = "/account/sentemail",
 }

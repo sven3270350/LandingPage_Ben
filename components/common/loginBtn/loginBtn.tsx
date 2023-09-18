@@ -15,7 +15,7 @@ const LoginBtn: React.FC<LoginBtnProps> = ({
   isLogin,
   className,
 }) => {
-  const { goToLogin, goToSignup, goToSignUpSubscribe } = useCustomRouter();
+  const { goToLogin, goToSignup } = useCustomRouter();
 
   return (
     <div
@@ -30,7 +30,6 @@ const LoginBtn: React.FC<LoginBtnProps> = ({
         {
           label === "Log in" && goToLogin();
           label === "Sign up" && goToSignup();
-          // label === "Subscribe" && goToSignUpSubscribe();
         }
       }}
     >

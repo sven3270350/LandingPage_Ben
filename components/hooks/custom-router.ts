@@ -38,10 +38,6 @@ export const useCustomRouter = () => {
     );
   };
 
-  const goToSignUpSubscribe = () => {
-    return router.push(ROUTE_PATH.SignUpSubscribe);
-  };
-
   const goToSentEmail = () => {
     return router.push(ROUTE_PATH.SentEmail);
   };
@@ -54,7 +50,6 @@ export const useCustomRouter = () => {
     goToManualSignUp,
     goToChangePassword,
     goToNewEmail,
-    goToSignUpSubscribe,
     goToSentEmail,
   };
 };

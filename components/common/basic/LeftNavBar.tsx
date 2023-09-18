@@ -1,4 +1,4 @@
-import SignUpSubscribePage from "pages/account/signupsubscribe";
+import SignUpSubscribePage from "components/common/signupsubscribe";
 import { Dispatch, SetStateAction } from "react";
 interface LeftNavBarProps {
   isSubscription: true;
