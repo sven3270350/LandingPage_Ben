@@ -22,11 +22,15 @@ interface HeaderProps {
   activeSlide: number;
   setActiveSlide: Dispatch<SetStateAction<number>>;
   handleSlideTo: () => void;
+  setIsSubscription: Dispatch<SetStateAction<boolean>>;
+  isSubscription: boolean;
 }
 const Header: React.FC<HeaderProps> = ({
   activeSlide,
   setActiveSlide,
   handleSlideTo,
+  setIsSubscription,
+  isSubscription,
 }) => {
   const [isLogin, setIsLogin] = useState(false);
   const [ismenuClick, setIsMenuClick] = useState(false);
@@ -228,7 +232,10 @@ const Header: React.FC<HeaderProps> = ({
                     </Link>
                   </div>
                 ) : (
-                  <div className="flex flex-row items-center ml-4 gap-3">
+                  <div
+                    className="flex flex-row items-center ml-4 gap-3"
+                    onClick={() => setIsSubscription(!isSubscription)}
+                  >
                     <LoginBtn
                       className="!w-[100px]"
                       label="Subscribe"

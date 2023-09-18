@@ -30,7 +30,7 @@ const LoginBtn: React.FC<LoginBtnProps> = ({
         {
           label === "Log in" && goToLogin();
           label === "Sign up" && goToSignup();
-          label === "Subscribe" && goToSignUpSubscribe();
+          // label === "Subscribe" && goToSignUpSubscribe();
         }
       }}
     >

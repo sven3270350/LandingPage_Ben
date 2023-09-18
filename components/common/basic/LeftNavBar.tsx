@@ -1,4 +1,14 @@
-const LeftNavBar = () => {
+import SignUpSubscribePage from "pages/account/signupsubscribe";
+import { Dispatch, SetStateAction } from "react";
+interface LeftNavBarProps {
+  isSubscription: true;
+  setIsSubscription: Dispatch<SetStateAction<boolean>>;
+}
+
+const LeftNavBar: React.FC<LeftNavBarProps> = ({
+  setIsSubscription,
+  isSubscription,
+}) => {
   return (
     <>
       {/* <button
@@ -24,7 +34,7 @@ const LeftNavBar = () => {
         </svg>
       </button> */}
 
-      <aside
+      {/* <aside
         id="default-sidebar"
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
@@ -122,8 +132,8 @@ const LeftNavBar = () => {
                 </svg>
                 <span className="flex-1 ml-3 whitespace-nowrap">Products</span>
               </a>
-            </li>
-            {/* <li>
+            </li> */}
+      {/* <li>
               <a
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -146,7 +156,7 @@ const LeftNavBar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>
               </a>
             </li> */}
-            <li>
+      {/* <li>
               <a
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -167,7 +177,13 @@ const LeftNavBar = () => {
             </li>
           </ul>
         </div>
-      </aside>
+      </aside> */}
+      <div className="subscription_style">
+        <SignUpSubscribePage
+          isSubscription={isSubscription}
+          setIsSubscription={setIsSubscription}
+        />
+      </div>
     </>
   );
 };

@@ -313,3 +313,10 @@ body {
 .footer-gradient {
   background: linear-gradient(91deg, #10726b -56.41%, #00f2de 105.71%);
 }
+.subscription_style {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 200000;
+  height: 100%;
+}

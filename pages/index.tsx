@@ -43,6 +43,7 @@ const Home: NextPage = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const { isTablet } = useMediaSize();
   const [initialSlide, setInitialSlide] = useState<number>(0);
+  const [isSubscription, setIsSubscription] = useState<boolean>(false);
   const router = useRouter();
   const handleInitialSlide = () => {
     let initialNum = sessionStorage.getItem("activeSlide");
@@ -106,14 +107,22 @@ const Home: NextPage = () => {
       modifier: 1,
     },
   };
+  console.log(isSubscription);
 
   return (
     <>
-      {/* <LeftNavBar /> */}
+      {isSubscription && (
+        <LeftNavBar
+          isSubscription={isSubscription}
+          setIsSubscription={setIsSubscription}
+        />
+      )}
       <Header
         activeSlide={activeSlide}
         setActiveSlide={setActiveSlide}
         handleSlideTo={handleSlideTo}
+        isSubscription={isSubscription}
+        setIsSubscription={setIsSubscription}
       />
       {isTablet ? (
         <div className="flex flex-col w-full">
