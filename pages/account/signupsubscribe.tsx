@@ -2,6 +2,7 @@ import { useCustomRouter } from "components/hooks/custom-router";
 import Link from "next/link";
 import router from "next/router";
 import Check from "public/assets/icons/Check";
+import Close from "public/assets/icons/Close";
 import Linkedin from "public/assets/icons/Linkedin";
 import Telegram from "public/assets/icons/Telegram";
 import Twitter from "public/assets/icons/Twitter";
@@ -27,7 +28,7 @@ const SignUpSubscribePage = () => {
   });
   return (
     <div className="flex justify-center items-center bg-slate-300 w-full py-8">
-      <div className="w-[427px] flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
+      <div className="w-[427px] relative flex justify-center items-center p-8 flex-col gap-8 rounded-xl bg-white">
         <div className="w-full">
           <div className="text-[#2F4644] text-center text-[22px] font-medium not-italic leading-[22px]">
             Subscribe
@@ -176,6 +177,9 @@ const SignUpSubscribePage = () => {
             pauseOnHover={false}
             theme={"dark"}
           />
+        </div>
+        <div className="absolute top-[10px] right-[10px]">
+          <Close width={32} height={32} />
         </div>
       </div>
     </div>
