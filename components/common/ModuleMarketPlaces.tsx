@@ -267,8 +267,8 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1560) {
-        setSwiperPosition((window.innerWidth - 1575) / 2);
-        setMobileSwiperPosition((window.innerWidth - 945) / 2);
+        setSwiperPosition((window.innerWidth - 1560) / 2);
+        setMobileSwiperPosition((window.innerWidth - 924) / 2);
       }
     };
     if (isTablet) {
@@ -280,7 +280,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [isTablet]);
+  }, [isTablet,isMobile]);
 
   return (
     <div
@@ -317,7 +317,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
       <div className="overflow-hidden">
         {!isMobile ? (
           <Swiper
-            style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
+            style={{ transform: `translate3d( ${isTablet && swiperPosition}px, 0px, 0px)` }}
             {...swiperProps}
           >
             {slides.map((item, index) => {
