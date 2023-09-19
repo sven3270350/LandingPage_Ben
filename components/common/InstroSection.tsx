@@ -86,12 +86,6 @@ const IntroSection: React.FC<IntroSectionProps> = ({
                   activeSlide === 0 && "animate-normal-animation duration-1000"
                 )}
               >
-                {/* <video
-                src="/assets/icons/Modules.mp4"
-                width={600}
-                autoPlay
-                loop
-              /> */}
                 <Lottie
                   options={{
                     animationData: IntroSVGAnimation,
