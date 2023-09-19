@@ -64,7 +64,7 @@ interface ModuleMarketPlacesProps {
 const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   activeSlide,
 }) => {
-  const { isTablet } = useMediaSize();
+  const { isMobile, isTablet } = useMediaSize();
   const [swiperPosition, setSwiperPosition] = useState<number>(0);
   const [mobileSwiperPosition, setMobileSwiperPosition] = useState<number>(0);
   const handleNextClick = () => {
@@ -128,7 +128,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   };
   const slides: SlidesProps[] = [
     {
-      img: "/assets/icons/Portfolio_Graph.png",
+      img: "/assets/icons/Portfolio_Graph_v2.png",
       title: "Portfolio",
       label: "in-a-box",
       btnlabel: "Learn more",
@@ -136,7 +136,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         "Manage and monitor your entire crypto portfolio, including, vested, unvested, staked assets, and more..",
     },
     {
-      img: "/assets/icons/Calendar_Graph_v2.png",
+      img: "/assets/icons/Calendar_Graph_v3.png",
       title: "Calendar",
       label: "in-a-box",
       btnlabel: "Learn more",
@@ -144,7 +144,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         "Monitor and sync all events related to your groups or portfolio, and never miss a thing..",
     },
     {
-      img: "/assets/icons/Raise_Graph.png",
+      img: "/assets/icons/Raise_Graph_v2.png",
       title: "Raise",
       label: "in-a-box",
       btnlabel: "Learn more",
@@ -152,7 +152,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         "Create or participate in VC, presale, and crowdfunding pools in one-click..",
     },
     {
-      img: "/assets/icons/Market_Graph.png",
+      img: "/assets/icons/Market_Graph_v2.png",
       title: "Market",
       label: "in-a-box",
       btnlabel: "Learn more",
@@ -160,7 +160,7 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         "Buy or sell tokens, unvested allocations, NFTs, Ambassador Program rights, and more..",
     },
     {
-      img: "/assets/icons/Groups_Graph_v2.png",
+      img: "/assets/icons/Groups_Graph_v3.png",
       title: "Groups",
       label: "in-a-box",
       btnlabel: "Learn more",
@@ -267,8 +267,8 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1560) {
-        setSwiperPosition((window.innerWidth - 1585) / 2);
-        setMobileSwiperPosition((window.innerWidth - 900) / 2);
+        setSwiperPosition((window.innerWidth - 1575) / 2);
+        setMobileSwiperPosition((window.innerWidth - 945) / 2);
       }
     };
     if (isTablet) {
@@ -315,193 +315,105 @@ const ModuleMarketPlaces: React.FC<ModuleMarketPlacesProps> = ({
         Learn how all the Cryptool integrated modules work together
       </div>
       <div className="overflow-hidden">
-        <Swiper
-          style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
-          {...swiperProps}
-        >
-          {slides.map((item, index) => {
-            return (
-              <div key={index}>
-                <SwiperSlide
-                  id={item.title}
-                  className="relative"
-                  key={index}
-                  onClick={() => {
-                    handlePrevNext(index);
-                  }}
-                >
-                  <div>
-                    <Image
-                      className="rounded-lg"
-                      width={6000}
-                      alt="Swiper image"
-                      height={4300}
-                      src={item.img}
-                    />
-                  </div>
-                  {/* <div className="absolute top-[20%] left-[20%] text-white text-base">
-                    {item.title}
-                  </div>
-                  <div className="absolute top-[29%] left-[20%] text-white text-base">
-                    {item.label}
-                  </div>
-                  <div className="absolute top-[70%] left-[20%] z-20 text-white"> */}
-                  {/* <HoverEffectBtn
-                      className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
-                      strokeDashoffset={-168}
-                      width={104}
-                      height={40}
-                      handleClick={handleClick}
-                      label={item.btnlabel}
-                    /> */}
-                  {/* <button
-                      type="button"
-                      className={cx(
-                        "inline-block text-white font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
-                      )}
-                    >
-                      {item.btnlabel}
-                    </button>
-                  </div> */}
-                  <div className="absolute top-[112%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                    <div className="text-[#2F4644] font-normal text-2xl md:text-3xl lg:text-4xl xl:text-5xl !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
-                      {item.title}
-                    </div>
-                    <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-base md:text-base lg:text-lg xl:text-xl font-light !leading-[120%] mb-4 md:mb-6 lg:mb-8 xl:mb-10 max-w-[517px]">
-                      {item.description}
-                    </div>
+        {!isMobile ? (
+          <Swiper
+            style={{ transform: `translate3d(${swiperPosition}px, 0px, 0px)` }}
+            {...swiperProps}
+          >
+            {slides.map((item, index) => {
+              return (
+                <div key={index}>
+                  <SwiperSlide
+                    id={item.title}
+                    className="relative"
+                    key={index}
+                    onClick={() => {
+                      handlePrevNext(index);
+                    }}
+                  >
                     <div>
-                      {/* <HoverEffectBtn
-                        className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] !h-[40px] mb-5"
-                        strokeDashoffset={-150}
-                        strokeDasharray="90 300"
-                        width={104}
-                        height={40}
-                        handleClick={handleClick}
-                        label={"Learn more"}
-                      /> */}
-                      <button
-                        type="button"
-                        className={cx(
-                          "inline-block font-sans cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-base lg:text-lg xl:text-xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
-                        )}
-                      >
-                        Learn more
-                      </button>
+                      <Image
+                        className="rounded-lg"
+                        width={6000}
+                        alt="Swiper image"
+                        height={4300}
+                        src={item.img}
+                      />
                     </div>
-                  </div>
-                </SwiperSlide>
-              </div>
-            );
-          })}
-          {/* <div
-            className="absolute right-[443px] top-[22%] z-10 cursor-pointer"
-            onClick={handleNextClick}
+                    <div className="absolute top-[112%] left-[7px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
+                      <div className="text-[#2F4644] font-normal text-2xl md:text-3xl lg:text-4xl xl:text-5xl !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
+                        {item.title}
+                      </div>
+                      <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-base md:text-base lg:text-lg xl:text-xl font-light !leading-[120%] mb-4 md:mb-6 lg:mb-8 xl:mb-10 max-w-[517px]">
+                        {item.description}
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          className={cx(
+                            "inline-block font-sans cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-base lg:text-lg xl:text-xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                          )}
+                        >
+                          Learn more
+                        </button>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                </div>
+              );
+            })}
+          </Swiper>
+        ) : (
+          <Swiper
+            style={{
+              transform: `translate3d(${mobileSwiperPosition}px, 0px, 0px)`,
+            }}
+            {...MobileSwiperProps}
           >
-            <NextBtn width={37} />
-          </div>
-          <div
-            className="absolute left-[443px] top-[22%] z-10 cursor-pointer"
-            onClick={handlePrevClick}
-          >
-            <PrevBtn width={37} />{" "}
-          </div> */}
-        </Swiper>
-
-        <Swiper
-          style={{
-            transform: `translate3d(${mobileSwiperPosition}px, 0px, 0px)`,
-          }}
-          {...MobileSwiperProps}
-        >
-          {slides.map((item, index) => {
-            return (
-              <div key={index}>
-                <SwiperSlide
-                  id={item.title}
-                  className="relative"
-                  key={index}
-                  onClick={() => {
-                    handlePrevNext(index);
-                  }}
-                >
-                  <div>
-                    <Image
-                      className="rounded-lg"
-                      width={6000}
-                      alt="Swiper image"
-                      height={4300}
-                      src={item.img}
-                    />
-                  </div>
-                  {/* <div className="absolute top-[20%] left-[20%] text-white text-base">
-                    {item.title}
-                  </div>
-                  <div className="absolute top-[29%] left-[20%] text-white text-base">
-                    {item.label}
-                  </div> */}
-                  {/* <div className="absolute top-[70%] left-[20%] z-20 text-white"> */}
-                  {/* <HoverEffectBtn
-                      className="svg-wrapper opacity-[.8] z-50 hover:opacity-[1] hover:font-semibold !w-[104px] h-[40px]"
-                      strokeDashoffset={-168}
-                      width={104}
-                      height={40}
-                      handleClick={handleClick}
-                      label={item.btnlabel}
-                    /> */}
-                  {/* <button
-                      type="button"
-                      className={cx(
-                        "inline-block text-white font-normal not-italic text-base hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
-                      )}
-                    >
-                      {item.btnlabel}
-                    </button> */}
-                  {/* </div> */}
-                  <div className="absolute top-[112%] left-[-110px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
-                    <div className="text-[#2F4644] font-normal text-2xl md:text-3xl lg:text-4xl xl:text-5xl !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
-                      {item.title}
-                    </div>
-                    <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-base sm:text-base md:text-base lg:text-lg xl:text-xl font-light !leading-[120%] mb-4 md:mb-6 lg:mb-8 xl:mb-10 max-w-[517px]">
-                      {item.description}
-                    </div>
+            {slides.map((item, index) => {
+              return (
+                <div key={index}>
+                  <SwiperSlide
+                    id={item.title}
+                    className="relative"
+                    key={index}
+                    onClick={() => {
+                      handlePrevNext(index);
+                    }}
+                  >
                     <div>
-                      {/* <HoverEffectBtn
-                        className="svg-wrapper hover:font-semibold !w-[104px] text-[#2F4644] !h-[40px] mb-5"
-                        strokeDashoffset={-150}
-                        strokeDasharray="90 300"
-                        width={104}
-                        height={40}
-                        handleClick={handleClick}
-                        label={"Learn more"}
-                      /> */}
-                      <button
-                        type="button"
-                        className={cx(
-                          "inline-block cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-base lg:text-lg xl:text-xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
-                        )}
-                      >
-                        Learn more
-                      </button>
+                      <Image
+                        className="rounded-lg"
+                        width={6000}
+                        alt="Swiper image"
+                        height={4300}
+                        src={item.img}
+                      />
                     </div>
-                  </div>
-                </SwiperSlide>
-              </div>
-            );
-          })}
-          {/* <div
-            className="absolute right-[443px] top-[22%] z-10 cursor-pointer"
-            onClick={handleNextClick}
-          >
-            <NextBtn width={37} />
-          </div>
-          <div
-            className="absolute left-[443px] top-[22%] z-10 cursor-pointer"
-            onClick={handlePrevClick}
-          >
-            <PrevBtn width={37} />{" "}
-          </div> */}
-        </Swiper>
+                    <div className="absolute top-[112%] left-[-110px] flex flex-col justify-center items-center w-[517px] module-description animate-normal-animation duration-1000">
+                      <div className="text-[#2F4644] font-normal text-2xl md:text-3xl lg:text-4xl xl:text-5xl !leading-[120%] mb-2 md:mb-3 lg:mb-4 xl:mb-5">
+                        {item.title}
+                      </div>
+                      <div className="text-[#2F4644] text-center w-[330px] sm:w-full text-base sm:text-base md:text-base lg:text-lg xl:text-xl font-light !leading-[120%] mb-4 md:mb-6 lg:mb-8 xl:mb-10 max-w-[517px]">
+                        {item.description}
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          className={cx(
+                            "inline-block cursor-pointer text-[#2F4644] font-normal not-italic text-base md:text-base lg:text-lg xl:text-xl hover:font-semibold focus:outline-none border-b-[3px] border-transparent hover:border-[#00F2DE] border-solid"
+                          )}
+                        >
+                          Learn more
+                        </button>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                </div>
+              );
+            })}
+          </Swiper>
+        )}
       </div>
     </div>
   );

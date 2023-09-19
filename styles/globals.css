@@ -182,14 +182,13 @@ body {
 }
 @media (max-width: 639px) {
   .img-swiper {
-    display: none !important;
+    /* display: none !important; */
     transition-duration: 3000ms;
   }
 }
 @media (min-width: 640px) {
   .mobile-swiper {
-    display: none !important;
-    transition-duration: 3000ms;
+    /* display: none !important; */
   }
   .img-swiper .swiper-pagination {
     top: var(--swiper-pagination-top, 68%) !important;
