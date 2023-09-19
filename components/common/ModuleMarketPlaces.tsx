@@ -45,9 +45,9 @@ interface MobileSwiperProps {
     stretch?: number;
     depth?: number;
     scale?: number;
-    modifier?: number;
+    modifier?: number; 
   };
-}
+} 
 
 interface SlidesProps {
   img: string;
