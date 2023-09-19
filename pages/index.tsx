@@ -107,7 +107,6 @@ const Home: NextPage = () => {
       modifier: 1,
     },
   };
-  console.log(isSubscription);
 
   return (
     <>
@@ -126,7 +125,10 @@ const Home: NextPage = () => {
       />
       {isTablet ? (
         <div className="flex flex-col w-full">
-          <IntroSection />
+          <IntroSection
+            isSubscription={isSubscription}
+            setIsSubscription={setIsSubscription}
+          />
           <VideoSection />
           <ModuleMarketPlaces />
           <ProposalSection />
@@ -139,6 +141,8 @@ const Home: NextPage = () => {
             <IntroSection
               activeSlide={activeSlide}
               handleSlideToTwo={handleSlideToTwo}
+              isSubscription={isSubscription}
+              setIsSubscription={setIsSubscription}
             />
           </SwiperSlide>
           <SwiperSlide>

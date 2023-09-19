@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import Image from "next/image";
 import ArrowBelow from "public/assets/icons/ArrowBelow";
 import Lottie from "react-lottie";
@@ -8,10 +8,14 @@ import IntroSVGAnimation from "public/assets/icons/Cryptool_Homepage_Animation.j
 interface IntroSectionProps {
   activeSlide?: number;
   handleSlideToTwo?: () => void;
+  isSubscription: boolean;
+  setIsSubscription: Dispatch<SetStateAction<boolean>>;
 }
 const IntroSection: React.FC<IntroSectionProps> = ({
   handleSlideToTwo,
   activeSlide,
+  isSubscription,
+  setIsSubscription,
 }) => {
   const { isTablet } = useMediaSize();
   return (
@@ -54,6 +58,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
                   activeSlide === 0 && "animate-normal-animation duration-1000",
                   isTablet && "!mb-0"
                 )}
+                onClick={() => setIsSubscription(!isSubscription)}
               >
                 Start Managing Today
               </button>

@@ -319,3 +319,12 @@ body {
   z-index: 200000;
   height: 100%;
 }
+.subscription_body {
+  /* height: 100%; */
+}
+
+@media (min-height: 979px) {
+  .subscription_style {
+    overflow-y: scroll;
+  }
+}
