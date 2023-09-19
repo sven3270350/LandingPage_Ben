@@ -77,7 +77,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
               <div
                 className={cx(
                   "z-10",
-                  isTablet && "mt-24 flex justify-center",
+                  isTablet && "mt-24 flex justify-center h-[50vh]",
                   activeSlide === 0 && "animate-normal-animation duration-1000"
                 )}
               >
