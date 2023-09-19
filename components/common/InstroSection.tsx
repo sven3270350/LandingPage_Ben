@@ -111,8 +111,8 @@ const IntroSection: React.FC<IntroSectionProps> = ({
       <Image
         alt="Wireframe"
         className={cx(
-          "w-auto h-[100%] z-[0] absolute bottom-0 right-0 !opacity-90 wireframe",
-          isTablet && "h-auto min-h-[600px]"
+          "w-auto z-[0] absolute bottom-0 right-0 !opacity-90 wireframe",
+          !isTablet && "h-[100%]"
         )}
         width={1700}
         height={1650}
