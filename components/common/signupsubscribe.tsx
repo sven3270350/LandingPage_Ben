@@ -40,7 +40,7 @@ const SignUpSubscribePage: React.FC<SignUpSubscribePageProps> = ({
   });
   return (
     // <div className="flex justify-center items-center bg-slate-300 w-full py-8 subscription">
-    <div className="w-[427px] relative flex justify-start p-8 flex-col gap-8 rounded-xl bg-white subscription_body">
+    <div className="w-full 2xs:w-[427px] relative flex justify-start p-8 flex-col gap-8 rounded-xl bg-white subscription_body">
       <div className="w-full">
         <div className="text-[#2F4644] text-center text-[22px] font-medium not-italic leading-[22px]">
           Subscribe
