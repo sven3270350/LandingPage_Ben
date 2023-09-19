@@ -20,10 +20,11 @@ const SignUpSubscribePage: React.FC<SignUpSubscribePageProps> = ({
   setIsSubscription,
   isSubscription,
 }) => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState<string>("");
   const { goToManualSignUp } = useCustomRouter();
-  const [userType, setUserType] = useState("");
-  const [netSize, setNetSize] = useState("");
+  const [userType, setUserType] = useState<string>("");
+  const [isUpdate, setIsUpdate] = useState<boolean>(false);
+  const [netSize, setNetSize] = useState<string>("");
   const notify = () =>
     toast(
       <div className="flex justify-between items-center">
@@ -261,7 +262,19 @@ const SignUpSubscribePage: React.FC<SignUpSubscribePageProps> = ({
         </Link>
       </div>
       <div className="flex items-center justify-start gap-[15px] w-full">
-        <input type="checkbox" />
+        {isUpdate ? (
+          <div onClick={() => setIsUpdate(false)}>
+            <Click
+              width={20}
+              height={20}
+              className="cursor-pointer bg-[#00F2DE] rounded-[4px]"
+            />
+          </div>
+        ) : (
+          <div onClick={() => setIsUpdate(true)}>
+            <UnClick width={20} height={20} className="cursor-pointer" />
+          </div>
+        )}
         <div className="text-[#54716F] font-normal text-xs leading-[180%]">
           I agree to receive updates from Cryptool.
         </div>
