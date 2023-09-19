@@ -333,3 +333,9 @@ body {
     height: 100%;
   }
 }
+
+@media (min-height: 1100px) {
+  .proposal_section {
+    height: 100%;
+  }
+}
